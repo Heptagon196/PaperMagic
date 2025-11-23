@@ -1,0 +1,10 @@
+{
+    "Lua.diagnostics.disable": [
+        "undefined-field",
+        "inject-field"
+    ],
+    "Lua.diagnostics.globals": [
+        "typeof",
+        "CS"
+    ]
+}

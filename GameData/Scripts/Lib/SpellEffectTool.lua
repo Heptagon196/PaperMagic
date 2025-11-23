@@ -1,0 +1,13 @@
+---@class SpellEffectInfo
+---@field ID string 标志符
+---@field UpdateInterval number Update更新间隔，-1表示不更新
+---@field ExpireTime number 最长持续时间，-1表示不限制
+---@field OnApply? fun(self: table, pos: any, towards: any) : nil
+---@field OnUpdate? fun(self: table, deltaTime: number) : nil
+---@field OnExpired? fun(self: table) : nil
+---@field OnCollisionEnter? fun(self: table, gameObject: any) : nil
+---@field OnCollisionStay? fun(self: table, gameObject: any) : nil
+---@field OnCollisionExit? fun(self: table, gameObject: any) : nil
+---@field OnTriggerEnter? fun(self: table, gameObject: any) : nil
+---@field OnTriggerStay? fun(self: table, gameObject: any) : nil
+---@field OnTriggerExit? fun(self: table, gameObject: any) : nil

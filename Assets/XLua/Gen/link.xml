@@ -1,0 +1,31 @@
+﻿
+
+<linker>
+
+	<assembly fullname="Assembly-CSharp">
+	    <type fullname="Tutorial.BaseClass" preserve="all"/>
+		<type fullname="Tutorial.TestEnum" preserve="all"/>
+		<type fullname="Tutorial.DerivedClass" preserve="all"/>
+		<type fullname="Tutorial.ICalc" preserve="all"/>
+		<type fullname="Tutorial.DerivedClassExtensions" preserve="all"/>
+		<type fullname="Spell.SpellEffectBase" preserve="all"/>
+		<type fullname="Spell.SpellEffectLua" preserve="all"/>
+		<type fullname="Spell.SpellTreeBase" preserve="all"/>
+		<type fullname="Spell.SpellTreeBaseLua" preserve="all"/>
+		<type fullname="PMLua.LuaScriptExecutor" preserve="all"/>
+		<type fullname="PMLua.PaperMagicLuaHelper" preserve="all"/>
+		<type fullname="PMLua.Export.BackpackLua" preserve="all"/>
+		<type fullname="PMLua.Export.CreatureLua" preserve="all"/>
+		<type fullname="PMLua.Export.EffectLua" preserve="all"/>
+		<type fullname="PMLua.Export.PlayerLua" preserve="all"/>
+		<type fullname="PMLua.Export.ProjectileLua" preserve="all"/>
+		<type fullname="PMLua.Export.QuestLua" preserve="all"/>
+		<type fullname="NPC.CreatureBase" preserve="all"/>
+		<type fullname="NPC.CreatureFaction" preserve="all"/>
+		<type fullname="NPC.CreatureLevel" preserve="all"/>
+		<type fullname="NPC.CreatureInfoBase" preserve="all"/>
+		<type fullname="Tutorial.DerivedClass+TestEnumInner" preserve="all"/>
+		
+	</assembly>
+
+</linker>

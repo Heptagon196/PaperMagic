@@ -1,0 +1,1280 @@
+fileFormatVersion: 2
+guid: 91070cd6a978dad408306e6da125975d
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Kenney_Male_Adventurer_Papered_Flipped_0
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 1357
+        width: 175
+        height: 239
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77d857d9de1ce4c4b995251b09735433
+      internalID: 1709335585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kenney_Male_Adventurer_Papered_Flipped_1
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 1351
+        width: 176
+        height: 230
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cd30b4322c848340badeaaef1ef9738
+      internalID: -1456038121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kenney_Male_Adventurer_Papered_Flipped_2
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 1351
+        width: 158
+        height: 224
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a471200088e687d4482fd6a833e8f6d1
+      internalID: -2041879107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kenney_Male_Adventurer_Papered_Flipped_3
+      rect:
+        serializedVersion: 2
+        x: 662
+        y: 1351
+        width: 158
+        height: 228
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc7f5e80e0add9f4a8cb05bbb59bd5d1
+      internalID: -964282586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kenney_Male_Adventurer_Papered_Flipped_4
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 1356
+        width: 209
+        height: 223
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b346ea99c42ba6d48bfdcd5b44dda419
+      internalID: 830121767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kenney_Male_Adventurer_Papered_Flipped_5
+      rect:
+        serializedVersion: 2
+        x: 1083
+        y: 1351
+        width: 145
+        height: 194
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a08bdeb118599994ea4cc1dfa3953477
+      internalID: 1205294799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kenney_Male_Adventurer_Papered_Flipped_6
+      rect:
+        serializedVersion: 2
+        x: 1257
+        y: 1353
+        width: 202
+        height: 233
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d7a5c08858c42643bb02ae4ec6cde67
+      internalID: 1671443610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kenney_Male_Adventurer_Papered_Flipped_7
+      rect:
+        serializedVersion: 2
+        x: 1476
+        y: 1352
+        width: 182
+        height: 242
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb5007dfb5d91b1468fc3621c5a7084d
+      internalID: 459674102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kenney_Male_Adventurer_Papered_Flipped_8
+      rect:
+        serializedVersion: 2
+        x: 1700
+        y: 1351
+        width: 153
+        height: 230
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c05e133f071131a4a9b29f159b420d8d
+      internalID: -1608049001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kenney_Male_Adventurer_Papered_Flipped_9
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 1083
+        width: 166
+        height: 236
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4c402593cee0fc49a08aa1943994c66
+      internalID: 508657120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kenney_Male_Adventurer_Papered_Flipped_10
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 1080
+        width: 166
+        height: 223
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a517c507874985448dac59e39d6555c
+      internalID: 378634894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kenney_Male_Adventurer_Papered_Flipped_11
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 1079
+        width: 132
+        height: 228
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3eadec51e022066439d519cbfb513b3c
+      internalID: 1792068497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kenney_Male_Adventurer_Papered_Flipped_12
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 1079
+        width: 199
+        height: 242
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ede66fe6eb3a7154382b79697e08894b
+      internalID: 1226491960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kenney_Male_Adventurer_Papered_Flipped_13
+      rect:
+        serializedVersion: 2
+        x: 845
+        y: 1079
+        width: 193
+        height: 212
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e057b199735dba4ba4fa9133dce11e8
+      internalID: -1629962171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kenney_Male_Adventurer_Papered_Flipped_14
+      rect:
+        serializedVersion: 2
+        x: 1047
+        y: 1079
+        width: 190
+        height: 236
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5efde1f5a4ad534ca196d08b5d36c0e
+      internalID: 1865583712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kenney_Male_Adventurer_Papered_Flipped_15
+      rect:
+        serializedVersion: 2
+        x: 1238
+        y: 1079
+        width: 208
+        height: 224
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8774f063db2f28a4785a483f0b275e42
+      internalID: -2079390818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kenney_Male_Adventurer_Papered_Flipped_16
+      rect:
+        serializedVersion: 2
+        x: 1469
+        y: 1080
+        width: 200
+        height: 188
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 683c65f75faf2ad49ab714ceaf8f2067
+      internalID: -620667100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kenney_Male_Adventurer_Papered_Flipped_17
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 1079
+        width: 192
+        height: 256
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0effe548ed2f2314d929f5c9a064ad59
+      internalID: 532626805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kenney_Male_Adventurer_Papered_Flipped_18
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 818
+        width: 208
+        height: 218
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c72150bfa8a653143af553098bc35e55
+      internalID: 960754929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kenney_Male_Adventurer_Papered_Flipped_19
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 808
+        width: 186
+        height: 228
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29c775c28c7435044aceb25bb1419655
+      internalID: -107080419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kenney_Male_Adventurer_Papered_Flipped_20
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 807
+        width: 171
+        height: 213
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f35e97d5b5974214db6ebccea7f73aa1
+      internalID: -1057256949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kenney_Male_Adventurer_Papered_Flipped_21
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 807
+        width: 133
+        height: 232
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18384158db8a3244c964836f3934cadc
+      internalID: 1758262255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kenney_Male_Adventurer_Papered_Flipped_22
+      rect:
+        serializedVersion: 2
+        x: 867
+        y: 807
+        width: 161
+        height: 227
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f44fc8f8c94913543986a31a92be9051
+      internalID: 215184297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kenney_Male_Adventurer_Papered_Flipped_23
+      rect:
+        serializedVersion: 2
+        x: 1075
+        y: 807
+        width: 142
+        height: 223
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10994d966ac2783469dbe6dc13aaa602
+      internalID: 1923725140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kenney_Male_Adventurer_Papered_Flipped_24
+      rect:
+        serializedVersion: 2
+        x: 1275
+        y: 811
+        width: 167
+        height: 239
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37c5b7beac4a1254ebc015719d967ce4
+      internalID: 1128407106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kenney_Male_Adventurer_Papered_Flipped_25
+      rect:
+        serializedVersion: 2
+        x: 1465
+        y: 814
+        width: 190
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbef09e4e2c171d4ca6271398a16435f
+      internalID: -127997130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kenney_Male_Adventurer_Papered_Flipped_26
+      rect:
+        serializedVersion: 2
+        x: 1676
+        y: 807
+        width: 177
+        height: 233
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2480086520f0df642b465a54bb851dab
+      internalID: 1529736953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kenney_Male_Adventurer_Papered_Flipped_27
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 551
+        width: 175
+        height: 236
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 150cf3bfcbeed794f8fb87266c3cb0fb
+      internalID: 1196789756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kenney_Male_Adventurer_Papered_Flipped_28
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 535
+        width: 205
+        height: 224
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0604aa08c703eb7418c7c905acb410f1
+      internalID: -1730509373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kenney_Male_Adventurer_Papered_Flipped_29
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 545
+        width: 205
+        height: 222
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0a7dcfc1a5f93843ad32514bbf4ee3a
+      internalID: 1726452691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kenney_Male_Adventurer_Papered_Flipped_30
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 535
+        width: 138
+        height: 228
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dce197bc408742443b860704578c6efd
+      internalID: -1162449017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kenney_Male_Adventurer_Papered_Flipped_31
+      rect:
+        serializedVersion: 2
+        x: 843
+        y: 535
+        width: 202
+        height: 190
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c75db515f70389a47b4f5af74e32ac59
+      internalID: 989971396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kenney_Male_Adventurer_Papered_Flipped_32
+      rect:
+        serializedVersion: 2
+        x: 1075
+        y: 535
+        width: 150
+        height: 212
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aedb7aadb03446d4ca9af61c2e430585
+      internalID: 1929328327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kenney_Male_Adventurer_Papered_Flipped_33
+      rect:
+        serializedVersion: 2
+        x: 1259
+        y: 535
+        width: 204
+        height: 211
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3ec5c8d724df3e469de030e0667e04b
+      internalID: -647692795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kenney_Male_Adventurer_Papered_Flipped_34
+      rect:
+        serializedVersion: 2
+        x: 1491
+        y: 535
+        width: 181
+        height: 233
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6027069fcf20444b997f53aeae19410
+      internalID: -1067974209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kenney_Male_Adventurer_Papered_Flipped_35
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 535
+        width: 189
+        height: 225
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79474e2d77d40f246932569e32c8d92c
+      internalID: 82541521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kenney_Male_Adventurer_Papered_Flipped_36
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 304
+        width: 207
+        height: 194
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a7d8ac851655b34096461de18915852
+      internalID: -1337967959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kenney_Male_Adventurer_Papered_Flipped_37
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 263
+        width: 151
+        height: 233
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d8dccc751e92574cbf532bc0110a055
+      internalID: -1459090220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kenney_Male_Adventurer_Papered_Flipped_38
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 263
+        width: 141
+        height: 229
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 048a8809cf74feb44bf2afa419b4deb3
+      internalID: 2012335433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kenney_Male_Adventurer_Papered_Flipped_39
+      rect:
+        serializedVersion: 2
+        x: 662
+        y: 263
+        width: 157
+        height: 222
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b280bb198504b54d90f4646d98e34a8
+      internalID: -1863562513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kenney_Male_Adventurer_Papered_Flipped_40
+      rect:
+        serializedVersion: 2
+        x: 868
+        y: 263
+        width: 168
+        height: 229
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccfce6855e712a349a073412859957e8
+      internalID: 1417300612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kenney_Male_Adventurer_Papered_Flipped_41
+      rect:
+        serializedVersion: 2
+        x: 1086
+        y: 263
+        width: 149
+        height: 234
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d0c1b2066f4717409acefb20c2a7853
+      internalID: 2002034015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kenney_Male_Adventurer_Papered_Flipped_42
+      rect:
+        serializedVersion: 2
+        x: 1291
+        y: 263
+        width: 141
+        height: 229
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8756ada4445f194db0ee215585aaf74
+      internalID: 164916626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kenney_Male_Adventurer_Papered_Flipped_43
+      rect:
+        serializedVersion: 2
+        x: 1495
+        y: 263
+        width: 155
+        height: 222
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03c8cc929ecfa3542930d568d2c38fff
+      internalID: -775953082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kenney_Male_Adventurer_Papered_Flipped_44
+      rect:
+        serializedVersion: 2
+        x: 1700
+        y: 265
+        width: 167
+        height: 231
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1210f1bef5b490f4b828eb566bc4dc9d
+      internalID: 2089103739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kenney_Male_Adventurer_Papered_Flipped_45
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 1
+        width: 151
+        height: 233
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36df499c314934a49bbc51596daa1cb7
+      internalID: -916718513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kenney_Male_Adventurer_Papered_Flipped_46
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 1
+        width: 141
+        height: 229
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f53acfa89d4371342ba60e3c87470b65
+      internalID: 1238837896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kenney_Male_Adventurer_Papered_Flipped_47
+      rect:
+        serializedVersion: 2
+        x: 662
+        y: 1
+        width: 157
+        height: 222
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab9de83380a88ed40be225b5d752d3c3
+      internalID: -1623205145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kenney_Male_Adventurer_Papered_Flipped_48
+      rect:
+        serializedVersion: 2
+        x: 868
+        y: 1
+        width: 168
+        height: 229
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82f875fb24a5fee41bea18ebf73d1e37
+      internalID: -1024084440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kenney_Male_Adventurer_Papered_Flipped_49
+      rect:
+        serializedVersion: 2
+        x: 1086
+        y: 1
+        width: 149
+        height: 234
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d79418f0f5748054884133127b485047
+      internalID: -1941479367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kenney_Male_Adventurer_Papered_Flipped_50
+      rect:
+        serializedVersion: 2
+        x: 1291
+        y: 1
+        width: 141
+        height: 229
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c517ae9e3ce87d94b871c8f0243658e1
+      internalID: -770239030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kenney_Male_Adventurer_Papered_Flipped_51
+      rect:
+        serializedVersion: 2
+        x: 1495
+        y: 1
+        width: 155
+        height: 223
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a203055d2c7c1446a691dd5a023ac77
+      internalID: 528261905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kenney_Male_Adventurer_Papered_Flipped_52
+      rect:
+        serializedVersion: 2
+        x: 1700
+        y: 3
+        width: 167
+        height: 231
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6c3053a31409a24d816a0319b7cd3bf
+      internalID: -1943300896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 9e92a686b7ae26046979fdedc5aeb7f7
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Kenney_Male_Adventurer_Papered_Flipped_0: 1709335585
+      Kenney_Male_Adventurer_Papered_Flipped_1: -1456038121
+      Kenney_Male_Adventurer_Papered_Flipped_10: 378634894
+      Kenney_Male_Adventurer_Papered_Flipped_11: 1792068497
+      Kenney_Male_Adventurer_Papered_Flipped_12: 1226491960
+      Kenney_Male_Adventurer_Papered_Flipped_13: -1629962171
+      Kenney_Male_Adventurer_Papered_Flipped_14: 1865583712
+      Kenney_Male_Adventurer_Papered_Flipped_15: -2079390818
+      Kenney_Male_Adventurer_Papered_Flipped_16: -620667100
+      Kenney_Male_Adventurer_Papered_Flipped_17: 532626805
+      Kenney_Male_Adventurer_Papered_Flipped_18: 960754929
+      Kenney_Male_Adventurer_Papered_Flipped_19: -107080419
+      Kenney_Male_Adventurer_Papered_Flipped_2: -2041879107
+      Kenney_Male_Adventurer_Papered_Flipped_20: -1057256949
+      Kenney_Male_Adventurer_Papered_Flipped_21: 1758262255
+      Kenney_Male_Adventurer_Papered_Flipped_22: 215184297
+      Kenney_Male_Adventurer_Papered_Flipped_23: 1923725140
+      Kenney_Male_Adventurer_Papered_Flipped_24: 1128407106
+      Kenney_Male_Adventurer_Papered_Flipped_25: -127997130
+      Kenney_Male_Adventurer_Papered_Flipped_26: 1529736953
+      Kenney_Male_Adventurer_Papered_Flipped_27: 1196789756
+      Kenney_Male_Adventurer_Papered_Flipped_28: -1730509373
+      Kenney_Male_Adventurer_Papered_Flipped_29: 1726452691
+      Kenney_Male_Adventurer_Papered_Flipped_3: -964282586
+      Kenney_Male_Adventurer_Papered_Flipped_30: -1162449017
+      Kenney_Male_Adventurer_Papered_Flipped_31: 989971396
+      Kenney_Male_Adventurer_Papered_Flipped_32: 1929328327
+      Kenney_Male_Adventurer_Papered_Flipped_33: -647692795
+      Kenney_Male_Adventurer_Papered_Flipped_34: -1067974209
+      Kenney_Male_Adventurer_Papered_Flipped_35: 82541521
+      Kenney_Male_Adventurer_Papered_Flipped_36: -1337967959
+      Kenney_Male_Adventurer_Papered_Flipped_37: -1459090220
+      Kenney_Male_Adventurer_Papered_Flipped_38: 2012335433
+      Kenney_Male_Adventurer_Papered_Flipped_39: -1863562513
+      Kenney_Male_Adventurer_Papered_Flipped_4: 830121767
+      Kenney_Male_Adventurer_Papered_Flipped_40: 1417300612
+      Kenney_Male_Adventurer_Papered_Flipped_41: 2002034015
+      Kenney_Male_Adventurer_Papered_Flipped_42: 164916626
+      Kenney_Male_Adventurer_Papered_Flipped_43: -775953082
+      Kenney_Male_Adventurer_Papered_Flipped_44: 2089103739
+      Kenney_Male_Adventurer_Papered_Flipped_45: -916718513
+      Kenney_Male_Adventurer_Papered_Flipped_46: 1238837896
+      Kenney_Male_Adventurer_Papered_Flipped_47: -1623205145
+      Kenney_Male_Adventurer_Papered_Flipped_48: -1024084440
+      Kenney_Male_Adventurer_Papered_Flipped_49: -1941479367
+      Kenney_Male_Adventurer_Papered_Flipped_5: 1205294799
+      Kenney_Male_Adventurer_Papered_Flipped_50: -770239030
+      Kenney_Male_Adventurer_Papered_Flipped_51: 528261905
+      Kenney_Male_Adventurer_Papered_Flipped_52: -1943300896
+      Kenney_Male_Adventurer_Papered_Flipped_6: 1671443610
+      Kenney_Male_Adventurer_Papered_Flipped_7: 459674102
+      Kenney_Male_Adventurer_Papered_Flipped_8: -1608049001
+      Kenney_Male_Adventurer_Papered_Flipped_9: 508657120
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
