@@ -28,7 +28,7 @@ namespace XLua.CSObjectWrap
         
 
         
-        int NPC.ICreatureAnimLua.anim 
+        string NPC.ICreatureAnimLua.anim 
         {
             
             get 
@@ -46,7 +46,7 @@ namespace XLua.CSObjectWrap
 					{
 						luaEnv.ThrowExceptionFromError(oldTop);
 					}
-					int __gen_ret = LuaAPI.xlua_tointeger(L, -1);
+					string __gen_ret = LuaAPI.lua_tostring(L, -1);
 					LuaAPI.lua_pop(L, 2);
 					return __gen_ret;
 #if THREAD_SAFE || HOTFIX_ENABLE

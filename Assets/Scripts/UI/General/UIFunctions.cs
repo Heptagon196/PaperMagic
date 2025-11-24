@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using Controller;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -19,11 +20,12 @@ namespace UI.General
         public GameObject[] tabs;
         public GameObject tipWidget;
         public UIWidgetPool floatTipPool;
+        public ConfirmBox confirmBox;
         public Vector2 floatStartPos;
         public Vector2 floatEndPos;
         public float floatFadeTime;
         public float floatStayTime;
-        public bool UIOpen => _rootTransform.gameObject.activeInHierarchy;
+        public bool UIOpen => _rootTransform.gameObject.activeInHierarchy || ChatBox.ChatBox.ChatBoxOpen;
         private Canvas _canvas;
         private Transform _rootTransform;
         private void Awake()
@@ -88,6 +90,10 @@ namespace UI.General
             floatTipPool.GetObject().GetComponent<FloatTipWidget>()
                 ?.ShowTip(text, floatStartPos, floatEndPos, floatFadeTime, floatStayTime);
         }
+        public void ShowConfirmBox(string text, Action onConfirm, Action onCancel)
+        {
+            confirmBox.ShowConfirmBox(text, onConfirm, onCancel);
+        }
         public static void ResizeContainer(Transform container, GameObject prefab, int count,
             Action<GameObject> onInit, int offset = 0)
         {
@@ -103,6 +109,33 @@ namespace UI.General
             for (int childIdx = count + offset; childIdx < container.childCount; childIdx++)
             {
                 container.GetChild(childIdx).gameObject.SetActive(false);
+            }
+        }
+        public static IEnumerator BlinkButtonOpacity(GameObject button, float deltaTime, float speed, float minVal, float maxVal)
+        {
+            var image = button.GetComponent<Image>();
+            var text = button.GetComponentInChildren<Text>();
+            var imageColor = image.color;
+            var textColor = text.color;
+            imageColor.a = 1;
+            textColor.a = 1;
+            float direction = -1;
+            float destOpacity = minVal;
+            float rate = 0;
+            // ReSharper disable once LoopVariableIsNeverChangedInsideLoop
+            while (button != null)
+            {
+                rate += deltaTime * speed * direction;
+                imageColor.a = Mathf.Lerp(minVal, maxVal, rate);
+                if (Mathf.Abs(imageColor.a - destOpacity) <= deltaTime)
+                {
+                    destOpacity = minVal + maxVal - destOpacity;
+                    direction *= -1;
+                }
+                textColor.a = imageColor.a;
+                image.color = imageColor;
+                text.color = textColor;
+                yield return new WaitForSeconds(deltaTime);
             }
         }
     }

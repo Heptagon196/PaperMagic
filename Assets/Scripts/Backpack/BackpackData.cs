@@ -149,8 +149,8 @@ namespace Backpack
             }
             return spellType switch
             {
-                SpellType.Modifier => $"增加伤害：<color=Green>  {spellDamage}</color>",
-                _ => $"造成伤害：<color=Green>  {spellDamage}</color>"
+                SpellType.Modifier => $"\n增加伤害：<color=Green>  {spellDamage}</color>",
+                _ => $"\n造成伤害：<color=Green>  {spellDamage}</color>"
             };
         }
         public IBackpackItemInfo SpawnNew(string inID)

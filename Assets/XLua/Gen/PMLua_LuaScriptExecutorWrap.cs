@@ -21,9 +21,10 @@ namespace XLua.CSObjectWrap
         {
 			ObjectTranslator translator = ObjectTranslatorPool.Instance.Find(L);
 			System.Type type = typeof(PMLua.LuaScriptExecutor);
-			Utils.BeginObjectRegister(type, L, translator, 0, 3, 2, 2);
+			Utils.BeginObjectRegister(type, L, translator, 0, 4, 2, 2);
 			
 			Utils.RegisterFunc(L, Utils.METHOD_IDX, "InitScriptEnv", _m_InitScriptEnv);
+			Utils.RegisterFunc(L, Utils.METHOD_IDX, "RawRunScript", _m_RawRunScript);
 			Utils.RegisterFunc(L, Utils.METHOD_IDX, "RunScript", _m_RunScript);
 			Utils.RegisterFunc(L, Utils.METHOD_IDX, "DestroyScript", _m_DestroyScript);
 			
@@ -99,6 +100,34 @@ namespace XLua.CSObjectWrap
                     
                     
                     return 0;
+                }
+                
+            } catch(System.Exception gen_e) {
+                return LuaAPI.luaL_error(L, "c# exception:" + gen_e);
+            }
+            
+        }
+        
+        [MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+        static int _m_RawRunScript(RealStatePtr L)
+        {
+		    try {
+            
+                ObjectTranslator translator = ObjectTranslatorPool.Instance.Find(L);
+            
+            
+                PMLua.LuaScriptExecutor gen_to_be_invoked = (PMLua.LuaScriptExecutor)translator.FastGetCSObj(L, 1);
+            
+            
+                
+                {
+                    
+                        var gen_ret = gen_to_be_invoked.RawRunScript(  );
+                        translator.Push(L, gen_ret);
+                    
+                    
+                    
+                    return 1;
                 }
                 
             } catch(System.Exception gen_e) {

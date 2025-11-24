@@ -351,7 +351,7 @@ namespace XLua.CSObjectWrap
                 
                 {
                     UnityEngine.GameObject _owner = (UnityEngine.GameObject)translator.GetObject(L, 2, typeof(UnityEngine.GameObject));
-                    int _stage = LuaAPI.xlua_tointeger(L, 3);
+                    string _stage = LuaAPI.lua_tostring(L, 3);
                     
                     gen_to_be_invoked.SetAnimation( _owner, _stage );
                     

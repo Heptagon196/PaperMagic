@@ -19,6 +19,7 @@ namespace Controller
             {
                 _instance = this;
                 PlayerPropertySlider.RegisterProperty(SliderPropertyType.Health, this);
+                faction = CreatureFaction.Friendly;
                 DontDestroyOnLoad(gameObject);
                 return;
             }

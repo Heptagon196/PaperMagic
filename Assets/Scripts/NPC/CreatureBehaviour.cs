@@ -9,13 +9,6 @@ using XLua;
 namespace NPC
 {
     [Serializable, LuaCallCSharp]
-    public enum CreatureFaction
-    {
-        Friendly, // 友好
-        Hostile, // 敌对
-        Neutral, // 中立
-    }
-    [Serializable, LuaCallCSharp]
     public enum CreatureLevel
     {
         None = -1,
@@ -32,18 +25,22 @@ namespace NPC
         public CreatureLevel level;
         public float maxHealth;
         public string path;
-        public Dictionary<CreatureAnimationStage, List<string>> AnimationSprites = new();
-        public Dictionary<CreatureAnimationStage, float> AnimationSpriteSwitchDurations = new();
+        public float width;
+        public float height;
+        public int xid;
+        public Dictionary<string, List<string>> AnimationSprites = new();
+        public Dictionary<string, float> AnimationSpriteSwitchDurations = new();
         public abstract CreatureInfoBase Clone();
         public abstract void OnUpdate();
         public abstract void OnStart(GameObject owner);
+        public abstract void OnDeath();
         public abstract void SetIsOnGround(bool isOnGround);
     }
     [CSharpCallLua]
     public interface ICreatureAnimLua
     {
         // ReSharper disable once InconsistentNaming
-        public int anim { get; }
+        public string anim { get; }
         // ReSharper disable once InconsistentNaming
         public int num { get; }
         // ReSharper disable once InconsistentNaming
@@ -53,19 +50,10 @@ namespace NPC
     public delegate void OnCreatureAction(LuaTable self);
     public class CreatureInfoLua : CreatureInfoBase
     {
-        public static readonly Dictionary<CreatureAnimationStage, string> SpriteGroupName = new()
-        {
-            { CreatureAnimationStage.Death, "death" },
-            { CreatureAnimationStage.Idle, "idle" },
-            { CreatureAnimationStage.Walk, "walk" },
-            { CreatureAnimationStage.Run, "run" },
-            { CreatureAnimationStage.Jump, "jump" },
-            { CreatureAnimationStage.Attack, "attack" },
-            { CreatureAnimationStage.Shield, "shield" },
-        };
         private readonly LuaTable _module;
         private readonly OnCreatureAction _onUpdate;
         private readonly OnCreatureAction _onStart;
+        private readonly OnCreatureAction _onDeath;
         public CreatureInfoLua(LuaTable table, string scriptPath)
         {
             if (table == null)
@@ -79,22 +67,26 @@ namespace NPC
             faction = (CreatureFaction)table.Get<int>("Faction");
             level = (CreatureLevel)table.Get<int>("Level");
             maxHealth = table.Get<float>("Health");
+            width = table.TryGet<float>("Width", 1);
+            height = table.TryGet<float>("Height", 2);
             var spriteFolder = table.Get<string>("AnimationFolder");
             var spriteSet = table.Get<List<ICreatureAnimLua>>("Animations");
             _onUpdate = table.Get<OnCreatureAction>("OnUpdate");
             _onStart = table.Get<OnCreatureAction>("OnStart");
+            _onDeath = table.Get<OnCreatureAction>("OnDeath");
+            xid = CreatureBase.AllocCreatureXid();
+            table.Set("XID", xid);
             AnimationSprites.Clear();
             AnimationSpriteSwitchDurations.Clear();
             foreach (var sprite in spriteSet)
             {
-                var stat = (CreatureAnimationStage)sprite.anim;
-                var spritePrefix = SpriteGroupName.GetValueOrDefault(stat);
-                AnimationSprites[stat] = new();
-                AnimationSpriteSwitchDurations.Add(stat, sprite.duration);
+                var animPrefix = sprite.anim;
+                AnimationSprites[animPrefix] = new();
+                AnimationSpriteSwitchDurations.Add(animPrefix, sprite.duration);
                 for (var idx = 1; idx <= sprite.num; idx++)
                 {
-                    var spritePath = $"{spriteFolder}/{spritePrefix}_{idx}.png";
-                    AnimationSprites[stat].Add(spritePath);
+                    var spritePath = $"{spriteFolder}/{animPrefix}_{idx}.png";
+                    AnimationSprites[animPrefix].Add(spritePath);
                 }
             }
         }
@@ -115,6 +107,10 @@ namespace NPC
         {
             _module.Set("Owner", owner);
             _onStart?.Invoke(_module);
+        }
+        public override void OnDeath()
+        {
+            _onDeath?.Invoke(_module);
         }
         public override void SetIsOnGround(bool isOnGround)
         {
@@ -145,6 +141,11 @@ namespace NPC
         }
         public void SetToDead()
         {
+            if (!creatureInited)
+            {
+                return;
+            }
+            CreatureInfo?.OnDeath();
             creatureInited = false;
             Destroy(gameObject);
             new GameObject().AddComponent<CreatureDeathAnimation>().InitAnim(_creatureAnimation);
@@ -153,10 +154,18 @@ namespace NPC
         {
             CreatureInfo = info;
             healthPoint = info.maxHealth;
+            faction = info.faction;
             maxHealthPoint = healthPoint;
             creatureInited = true;
             _creatureAnimation.LoadSpriteSet(info.AnimationSprites, info.AnimationSpriteSwitchDurations);
             _creatureMovement.SetCreature(info);
+
+            var capsuleCollider = transform.GetComponent<CapsuleCollider>();
+            if (capsuleCollider != null)
+            {
+                capsuleCollider.radius = info.width / 2;
+                capsuleCollider.height = info.height;
+            }
         }
         private void Update()
         {
@@ -165,7 +174,6 @@ namespace NPC
                 SetToDead();
             }
         }
-
         private bool _onDeathCalled = false;
         public override void OnTakeDamage(float damage, CreatureBase source)
         {

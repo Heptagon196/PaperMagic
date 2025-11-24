@@ -21,23 +21,25 @@ namespace XLua.CSObjectWrap
         {
 			ObjectTranslator translator = ObjectTranslatorPool.Instance.Find(L);
 			System.Type type = typeof(PMLua.PaperMagicLuaHelper);
-			Utils.BeginObjectRegister(type, L, translator, 0, 3, 6, 6);
+			Utils.BeginObjectRegister(type, L, translator, 0, 3, 7, 7);
 			
 			Utils.RegisterFunc(L, Utils.METHOD_IDX, "OnInit", _m_OnInit);
 			Utils.RegisterFunc(L, Utils.METHOD_IDX, "Log", _m_Log);
 			Utils.RegisterFunc(L, Utils.METHOD_IDX, "RotateVec", _m_RotateVec);
 			
 			
-			Utils.RegisterFunc(L, Utils.GETTER_IDX, "Creature", _g_get_Creature);
+			Utils.RegisterFunc(L, Utils.GETTER_IDX, "Backpack", _g_get_Backpack);
+            Utils.RegisterFunc(L, Utils.GETTER_IDX, "Chat", _g_get_Chat);
+            Utils.RegisterFunc(L, Utils.GETTER_IDX, "Creature", _g_get_Creature);
             Utils.RegisterFunc(L, Utils.GETTER_IDX, "Effect", _g_get_Effect);
-            Utils.RegisterFunc(L, Utils.GETTER_IDX, "Backpack", _g_get_Backpack);
             Utils.RegisterFunc(L, Utils.GETTER_IDX, "Player", _g_get_Player);
             Utils.RegisterFunc(L, Utils.GETTER_IDX, "Projectile", _g_get_Projectile);
             Utils.RegisterFunc(L, Utils.GETTER_IDX, "Quest", _g_get_Quest);
             
-			Utils.RegisterFunc(L, Utils.SETTER_IDX, "Creature", _s_set_Creature);
+			Utils.RegisterFunc(L, Utils.SETTER_IDX, "Backpack", _s_set_Backpack);
+            Utils.RegisterFunc(L, Utils.SETTER_IDX, "Chat", _s_set_Chat);
+            Utils.RegisterFunc(L, Utils.SETTER_IDX, "Creature", _s_set_Creature);
             Utils.RegisterFunc(L, Utils.SETTER_IDX, "Effect", _s_set_Effect);
-            Utils.RegisterFunc(L, Utils.SETTER_IDX, "Backpack", _s_set_Backpack);
             Utils.RegisterFunc(L, Utils.SETTER_IDX, "Player", _s_set_Player);
             Utils.RegisterFunc(L, Utils.SETTER_IDX, "Projectile", _s_set_Projectile);
             Utils.RegisterFunc(L, Utils.SETTER_IDX, "Quest", _s_set_Quest);
@@ -175,6 +177,34 @@ namespace XLua.CSObjectWrap
         
         
         [MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+        static int _g_get_Backpack(RealStatePtr L)
+        {
+		    try {
+                ObjectTranslator translator = ObjectTranslatorPool.Instance.Find(L);
+			
+                PMLua.PaperMagicLuaHelper gen_to_be_invoked = (PMLua.PaperMagicLuaHelper)translator.FastGetCSObj(L, 1);
+                translator.Push(L, gen_to_be_invoked.Backpack);
+            } catch(System.Exception gen_e) {
+                return LuaAPI.luaL_error(L, "c# exception:" + gen_e);
+            }
+            return 1;
+        }
+        
+        [MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+        static int _g_get_Chat(RealStatePtr L)
+        {
+		    try {
+                ObjectTranslator translator = ObjectTranslatorPool.Instance.Find(L);
+			
+                PMLua.PaperMagicLuaHelper gen_to_be_invoked = (PMLua.PaperMagicLuaHelper)translator.FastGetCSObj(L, 1);
+                translator.Push(L, gen_to_be_invoked.Chat);
+            } catch(System.Exception gen_e) {
+                return LuaAPI.luaL_error(L, "c# exception:" + gen_e);
+            }
+            return 1;
+        }
+        
+        [MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
         static int _g_get_Creature(RealStatePtr L)
         {
 		    try {
@@ -196,20 +226,6 @@ namespace XLua.CSObjectWrap
 			
                 PMLua.PaperMagicLuaHelper gen_to_be_invoked = (PMLua.PaperMagicLuaHelper)translator.FastGetCSObj(L, 1);
                 translator.Push(L, gen_to_be_invoked.Effect);
-            } catch(System.Exception gen_e) {
-                return LuaAPI.luaL_error(L, "c# exception:" + gen_e);
-            }
-            return 1;
-        }
-        
-        [MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
-        static int _g_get_Backpack(RealStatePtr L)
-        {
-		    try {
-                ObjectTranslator translator = ObjectTranslatorPool.Instance.Find(L);
-			
-                PMLua.PaperMagicLuaHelper gen_to_be_invoked = (PMLua.PaperMagicLuaHelper)translator.FastGetCSObj(L, 1);
-                translator.Push(L, gen_to_be_invoked.Backpack);
             } catch(System.Exception gen_e) {
                 return LuaAPI.luaL_error(L, "c# exception:" + gen_e);
             }
@@ -261,6 +277,36 @@ namespace XLua.CSObjectWrap
         
         
         [MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+        static int _s_set_Backpack(RealStatePtr L)
+        {
+		    try {
+                ObjectTranslator translator = ObjectTranslatorPool.Instance.Find(L);
+			
+                PMLua.PaperMagicLuaHelper gen_to_be_invoked = (PMLua.PaperMagicLuaHelper)translator.FastGetCSObj(L, 1);
+                gen_to_be_invoked.Backpack = (PMLua.Export.BackpackLua)translator.GetObject(L, 2, typeof(PMLua.Export.BackpackLua));
+            
+            } catch(System.Exception gen_e) {
+                return LuaAPI.luaL_error(L, "c# exception:" + gen_e);
+            }
+            return 0;
+        }
+        
+        [MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+        static int _s_set_Chat(RealStatePtr L)
+        {
+		    try {
+                ObjectTranslator translator = ObjectTranslatorPool.Instance.Find(L);
+			
+                PMLua.PaperMagicLuaHelper gen_to_be_invoked = (PMLua.PaperMagicLuaHelper)translator.FastGetCSObj(L, 1);
+                gen_to_be_invoked.Chat = (PMLua.Export.ChatLua)translator.GetObject(L, 2, typeof(PMLua.Export.ChatLua));
+            
+            } catch(System.Exception gen_e) {
+                return LuaAPI.luaL_error(L, "c# exception:" + gen_e);
+            }
+            return 0;
+        }
+        
+        [MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
         static int _s_set_Creature(RealStatePtr L)
         {
 		    try {
@@ -283,21 +329,6 @@ namespace XLua.CSObjectWrap
 			
                 PMLua.PaperMagicLuaHelper gen_to_be_invoked = (PMLua.PaperMagicLuaHelper)translator.FastGetCSObj(L, 1);
                 gen_to_be_invoked.Effect = (PMLua.Export.EffectLua)translator.GetObject(L, 2, typeof(PMLua.Export.EffectLua));
-            
-            } catch(System.Exception gen_e) {
-                return LuaAPI.luaL_error(L, "c# exception:" + gen_e);
-            }
-            return 0;
-        }
-        
-        [MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
-        static int _s_set_Backpack(RealStatePtr L)
-        {
-		    try {
-                ObjectTranslator translator = ObjectTranslatorPool.Instance.Find(L);
-			
-                PMLua.PaperMagicLuaHelper gen_to_be_invoked = (PMLua.PaperMagicLuaHelper)translator.FastGetCSObj(L, 1);
-                gen_to_be_invoked.Backpack = (PMLua.Export.BackpackLua)translator.GetObject(L, 2, typeof(PMLua.Export.BackpackLua));
             
             } catch(System.Exception gen_e) {
                 return LuaAPI.luaL_error(L, "c# exception:" + gen_e);

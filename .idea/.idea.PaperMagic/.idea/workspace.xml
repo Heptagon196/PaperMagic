@@ -4,7 +4,56 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="42ba9b4e-4b93-444d-b127-378c80b30214" name="更改" comment="" />
+    <list default="true" id="42ba9b4e-4b93-444d-b127-378c80b30214" name="更改" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/PMLua/Export/ChatLua.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/PMLua/Export/ChatLua.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/ChatBox.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/ChatBox/ChatBox.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/ChatBox/ChatBox.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/ChatBox/ChatBoxProvider.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/ChatBox/ChatBoxProvider.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/ChatBox/LuaChatBoxProvider.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/ChatBox/LuaChatBoxProvider.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/ChatBox/ShopManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/ChatBox/ShopManager.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/General/ConfirmBox.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/General/ConfirmBox.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.PaperMagic/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PaperMagic/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/NPC.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/NPC.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Backpack/SpellUIItem.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Backpack/SpellUIItem.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Backpack/BackpackData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Backpack/BackpackData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Backpack/NormalItemManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Backpack/NormalItemManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controller/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/PlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NPC/CreatureAnimation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NPC/CreatureAnimation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NPC/CreatureBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NPC/CreatureBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NPC/CreatureBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NPC/CreatureBehaviour.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NPC/CreatureDeathAnimation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NPC/CreatureDeathAnimation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NPC/CreatureMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NPC/CreatureMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PMLua/Export/CreatureLua.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PMLua/Export/CreatureLua.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PMLua/LuaScriptExecutor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PMLua/LuaScriptExecutor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PMLua/PaperMagicLuaHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PMLua/PaperMagicLuaHelper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Quest/QuestManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Quest/QuestManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SaveData/SaveDataManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SaveData/SaveDataManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Backpack/ItemButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Backpack/ItemButton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/General/GridLayoutFitter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/General/GridLayoutFitter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/General/UIFunctions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/General/UIFunctions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Gen/NPC_CreatureBaseWrap.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/XLua/Gen/NPC_CreatureBaseWrap.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Gen/NPC_CreatureInfoBaseWrap.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/XLua/Gen/NPC_CreatureInfoBaseWrap.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Gen/NPC_ICreatureAnimLuaBridge.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/XLua/Gen/NPC_ICreatureAnimLuaBridge.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Gen/PMLua_Export_CreatureLuaWrap.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/XLua/Gen/PMLua_Export_CreatureLuaWrap.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Gen/PMLua_LuaScriptExecutorWrap.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/XLua/Gen/PMLua_LuaScriptExecutorWrap.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Gen/PMLua_PaperMagicLuaHelperWrap.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/XLua/Gen/PMLua_PaperMagicLuaHelperWrap.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Gen/XLuaGenAutoRegister.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/XLua/Gen/XLuaGenAutoRegister.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Gen/link.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/XLua/Gen/link.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameData/SaveData/0.json" beforeDir="false" afterPath="$PROJECT_DIR$/GameData/SaveData/0.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameData/SaveData/1.json" beforeDir="false" afterPath="$PROJECT_DIR$/GameData/SaveData/1.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameData/Scripts/.vscode/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/GameData/Scripts/.vscode/settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameData/Scripts/Lib/AI.lua" beforeDir="false" afterPath="$PROJECT_DIR$/GameData/Scripts/Lib/AI.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameData/Scripts/Lib/Backpack.lua" beforeDir="false" afterPath="$PROJECT_DIR$/GameData/Scripts/Lib/Backpack.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameData/Scripts/Lib/General.lua" beforeDir="false" afterPath="$PROJECT_DIR$/GameData/Scripts/Lib/General.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,6 +61,9 @@
   </component>
   <component name="DpaMonitoringSettings">
     <option name="firstShow" value="false" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/03fb069b9d44498e9961a63c104533ff2b600/84/ae0928a5/TweenCallback.cs" root0="FORCE_HIGHLIGHTING" />
@@ -33,6 +85,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b0b044832c86429e90c306261f4bbd83177a00/5b/1a3ae00b/Vector3.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b0b044832c86429e90c306261f4bbd83177a00/93/0a47dd0f/Renderer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b0b044832c86429e90c306261f4bbd83177a00/a4/ffcab543/Transform.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b0b044832c86429e90c306261f4bbd83177a00/ae/d789bb23/Mathf.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b0b044832c86429e90c306261f4bbd83177a00/ba/a1daeec9/RectTransform.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b0b044832c86429e90c306261f4bbd83177a00/d9/4848417b/UnityEvent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b0b044832c86429e90c306261f4bbd83177a00/e1/47cf2042/SpriteRenderer.cs" root0="FORCE_HIGHLIGHTING" />
@@ -55,6 +108,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/NPC/EnemyController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/NPC/NPCController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PMLua/Export/BackpackLua.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PMLua/Export/ChatLua.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PMLua/Export/CreatureLua.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PMLua/Export/EffectLua.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PMLua/Export/PlayerLua.cs" root0="FORCE_HIGHLIGHTING" />
@@ -70,7 +124,12 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Backpack/BackpackPanel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Backpack/ItemButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Backpack/SpellPanel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/ChatBox/ChatBox.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/ChatBox/ChatBoxProvider.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/ChatBox/LuaChatBoxProvider.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/ChatBox/ShopManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/General/CheckMouseHover.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/General/ConfirmBox.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/General/FloatTipWidget.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/General/GridLayoutFitter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/General/KeepActiveWhenHovering.cs" root0="FORCE_HIGHLIGHTING" />
@@ -89,21 +148,27 @@
   &quot;associatedIndex&quot;: 2
 }</component>
   <component name="ProjectId" id="35EYZ0LcaiwiZ4bZpqYezusZBLx" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;XThreadsFramesViewSplitterKey&quot;: &quot;0.4640523&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.build.unityPlugin&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;CodeLensConfigurable&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;,
     &quot;附加到 Unity 播放器.WindowsPlayer(2,LAPTOP_ERIC).executor&quot;: &quot;Debug&quot;,
     &quot;附加到 Unity 编辑器.附加到 Unity 编辑器.executor&quot;: &quot;Debug&quot;
@@ -146,15 +211,13 @@
       <option name="MIXED_MODE_DEBUG" value="0" />
       <method v="2" />
     </configuration>
-    <configuration name="附加到 Unity 编辑器" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="88868">
+    <configuration name="附加到 Unity 编辑器" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="88868" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="runtimes">
-        <list>
-          <MonoRuntime />
-        </list>
+        <list />
       </option>
       <option name="selectedOptions">
         <list />
@@ -214,7 +277,8 @@
       <workItem from="1763646245408" duration="16648000" />
       <workItem from="1763702892695" duration="31867000" />
       <workItem from="1763813832754" duration="22548000" />
-      <workItem from="1763875621040" duration="23736000" />
+      <workItem from="1763875621040" duration="33451000" />
+      <workItem from="1763989137547" duration="15819000" />
     </task>
     <servers />
   </component>

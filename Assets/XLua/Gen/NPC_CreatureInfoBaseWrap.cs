@@ -21,11 +21,12 @@ namespace XLua.CSObjectWrap
         {
 			ObjectTranslator translator = ObjectTranslatorPool.Instance.Find(L);
 			System.Type type = typeof(NPC.CreatureInfoBase);
-			Utils.BeginObjectRegister(type, L, translator, 0, 4, 8, 8);
+			Utils.BeginObjectRegister(type, L, translator, 0, 5, 11, 11);
 			
 			Utils.RegisterFunc(L, Utils.METHOD_IDX, "Clone", _m_Clone);
 			Utils.RegisterFunc(L, Utils.METHOD_IDX, "OnUpdate", _m_OnUpdate);
 			Utils.RegisterFunc(L, Utils.METHOD_IDX, "OnStart", _m_OnStart);
+			Utils.RegisterFunc(L, Utils.METHOD_IDX, "OnDeath", _m_OnDeath);
 			Utils.RegisterFunc(L, Utils.METHOD_IDX, "SetIsOnGround", _m_SetIsOnGround);
 			
 			
@@ -35,6 +36,9 @@ namespace XLua.CSObjectWrap
             Utils.RegisterFunc(L, Utils.GETTER_IDX, "level", _g_get_level);
             Utils.RegisterFunc(L, Utils.GETTER_IDX, "maxHealth", _g_get_maxHealth);
             Utils.RegisterFunc(L, Utils.GETTER_IDX, "path", _g_get_path);
+            Utils.RegisterFunc(L, Utils.GETTER_IDX, "width", _g_get_width);
+            Utils.RegisterFunc(L, Utils.GETTER_IDX, "height", _g_get_height);
+            Utils.RegisterFunc(L, Utils.GETTER_IDX, "xid", _g_get_xid);
             Utils.RegisterFunc(L, Utils.GETTER_IDX, "AnimationSprites", _g_get_AnimationSprites);
             Utils.RegisterFunc(L, Utils.GETTER_IDX, "AnimationSpriteSwitchDurations", _g_get_AnimationSpriteSwitchDurations);
             
@@ -44,6 +48,9 @@ namespace XLua.CSObjectWrap
             Utils.RegisterFunc(L, Utils.SETTER_IDX, "level", _s_set_level);
             Utils.RegisterFunc(L, Utils.SETTER_IDX, "maxHealth", _s_set_maxHealth);
             Utils.RegisterFunc(L, Utils.SETTER_IDX, "path", _s_set_path);
+            Utils.RegisterFunc(L, Utils.SETTER_IDX, "width", _s_set_width);
+            Utils.RegisterFunc(L, Utils.SETTER_IDX, "height", _s_set_height);
+            Utils.RegisterFunc(L, Utils.SETTER_IDX, "xid", _s_set_xid);
             Utils.RegisterFunc(L, Utils.SETTER_IDX, "AnimationSprites", _s_set_AnimationSprites);
             Utils.RegisterFunc(L, Utils.SETTER_IDX, "AnimationSpriteSwitchDurations", _s_set_AnimationSpriteSwitchDurations);
             
@@ -145,6 +152,33 @@ namespace XLua.CSObjectWrap
                     UnityEngine.GameObject _owner = (UnityEngine.GameObject)translator.GetObject(L, 2, typeof(UnityEngine.GameObject));
                     
                     gen_to_be_invoked.OnStart( _owner );
+                    
+                    
+                    
+                    return 0;
+                }
+                
+            } catch(System.Exception gen_e) {
+                return LuaAPI.luaL_error(L, "c# exception:" + gen_e);
+            }
+            
+        }
+        
+        [MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+        static int _m_OnDeath(RealStatePtr L)
+        {
+		    try {
+            
+                ObjectTranslator translator = ObjectTranslatorPool.Instance.Find(L);
+            
+            
+                NPC.CreatureInfoBase gen_to_be_invoked = (NPC.CreatureInfoBase)translator.FastGetCSObj(L, 1);
+            
+            
+                
+                {
+                    
+                    gen_to_be_invoked.OnDeath(  );
                     
                     
                     
@@ -266,6 +300,48 @@ namespace XLua.CSObjectWrap
 			
                 NPC.CreatureInfoBase gen_to_be_invoked = (NPC.CreatureInfoBase)translator.FastGetCSObj(L, 1);
                 LuaAPI.lua_pushstring(L, gen_to_be_invoked.path);
+            } catch(System.Exception gen_e) {
+                return LuaAPI.luaL_error(L, "c# exception:" + gen_e);
+            }
+            return 1;
+        }
+        
+        [MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+        static int _g_get_width(RealStatePtr L)
+        {
+		    try {
+                ObjectTranslator translator = ObjectTranslatorPool.Instance.Find(L);
+			
+                NPC.CreatureInfoBase gen_to_be_invoked = (NPC.CreatureInfoBase)translator.FastGetCSObj(L, 1);
+                LuaAPI.lua_pushnumber(L, gen_to_be_invoked.width);
+            } catch(System.Exception gen_e) {
+                return LuaAPI.luaL_error(L, "c# exception:" + gen_e);
+            }
+            return 1;
+        }
+        
+        [MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+        static int _g_get_height(RealStatePtr L)
+        {
+		    try {
+                ObjectTranslator translator = ObjectTranslatorPool.Instance.Find(L);
+			
+                NPC.CreatureInfoBase gen_to_be_invoked = (NPC.CreatureInfoBase)translator.FastGetCSObj(L, 1);
+                LuaAPI.lua_pushnumber(L, gen_to_be_invoked.height);
+            } catch(System.Exception gen_e) {
+                return LuaAPI.luaL_error(L, "c# exception:" + gen_e);
+            }
+            return 1;
+        }
+        
+        [MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+        static int _g_get_xid(RealStatePtr L)
+        {
+		    try {
+                ObjectTranslator translator = ObjectTranslatorPool.Instance.Find(L);
+			
+                NPC.CreatureInfoBase gen_to_be_invoked = (NPC.CreatureInfoBase)translator.FastGetCSObj(L, 1);
+                LuaAPI.xlua_pushinteger(L, gen_to_be_invoked.xid);
             } catch(System.Exception gen_e) {
                 return LuaAPI.luaL_error(L, "c# exception:" + gen_e);
             }
@@ -395,13 +471,58 @@ namespace XLua.CSObjectWrap
         }
         
         [MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+        static int _s_set_width(RealStatePtr L)
+        {
+		    try {
+                ObjectTranslator translator = ObjectTranslatorPool.Instance.Find(L);
+			
+                NPC.CreatureInfoBase gen_to_be_invoked = (NPC.CreatureInfoBase)translator.FastGetCSObj(L, 1);
+                gen_to_be_invoked.width = (float)LuaAPI.lua_tonumber(L, 2);
+            
+            } catch(System.Exception gen_e) {
+                return LuaAPI.luaL_error(L, "c# exception:" + gen_e);
+            }
+            return 0;
+        }
+        
+        [MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+        static int _s_set_height(RealStatePtr L)
+        {
+		    try {
+                ObjectTranslator translator = ObjectTranslatorPool.Instance.Find(L);
+			
+                NPC.CreatureInfoBase gen_to_be_invoked = (NPC.CreatureInfoBase)translator.FastGetCSObj(L, 1);
+                gen_to_be_invoked.height = (float)LuaAPI.lua_tonumber(L, 2);
+            
+            } catch(System.Exception gen_e) {
+                return LuaAPI.luaL_error(L, "c# exception:" + gen_e);
+            }
+            return 0;
+        }
+        
+        [MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+        static int _s_set_xid(RealStatePtr L)
+        {
+		    try {
+                ObjectTranslator translator = ObjectTranslatorPool.Instance.Find(L);
+			
+                NPC.CreatureInfoBase gen_to_be_invoked = (NPC.CreatureInfoBase)translator.FastGetCSObj(L, 1);
+                gen_to_be_invoked.xid = LuaAPI.xlua_tointeger(L, 2);
+            
+            } catch(System.Exception gen_e) {
+                return LuaAPI.luaL_error(L, "c# exception:" + gen_e);
+            }
+            return 0;
+        }
+        
+        [MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
         static int _s_set_AnimationSprites(RealStatePtr L)
         {
 		    try {
                 ObjectTranslator translator = ObjectTranslatorPool.Instance.Find(L);
 			
                 NPC.CreatureInfoBase gen_to_be_invoked = (NPC.CreatureInfoBase)translator.FastGetCSObj(L, 1);
-                gen_to_be_invoked.AnimationSprites = (System.Collections.Generic.Dictionary<NPC.CreatureAnimationStage, System.Collections.Generic.List<string>>)translator.GetObject(L, 2, typeof(System.Collections.Generic.Dictionary<NPC.CreatureAnimationStage, System.Collections.Generic.List<string>>));
+                gen_to_be_invoked.AnimationSprites = (System.Collections.Generic.Dictionary<string, System.Collections.Generic.List<string>>)translator.GetObject(L, 2, typeof(System.Collections.Generic.Dictionary<string, System.Collections.Generic.List<string>>));
             
             } catch(System.Exception gen_e) {
                 return LuaAPI.luaL_error(L, "c# exception:" + gen_e);
@@ -416,7 +537,7 @@ namespace XLua.CSObjectWrap
                 ObjectTranslator translator = ObjectTranslatorPool.Instance.Find(L);
 			
                 NPC.CreatureInfoBase gen_to_be_invoked = (NPC.CreatureInfoBase)translator.FastGetCSObj(L, 1);
-                gen_to_be_invoked.AnimationSpriteSwitchDurations = (System.Collections.Generic.Dictionary<NPC.CreatureAnimationStage, float>)translator.GetObject(L, 2, typeof(System.Collections.Generic.Dictionary<NPC.CreatureAnimationStage, float>));
+                gen_to_be_invoked.AnimationSpriteSwitchDurations = (System.Collections.Generic.Dictionary<string, float>)translator.GetObject(L, 2, typeof(System.Collections.Generic.Dictionary<string, float>));
             
             } catch(System.Exception gen_e) {
                 return LuaAPI.luaL_error(L, "c# exception:" + gen_e);

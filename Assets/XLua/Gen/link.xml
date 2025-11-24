@@ -8,6 +8,14 @@
 		<type fullname="Tutorial.DerivedClass" preserve="all"/>
 		<type fullname="Tutorial.ICalc" preserve="all"/>
 		<type fullname="Tutorial.DerivedClassExtensions" preserve="all"/>
+		<type fullname="UI.ChatBox.ILuaChatLine" preserve="all"/>
+		<type fullname="UI.ChatBox.LuaChatText" preserve="all"/>
+		<type fullname="UI.ChatBox.LuaChatOptions" preserve="all"/>
+		<type fullname="UI.ChatBox.LuaChatAction" preserve="all"/>
+		<type fullname="UI.ChatBox.LuaChatClose" preserve="all"/>
+		<type fullname="UI.ChatBox.LuaChatCreator" preserve="all"/>
+		<type fullname="UI.ChatBox.LuaChatShopItem" preserve="all"/>
+		<type fullname="UI.ChatBox.LuaChatOpenShop" preserve="all"/>
 		<type fullname="Spell.SpellEffectBase" preserve="all"/>
 		<type fullname="Spell.SpellEffectLua" preserve="all"/>
 		<type fullname="Spell.SpellTreeBase" preserve="all"/>
@@ -15,13 +23,14 @@
 		<type fullname="PMLua.LuaScriptExecutor" preserve="all"/>
 		<type fullname="PMLua.PaperMagicLuaHelper" preserve="all"/>
 		<type fullname="PMLua.Export.BackpackLua" preserve="all"/>
+		<type fullname="PMLua.Export.ChatLua" preserve="all"/>
 		<type fullname="PMLua.Export.CreatureLua" preserve="all"/>
 		<type fullname="PMLua.Export.EffectLua" preserve="all"/>
 		<type fullname="PMLua.Export.PlayerLua" preserve="all"/>
 		<type fullname="PMLua.Export.ProjectileLua" preserve="all"/>
 		<type fullname="PMLua.Export.QuestLua" preserve="all"/>
-		<type fullname="NPC.CreatureBase" preserve="all"/>
 		<type fullname="NPC.CreatureFaction" preserve="all"/>
+		<type fullname="NPC.CreatureBase" preserve="all"/>
 		<type fullname="NPC.CreatureLevel" preserve="all"/>
 		<type fullname="NPC.CreatureInfoBase" preserve="all"/>
 		<type fullname="Tutorial.DerivedClass+TestEnumInner" preserve="all"/>

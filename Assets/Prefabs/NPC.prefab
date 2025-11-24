@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7696550287673664463}
   - component: {fileID: 2437034741431021515}
   - component: {fileID: 7173663546017712409}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: NPC
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -35,7 +35,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5663568389359605626}
-  - {fileID: 4446889049222779005}
   - {fileID: 4308465370259012881}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -103,7 +102,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealthPoint: 0
   healthPoint: 0
-  creatureID: std.patrol
+  faction: 0
+  creatureID: std.elite_patrol
   creatureInited: 0
 --- !u!114 &2437034741431021515
 MonoBehaviour:
@@ -134,7 +134,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10efb1b594134007b8ab6da7b05829bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  footPoint: {fileID: 4446889049222779005}
   isGrounded: 0
   creatureAnimation: {fileID: 2437034741431021515}
 --- !u!1 &1805502034016047244
@@ -149,7 +148,7 @@ GameObject:
   - component: {fileID: 4308928465774822809}
   - component: {fileID: 5423510982766896716}
   - component: {fileID: 2542398793849789638}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -242,37 +241,6 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!1 &5903043357231893800
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4446889049222779005}
-  m_Layer: 6
-  m_Name: GroundCheckPoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4446889049222779005
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5903043357231893800}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.75, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 6090035251763043944}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8636809563395277774
 GameObject:
   m_ObjectHideFlags: 0
@@ -283,7 +251,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5663568389359605626}
   - component: {fileID: 8054253327275232191}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}

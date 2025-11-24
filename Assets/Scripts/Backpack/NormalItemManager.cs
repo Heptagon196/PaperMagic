@@ -10,6 +10,7 @@ namespace Backpack
     public static class NormalItemManager
     {
         public const string EmptyItem = "std.empty";
+        public const string CoinItem = "std.coin";
         private static readonly Dictionary<string, NormalItemBase> AllItemSpawner = new();
         public static NormalItemBase SpawnItem(string name)
         {
@@ -33,6 +34,14 @@ namespace Backpack
         {
             RegisterAllLuaItemInfo();
             AllItemSpawner.Add(EmptyItem, new NormalItemEmpty());
+            AllItemSpawner.Add(CoinItem, new NormalItemBase()
+            {
+                itemID = CoinItem,
+                itemName = "金币",
+                itemType = NormalItemType.Normal,
+                itemDesc = "非常开心",
+                itemIcon = "Item/std/coin.png",
+            });
         }
         private static void RegisterAllLuaItemInfo()
         {

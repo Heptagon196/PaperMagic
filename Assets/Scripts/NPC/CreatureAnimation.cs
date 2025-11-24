@@ -1,26 +1,16 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Backpack;
 using UnityEngine;
 
 namespace NPC
 {
-    public enum CreatureAnimationStage
-    {
-        None,
-        Death,
-        Idle,
-        Walk,
-        Run,
-        Jump,
-        Attack,
-        Shield,
-    }
     public class CreatureAnimation : MonoBehaviour
     {
         public float switchDuration = 0.2f;
-        public Dictionary<CreatureAnimationStage, List<Sprite>> Animations = new();
-        public Dictionary<CreatureAnimationStage, float> AnimationSwitchDuration = new();
-        public CreatureAnimationStage currentStage = CreatureAnimationStage.None;
+        public Dictionary<string, List<Sprite>> Animations = new();
+        public Dictionary<string, float> AnimationSwitchDuration = new();
+        public string currentStage = "";
         public List<Sprite> currentSprites;
         public int currentAnimationFrame = 0;
         public bool loop = true;
@@ -57,8 +47,8 @@ namespace NPC
             }
         }
 
-        public void LoadSpriteSet(Dictionary<CreatureAnimationStage, List<string>> spriteSetList,
-            Dictionary<CreatureAnimationStage, float> switchDurations)
+        public void LoadSpriteSet(Dictionary<string, List<string>> spriteSetList,
+            Dictionary<string, float> switchDurations)
         {
             AnimationSwitchDuration = switchDurations;
             _spriteRenderer.sprite = null;
@@ -67,7 +57,7 @@ namespace NPC
                 LoadSpriteSetForStat(spriteSet.Key, spriteSet.Value);
             }
         }
-        public void LoadSpriteSetForStat(CreatureAnimationStage animStage, List<string> spritePathList)
+        public void LoadSpriteSetForStat(string animStage, List<string> spritePathList)
         {
             Animations[animStage] = new(spritePathList.Count);
             var spriteSet = Animations[animStage];
@@ -81,7 +71,7 @@ namespace NPC
                 });
             }
         }
-        public void SetAnimStat(CreatureAnimationStage animStage)
+        public void SetAnimStat(string animStage)
         {
             currentAnimationFrame = 0;
             Animations.TryGetValue(animStage, out currentSprites);

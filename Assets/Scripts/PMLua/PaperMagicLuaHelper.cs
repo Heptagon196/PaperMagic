@@ -4,6 +4,7 @@ using NPC;
 using PMLua.Export;
 using Quest;
 using Spell;
+using UI.ChatBox;
 using UnityEngine;
 using XLua;
 
@@ -12,9 +13,10 @@ namespace PMLua
     [LuaCallCSharp]
     public class PaperMagicLuaHelper
     {
+        public BackpackLua Backpack = new();
+        public ChatLua Chat = new();
         public CreatureLua Creature = new();
         public EffectLua Effect = new();
-        public BackpackLua Backpack = new();
         public PlayerLua Player = new();
         public ProjectileLua Projectile = new();
         public QuestLua Quest = new();

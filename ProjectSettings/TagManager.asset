@@ -15,7 +15,7 @@ TagManager:
   - Water
   - UI
   - Player
-  - 
+  - Creature
   - 
   - 
   - 
@@ -44,9 +44,18 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Player
+  - name: Creature
     uniqueID: 1939084811
     locked: 0
   - name: Bullet
     uniqueID: 4078872863
+    locked: 0
+  - name: New Layer 3
+    uniqueID: 4265809127
+    locked: 0
+  - name: New Layer 4
+    uniqueID: 4081379261
+    locked: 0
+  - name: Player
+    uniqueID: 4220951311
     locked: 0

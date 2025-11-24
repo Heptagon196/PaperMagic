@@ -37,6 +37,30 @@ namespace XLua.CSObjectWrap
             translator.DelayWrapLoader(typeof(Tutorial.DerivedClassExtensions), TutorialDerivedClassExtensionsWrap.__Register);
         
         
+            translator.DelayWrapLoader(typeof(UI.ChatBox.ILuaChatLine), UIChatBoxILuaChatLineWrap.__Register);
+        
+        
+            translator.DelayWrapLoader(typeof(UI.ChatBox.LuaChatText), UIChatBoxLuaChatTextWrap.__Register);
+        
+        
+            translator.DelayWrapLoader(typeof(UI.ChatBox.LuaChatOptions), UIChatBoxLuaChatOptionsWrap.__Register);
+        
+        
+            translator.DelayWrapLoader(typeof(UI.ChatBox.LuaChatAction), UIChatBoxLuaChatActionWrap.__Register);
+        
+        
+            translator.DelayWrapLoader(typeof(UI.ChatBox.LuaChatClose), UIChatBoxLuaChatCloseWrap.__Register);
+        
+        
+            translator.DelayWrapLoader(typeof(UI.ChatBox.LuaChatCreator), UIChatBoxLuaChatCreatorWrap.__Register);
+        
+        
+            translator.DelayWrapLoader(typeof(UI.ChatBox.LuaChatShopItem), UIChatBoxLuaChatShopItemWrap.__Register);
+        
+        
+            translator.DelayWrapLoader(typeof(UI.ChatBox.LuaChatOpenShop), UIChatBoxLuaChatOpenShopWrap.__Register);
+        
+        
             translator.DelayWrapLoader(typeof(Spell.SpellEffectBase), SpellSpellEffectBaseWrap.__Register);
         
         
@@ -58,6 +82,9 @@ namespace XLua.CSObjectWrap
             translator.DelayWrapLoader(typeof(PMLua.Export.BackpackLua), PMLuaExportBackpackLuaWrap.__Register);
         
         
+            translator.DelayWrapLoader(typeof(PMLua.Export.ChatLua), PMLuaExportChatLuaWrap.__Register);
+        
+        
             translator.DelayWrapLoader(typeof(PMLua.Export.CreatureLua), PMLuaExportCreatureLuaWrap.__Register);
         
         
@@ -73,10 +100,10 @@ namespace XLua.CSObjectWrap
             translator.DelayWrapLoader(typeof(PMLua.Export.QuestLua), PMLuaExportQuestLuaWrap.__Register);
         
         
-            translator.DelayWrapLoader(typeof(NPC.CreatureBase), NPCCreatureBaseWrap.__Register);
-        
-        
             translator.DelayWrapLoader(typeof(NPC.CreatureFaction), NPCCreatureFactionWrap.__Register);
+        
+        
+            translator.DelayWrapLoader(typeof(NPC.CreatureBase), NPCCreatureBaseWrap.__Register);
         
         
             translator.DelayWrapLoader(typeof(NPC.CreatureLevel), NPCCreatureLevelWrap.__Register);
@@ -96,6 +123,8 @@ namespace XLua.CSObjectWrap
             
             wrapInit0(luaenv, translator);
             
+            
+            translator.AddInterfaceBridgeCreator(typeof(UI.ChatBox.ILuaChatLine), UIChatBoxILuaChatLineBridge.__Create);
             
             translator.AddInterfaceBridgeCreator(typeof(NPC.ICreatureAnimLua), NPCICreatureAnimLuaBridge.__Create);
             

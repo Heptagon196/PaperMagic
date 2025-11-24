@@ -16,7 +16,6 @@ namespace NPC
     }
     public class CreatureMovement : MonoBehaviour
     {
-        public Transform footPoint;
         public bool isGrounded;
         private SpriteRenderer _spriteRenderer;
         public CreatureAnimation creatureAnimation;
@@ -41,7 +40,9 @@ namespace NPC
             {
                 return;
             }
-            isGrounded = Physics.BoxCast(footPoint.position, new Vector3(0.5f, 0.1f, 0.5f),
+            var pos = transform.position;
+            pos.y = pos.y - CreatureInfo.height + 0.25f;
+            isGrounded = Physics.BoxCast(pos, new Vector3(0.5f, 0.1f, 0.5f),
                 Vector3.down, Quaternion.identity, 0.2f, _groundLayer);
             CreatureInfo.SetIsOnGround(isGrounded);
             CreatureInfo.OnUpdate();

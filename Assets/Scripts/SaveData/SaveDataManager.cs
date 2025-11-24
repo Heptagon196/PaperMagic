@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using Backpack;
 using Quest;
+using UI.ChatBox;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
@@ -32,6 +33,9 @@ namespace SaveData
         public List<QuestSaveDataSerializable> questSave = new();
         public List<QuestSavePair<QuestStatus>> questStatus = new();
         public List<string> activatedQuests = new();
+        
+        // 商店限购
+        public List<ShopBuyLimitSaveLine> shopLimit = new();
     }
     [Serializable]
     public class GameDataItem

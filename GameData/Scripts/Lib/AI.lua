@@ -1,11 +1,17 @@
 ---@class CreatureInfo
----@field ID string
----@field Name string
----@field Faction CreatureFaction
----@field Level CreatureLevel
----@field Health number
+---@field ID string 生物种类标识符
+---@field Name string 生物种类名称
+---@field Faction CreatureFaction 阵营
+---@field Level CreatureLevel 等阶
+---@field Health number 生命上限
+---@field Width? number 生物宽度
+---@field Height? number 生物高度
+---@field XID? number 生物实例唯一标识符
 ---@field AnimationFolder string
 ---@field Animations CreatureAnimGroup[]
+---@field OnStart? fun(self: table): nil
+---@field OnUpdate? fun(self: table): nil
+---@field OnDeath? fun(self: table): nil
 ---@field OnStateEnter? fun(self: table, state: AIState): nil
 ---@field OnStateExit? fun(self: table, state: AIState): nil
 ---@field UpdateStateMachine? fun(self: table, deltaTime: number): nil
@@ -42,23 +48,25 @@ CreatureLevel = {
 
 ---@enum CreatureAnimStage
 CreatureAnimStage = {
-    None = 0,
-    Death = 1,
-    Idle = 2,
-    Walk = 3,
-    Run = 4,
-    Jump = 5,
-    Attack = 6,
-    Shield = 7,
+    None = '',
+    Death = 'death',
+    Idle = 'idle',
+    Walk = 'walk',
+    Run = 'run',
+    Jump = 'jump',
+    Attack = 'attack',
+    Shield = 'shield',
 }
 
 -- 基础AI类
+---@class CreatureInfoExtended
 BaseAI = {
     Owner = nil,
     isGrounded = false,
     ---@type AIState
     currentState = AIState.Idle,
-    stateEnterTime = 0
+    stateEnterTime = 0,
+    XID = nil,
 }
 
 function BaseAI:OnInit()
@@ -102,10 +110,11 @@ end
 -- function BaseAI:UpdateStateMachine(deltaTime) end
 
 ---@param table CreatureInfo
----@return CreatureInfo
+---@return CreatureInfoExtended
 function BaseAI:New(table)
     setmetatable(table, self)
     self.__index = self
+---@diagnostic disable-next-line: return-type-mismatch
     return table
 end
 

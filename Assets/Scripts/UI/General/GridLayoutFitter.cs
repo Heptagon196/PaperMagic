@@ -5,13 +5,17 @@ namespace UI.General
 {
     public class GridLayoutFitter : MonoBehaviour
     {
+        public RectTransform detectTransform;
         private void Start()
         {
             var layout = GetComponent<GridLayoutGroup>();
             layout.constraint = GridLayoutGroup.Constraint.FixedColumnCount;
-            var parentRect = transform.parent.GetComponent<RectTransform>();
-            LayoutRebuilder.ForceRebuildLayoutImmediate(parentRect);
-            var width = parentRect.rect.width - layout.padding.left - layout.padding.right + layout.spacing.x;
+            if (detectTransform == null)
+            {
+                detectTransform = transform.parent.GetComponent<RectTransform>();
+            }
+            LayoutRebuilder.ForceRebuildLayoutImmediate(detectTransform);
+            var width = detectTransform.rect.width - layout.padding.left - layout.padding.right + layout.spacing.x;
             layout.constraintCount = Mathf.FloorToInt(width / (layout.cellSize.x + layout.spacing.x));
         }
     }

@@ -71,10 +71,10 @@ namespace PMLua.Export
             }
             return false;
         }
-        public void SetAnimation(GameObject owner, int stage)
+        public void SetAnimation(GameObject owner, string stage)
         {
             var anim = owner.GetComponent<CreatureAnimation>();
-            anim.SetAnimStat((CreatureAnimationStage)stage);
+            anim.SetAnimStat(stage);
         }
     }
 }

@@ -12,6 +12,7 @@ namespace UI.Backpack
         Backpack,
         Equipped,
         SpellPanel,
+        Shop,
     }
     public interface IItemButtonExtraData {}
     public class ItemButton : MonoBehaviour,

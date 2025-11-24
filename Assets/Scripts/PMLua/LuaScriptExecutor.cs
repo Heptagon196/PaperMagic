@@ -18,10 +18,8 @@ namespace PMLua
         public void InitScriptEnv()
         {
         }
-        public LuaTable RunScript(bool callOnStart = true)
+        public object[] RawRunScript()
         {
-            // 执行脚本
-            object[] ret = null;
             var loadPath = LuaManager.Instance.GetLoadPath(luaScriptPath);
             string content = "";
             try
@@ -33,7 +31,12 @@ namespace PMLua
             {
                 Console.WriteLine(e);
             }
-            ret = Env.DoString(content, loadPath);
+            return Env.DoString(content, loadPath);
+        }
+        public LuaTable RunScript(bool callOnStart = true)
+        {
+            // 执行脚本
+            object[] ret = RawRunScript();
             // 从 Lua 脚本域中获取定义的函数
             var table = ret?.Length > 0 ? ret[0] as LuaTable : null;
             if (callOnStart)

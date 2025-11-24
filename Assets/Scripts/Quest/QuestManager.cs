@@ -52,13 +52,17 @@ namespace Quest
         }
         private static void OnRecvEvent(EventParamBase param)
         {
-            var updateList = ActivatedQuests
-                .Where(activatedQuest => activatedQuest.Key != QuestCategory.QuestGoal)
-                .SelectMany(activatedQuest => activatedQuest.Value).ToList();
-            foreach (var questID in updateList)
+            if (param.EventType is QuestNotifyEvent recvEventType)
             {
-                GetQuestStatus(questID, param.EventType is QuestNotifyEvent eventType ? eventType : QuestNotifyEvent.None,
-                    param.Subject, param.ObjectID);
+                var updateList = ActivatedQuests
+                    .Where(activatedQuest =>
+                        activatedQuest.Key != QuestCategory.QuestGoal)
+                    .SelectMany(activatedQuest => activatedQuest.Value).ToList();
+                foreach (var questID in updateList.Where(questID =>
+                             GetQuestInfo(questID)?.notifyEvents.Contains(recvEventType) ?? false))
+                {
+                    GetQuestStatus(questID, recvEventType, param.Subject, param.ObjectID);
+                }
             }
         }
         public static List<string> GetActivatedQuestsOf(QuestCategory category)
