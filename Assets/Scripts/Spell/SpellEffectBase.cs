@@ -40,6 +40,7 @@ namespace Spell
         public List<PatchOnApplyEvent> OnApply = new();
         public virtual void ApplyEffect(Vector3 spawnLocation, Vector3 spawnTowards)
         {
+            spawnTowards = new Vector3(spawnTowards.x, spawnTowards.y, 0).normalized;
             OnApply.ForEach(patch => patch(this, spawnLocation, spawnTowards));
         }
         public List<PatchOnUpdateEvent> OnUpdate = new();

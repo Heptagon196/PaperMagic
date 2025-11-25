@@ -1,9 +1,21 @@
 {
-    "saveTime": "2025-11-25 01:27:41",
+    "saveTime": "2025-11-26 02:22:51",
+    "movementMode": 0,
     "playerPosition": {
-        "x": 5.904222011566162,
+        "x": 3.5782463550567629,
         "y": 1.5,
-        "z": 0.0
+        "z": -1.0
+    },
+    "cameraPosition": {
+        "x": 6.578246116638184,
+        "y": 4.5,
+        "z": -21.0
+    },
+    "cameraRotation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 1.0
     },
     "maxHealth": 100.0,
     "currentHealth": 0.0,
@@ -36,7 +48,7 @@
         {
             "type": 1,
             "id": "std.triple_cast",
-            "count": 3
+            "count": 4
         },
         {
             "type": 1,
@@ -61,7 +73,7 @@
         {
             "type": 2,
             "id": "std.coin",
-            "count": 8300
+            "count": 8000
         }
     ],
     "equipped": [

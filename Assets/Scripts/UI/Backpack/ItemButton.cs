@@ -13,6 +13,7 @@ namespace UI.Backpack
         Equipped,
         SpellPanel,
         Shop,
+        Indicator,
     }
     public interface IItemButtonExtraData {}
     public class ItemButton : MonoBehaviour,
@@ -21,6 +22,7 @@ namespace UI.Backpack
         IPointerEnterHandler, IPointerExitHandler,
         IPointerClickHandler
     {
+        public bool autoSet = false;
         public bool enableDrag = true;
         public bool enableDrop = true;
         public bool enableTip = true;
@@ -65,6 +67,14 @@ namespace UI.Backpack
                 _dragItem.transform.SetAsLastSibling();
                 _draggingRect = _dragItem.GetComponent<RectTransform>();
                 _dragItem.SetActive(false);
+            }
+        }
+        private void Start()
+        {
+            if (autoSet)
+            {
+                EnableOutline();
+                LoadInfo(itemType, itemID, BackpackManager.Instance.GetNum(itemType, itemID));
             }
         }
         public void EnableOutline(bool toEnable = true)

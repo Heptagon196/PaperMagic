@@ -1,4 +1,5 @@
 ﻿using System;
+using Controller;
 using UnityEngine;
 
 namespace NPC
@@ -24,6 +25,8 @@ namespace NPC
         public CreatureInfoBase CreatureInfo;
         private bool _inited = false;
         private int _playerLayer, _groundLayer, _hitTestLayer;
+        private bool _savedVelocity = false;
+        private Vector3 _velocity;
         public void SetCreature(CreatureInfoBase info)
         {
             _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
@@ -39,6 +42,25 @@ namespace NPC
             if (!_inited)
             {
                 return;
+            }
+            // 俯视角时只允许友善npc行动
+            if (PlayerController.Instance.movementMode == PlayerMovementMode.Topdown)
+            {
+                if (CreatureInfo.faction != CreatureFaction.Friendly)
+                {
+                    if (!_savedVelocity)
+                    {
+                        _savedVelocity = true;
+                        _velocity = _rigidbody.velocity;
+                    }
+                    _rigidbody.velocity = Vector3.zero;
+                    return;
+                }
+            }
+            if (_savedVelocity)
+            {
+                _rigidbody.velocity = _velocity;
+                _savedVelocity = false;
             }
             var pos = transform.position;
             pos.y = pos.y - CreatureInfo.height + 0.25f;

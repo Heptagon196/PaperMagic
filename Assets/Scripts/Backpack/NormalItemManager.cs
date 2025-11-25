@@ -39,7 +39,7 @@ namespace Backpack
                 itemID = CoinItem,
                 itemName = "金币",
                 itemType = NormalItemType.Normal,
-                itemDesc = "非常开心",
+                itemDesc = "<size=20>金币</size>\n\n<i>非常开心</i>",
                 itemIcon = "Item/std/coin.png",
             });
         }

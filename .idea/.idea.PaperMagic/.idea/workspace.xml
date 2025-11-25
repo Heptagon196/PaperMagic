@@ -5,54 +5,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="42ba9b4e-4b93-444d-b127-378c80b30214" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/PMLua/Export/ChatLua.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/PMLua/Export/ChatLua.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/ChatBox.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/ChatBox/ChatBox.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/ChatBox/ChatBox.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/ChatBox/ChatBoxProvider.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/ChatBox/ChatBoxProvider.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/ChatBox/LuaChatBoxProvider.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/ChatBox/LuaChatBoxProvider.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/ChatBox/ShopManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/ChatBox/ShopManager.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/General/ConfirmBox.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/General/ConfirmBox.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/SpriteFaceToCamera.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/SpriteFaceToCamera.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SceneItems.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SceneItems/MovementSwitcher.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SceneItems/MovementSwitcher.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Player/PlayerItemCountIndicator.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Player/PlayerItemCountIndicator.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PaperMagic/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PaperMagic/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/NPC.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/NPC.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Backpack/SpellUIItem.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Backpack/SpellUIItem.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Backpack/BackpackData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Backpack/BackpackData.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Backpack/NormalItemManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Backpack/NormalItemManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controller/CameraController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/CameraController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controller/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NPC/CreatureAnimation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NPC/CreatureAnimation.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NPC/CreatureBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NPC/CreatureBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NPC/CreatureBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NPC/CreatureBehaviour.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NPC/CreatureDeathAnimation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NPC/CreatureDeathAnimation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controller/PlayerMagicController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/PlayerMagicController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/NPC/CreatureMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NPC/CreatureMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PMLua/Export/CreatureLua.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PMLua/Export/CreatureLua.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PMLua/LuaScriptExecutor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PMLua/LuaScriptExecutor.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PMLua/PaperMagicLuaHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PMLua/PaperMagicLuaHelper.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Quest/QuestManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Quest/QuestManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/SaveData/SaveDataManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SaveData/SaveDataManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Spell/SpellEffectBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Spell/SpellEffectBase.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Backpack/ItemButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Backpack/ItemButton.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/General/GridLayoutFitter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/General/GridLayoutFitter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/General/UIFunctions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/General/UIFunctions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/XLua/Gen/NPC_CreatureBaseWrap.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/XLua/Gen/NPC_CreatureBaseWrap.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/XLua/Gen/NPC_CreatureInfoBaseWrap.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/XLua/Gen/NPC_CreatureInfoBaseWrap.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/XLua/Gen/NPC_ICreatureAnimLuaBridge.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/XLua/Gen/NPC_ICreatureAnimLuaBridge.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/XLua/Gen/PMLua_Export_CreatureLuaWrap.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/XLua/Gen/PMLua_Export_CreatureLuaWrap.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/XLua/Gen/PMLua_LuaScriptExecutorWrap.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/XLua/Gen/PMLua_LuaScriptExecutorWrap.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/XLua/Gen/PMLua_PaperMagicLuaHelperWrap.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/XLua/Gen/PMLua_PaperMagicLuaHelperWrap.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/XLua/Gen/XLuaGenAutoRegister.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/XLua/Gen/XLuaGenAutoRegister.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/XLua/Gen/link.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/XLua/Gen/link.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameData/SaveData/0.json" beforeDir="false" afterPath="$PROJECT_DIR$/GameData/SaveData/0.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameData/SaveData/1.json" beforeDir="false" afterPath="$PROJECT_DIR$/GameData/SaveData/1.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameData/Scripts/.vscode/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/GameData/Scripts/.vscode/settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameData/Scripts/Items/TemplateItem.lua" beforeDir="false" afterPath="$PROJECT_DIR$/GameData/Scripts/Items/TemplateItem.lua" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameData/Scripts/Lib/AI.lua" beforeDir="false" afterPath="$PROJECT_DIR$/GameData/Scripts/Lib/AI.lua" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameData/Scripts/Lib/Backpack.lua" beforeDir="false" afterPath="$PROJECT_DIR$/GameData/Scripts/Lib/Backpack.lua" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameData/Scripts/Lib/General.lua" beforeDir="false" afterPath="$PROJECT_DIR$/GameData/Scripts/Lib/General.lua" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameData/Scripts/SpellEffects/DefaultProjectile.lua" beforeDir="false" afterPath="$PROJECT_DIR$/GameData/Scripts/SpellEffects/DefaultProjectile.lua" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,10 +62,13 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b0b044832c86429e90c306261f4bbd83177a00/5b/1a3ae00b/Vector3.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b0b044832c86429e90c306261f4bbd83177a00/93/0a47dd0f/Renderer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b0b044832c86429e90c306261f4bbd83177a00/a4/ffcab543/Transform.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b0b044832c86429e90c306261f4bbd83177a00/a5/ad3779b3/Object.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b0b044832c86429e90c306261f4bbd83177a00/ae/d789bb23/Mathf.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b0b044832c86429e90c306261f4bbd83177a00/ba/a1daeec9/RectTransform.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b0b044832c86429e90c306261f4bbd83177a00/d9/4848417b/UnityEvent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b0b044832c86429e90c306261f4bbd83177a00/e1/47cf2042/SpriteRenderer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ca7b32b31189438bab0ba6f61815e95f1fe00/1e/fdaf10b4/Rigidbody.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ca7b32b31189438bab0ba6f61815e95f1fe00/b7/1cba8835/RigidbodyConstraints.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Backpack/BackpackData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Backpack/BackpackManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Backpack/NormalItem.cs" root0="FORCE_HIGHLIGHTING" />
@@ -98,6 +78,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controller/EventManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controller/PlayerMagicController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controller/SetToSingleton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controller/SpriteFaceToCamera.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Equipment/EquipmentBase.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Equipment/EquipmentManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/NPC/CreatureAnimation.cs" root0="FORCE_HIGHLIGHTING" />
@@ -117,6 +98,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Quest/QuestData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Quest/QuestManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SaveData/SaveDataManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SceneItems/MovementSwitcher.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Spell/Projectile.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Spell/ProjectilePool.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Spell/SpellEffectBase.cs" root0="FORCE_HIGHLIGHTING" />
@@ -135,6 +117,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/General/KeepActiveWhenHovering.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/General/RectTransformExtensions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/General/UIWidgetPool.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Player/PlayerItemCountIndicator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Player/PlayerPropertySlider.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Quest/QuestItem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Quest/QuestPanel.cs" root0="FORCE_HIGHLIGHTING" />
@@ -279,6 +262,7 @@
       <workItem from="1763813832754" duration="22548000" />
       <workItem from="1763875621040" duration="33451000" />
       <workItem from="1763989137547" duration="15819000" />
+      <workItem from="1764078976399" duration="13196000" />
     </task>
     <servers />
   </component>

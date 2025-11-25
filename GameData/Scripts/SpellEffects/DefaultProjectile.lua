@@ -8,12 +8,11 @@ local Data = {
     ShootSpeed = 15,
     CircleRadius = 3,
     Color = CS.UnityEngine.Color(1, 1, 1, 1),
-    CollisionIgnoreTime = 0.05,
     StartTime = 0,
 }
 
 function Data:OnApply(pos, towards)
-    self.Owner.transform.position = pos + towards.normalized
+    self.Owner.transform.position = pos
     self.Owner:GetComponent(typeof(CS.UnityEngine.Rigidbody)).velocity = self.ShootSpeed * towards
 	self.Owner:GetComponentInChildren(typeof(CS.UnityEngine.SpriteRenderer)).color = self.Color
     self.StartTime = CS.UnityEngine.Time.time
@@ -23,7 +22,7 @@ function Data:OnUpdate()
 end
 
 function Data:OnTriggerEnter(other)
-    if (CS.UnityEngine.Time.time - self.StartTime < self.CollisionIgnoreTime) then
+    if (not PM:IsValid(self.Source)) then
         return
     end
     -- 不攻击自身

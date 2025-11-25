@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using Backpack;
+using Controller;
 using Quest;
 using UI.ChatBox;
 using UnityEngine;
@@ -21,7 +22,10 @@ namespace SaveData
     {
         public string saveTime;
         // 玩家
+        public PlayerMovementMode movementMode;
         public Vector3 playerPosition;
+        public Vector3 cameraPosition;
+        public Quaternion cameraRotation;
         public float maxHealth = 100;
         public float currentHealth = 100;
         

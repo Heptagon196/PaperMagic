@@ -254,6 +254,44 @@ function ActionNode:Execute()
     return self.actionFunc(), self
 end
 
+-- 协程动作节点
+---@class AsyncNode: BTNode
+AsyncNode = BTNode:New('Async')
+
+function AsyncNode:New(name, actionFunc)
+    local node = BTNode.New(self, name)
+    node.origFunc = actionFunc
+    node.actionFunc = coroutine.create(actionFunc)
+    return node
+end
+
+function AsyncNode:Execute()
+    local success, result = coroutine.resume(self.actionFunc)
+    local status = coroutine.status(self.actionFunc)
+    local retStatus = BTState.Running
+    if (status == 'dead') then
+        retStatus = result or BTState.Success
+    elseif (result) then
+        retStatus = result
+    end
+    if (retStatus ~= BTState.Running) then
+        self.actionFunc = coroutine.create(self.origFunc)
+    end
+    return retStatus, self
+end
+
+function AsyncWaitSeconds(seconds)
+    local time = 0
+    while (true) do
+        if (time < seconds) then
+            time = time + CS.UnityEngine.Time.deltaTime
+            coroutine.yield()
+        else
+            break
+        end
+    end
+end
+
 -- 装饰器节点
 ---@class DecoratorNode: BTNode
 DecoratorNode = BTNode:New('Decorator')

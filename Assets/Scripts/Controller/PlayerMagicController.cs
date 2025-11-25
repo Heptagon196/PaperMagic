@@ -54,6 +54,10 @@ namespace Controller
                     equipment.ResumeManaOnUpdate();
                 }
             }
+            if (PlayerController.Instance.movementMode == PlayerMovementMode.Topdown)
+            {
+                return;
+            }
             if (UIFunctions.Instance.UIOpen || CheckMouseHover.MouseOnUI)
             {
                 return;

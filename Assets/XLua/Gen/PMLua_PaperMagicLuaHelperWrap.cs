@@ -21,10 +21,13 @@ namespace XLua.CSObjectWrap
         {
 			ObjectTranslator translator = ObjectTranslatorPool.Instance.Find(L);
 			System.Type type = typeof(PMLua.PaperMagicLuaHelper);
-			Utils.BeginObjectRegister(type, L, translator, 0, 3, 7, 7);
+			Utils.BeginObjectRegister(type, L, translator, 0, 6, 7, 7);
 			
 			Utils.RegisterFunc(L, Utils.METHOD_IDX, "OnInit", _m_OnInit);
+			Utils.RegisterFunc(L, Utils.METHOD_IDX, "IsValid", _m_IsValid);
 			Utils.RegisterFunc(L, Utils.METHOD_IDX, "Log", _m_Log);
+			Utils.RegisterFunc(L, Utils.METHOD_IDX, "FloatMsg", _m_FloatMsg);
+			Utils.RegisterFunc(L, Utils.METHOD_IDX, "StartTimer", _m_StartTimer);
 			Utils.RegisterFunc(L, Utils.METHOD_IDX, "RotateVec", _m_RotateVec);
 			
 			
@@ -116,6 +119,35 @@ namespace XLua.CSObjectWrap
         }
         
         [MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+        static int _m_IsValid(RealStatePtr L)
+        {
+		    try {
+            
+                ObjectTranslator translator = ObjectTranslatorPool.Instance.Find(L);
+            
+            
+                PMLua.PaperMagicLuaHelper gen_to_be_invoked = (PMLua.PaperMagicLuaHelper)translator.FastGetCSObj(L, 1);
+            
+            
+                
+                {
+                    UnityEngine.Object _unityObject = (UnityEngine.Object)translator.GetObject(L, 2, typeof(UnityEngine.Object));
+                    
+                        var gen_ret = gen_to_be_invoked.IsValid( _unityObject );
+                        LuaAPI.lua_pushboolean(L, gen_ret);
+                    
+                    
+                    
+                    return 1;
+                }
+                
+            } catch(System.Exception gen_e) {
+                return LuaAPI.luaL_error(L, "c# exception:" + gen_e);
+            }
+            
+        }
+        
+        [MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
         static int _m_Log(RealStatePtr L)
         {
 		    try {
@@ -131,6 +163,63 @@ namespace XLua.CSObjectWrap
                     string _msg = LuaAPI.lua_tostring(L, 2);
                     
                     gen_to_be_invoked.Log( _msg );
+                    
+                    
+                    
+                    return 0;
+                }
+                
+            } catch(System.Exception gen_e) {
+                return LuaAPI.luaL_error(L, "c# exception:" + gen_e);
+            }
+            
+        }
+        
+        [MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+        static int _m_FloatMsg(RealStatePtr L)
+        {
+		    try {
+            
+                ObjectTranslator translator = ObjectTranslatorPool.Instance.Find(L);
+            
+            
+                PMLua.PaperMagicLuaHelper gen_to_be_invoked = (PMLua.PaperMagicLuaHelper)translator.FastGetCSObj(L, 1);
+            
+            
+                
+                {
+                    string _msg = LuaAPI.lua_tostring(L, 2);
+                    
+                    gen_to_be_invoked.FloatMsg( _msg );
+                    
+                    
+                    
+                    return 0;
+                }
+                
+            } catch(System.Exception gen_e) {
+                return LuaAPI.luaL_error(L, "c# exception:" + gen_e);
+            }
+            
+        }
+        
+        [MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+        static int _m_StartTimer(RealStatePtr L)
+        {
+		    try {
+            
+                ObjectTranslator translator = ObjectTranslatorPool.Instance.Find(L);
+            
+            
+                PMLua.PaperMagicLuaHelper gen_to_be_invoked = (PMLua.PaperMagicLuaHelper)translator.FastGetCSObj(L, 1);
+            
+            
+                
+                {
+                    float _seconds = (float)LuaAPI.lua_tonumber(L, 2);
+                    System.Action _callBack = translator.GetDelegate<System.Action>(L, 3);
+                    
+                    gen_to_be_invoked.StartTimer( _seconds, _callBack );
                     
                     
                     

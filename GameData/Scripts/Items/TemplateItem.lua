@@ -4,7 +4,7 @@ local Data = {
     ID = 'std.default',
     Name = '治疗物品',
     Type = NormalItemType.Normal,
-    Desc = '恢复30点生命',
+    Desc = '<size=20>治疗道具</size>\n\n<i>恢复<color=Green>30</color>点生命</i>',
     Icon = 'Item/std/default.png',
 
     Recovery = 30,
