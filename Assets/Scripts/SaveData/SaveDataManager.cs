@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using Backpack;
 using Controller;
+using NPC;
 using Quest;
 using UI.ChatBox;
 using UnityEngine;
@@ -37,9 +38,13 @@ namespace SaveData
         public List<QuestSaveDataSerializable> questSave = new();
         public List<QuestSavePair<QuestStatus>> questStatus = new();
         public List<string> activatedQuests = new();
+        public string selectedQuest;
         
         // 商店限购
         public List<ShopBuyLimitSaveLine> shopLimit = new();
+        
+        // 敌人
+        public List<PersistentCreatureInfo> persistentCreatures = new();
     }
     [Serializable]
     public class GameDataItem
@@ -212,6 +217,10 @@ namespace SaveData
                 currentSaveFileSlot = loadSlot;
             }
             data = GetSaveFileData(currentSaveFileSlot);
+            if (data.currentHealth <= 0)
+            {
+                data.currentHealth = data.maxHealth;
+            }
             if (data == null)
             {
                 data = new()
@@ -230,7 +239,10 @@ namespace SaveData
         }
         public void OnApplicationQuit()
         {
-            SaveGame();
+            if (PlayerController.Instance.healthPoint > 0)
+            {
+                SaveGame();
+            }
             SaveGlobalSettings();
         }
         public void FindAllProcessers()

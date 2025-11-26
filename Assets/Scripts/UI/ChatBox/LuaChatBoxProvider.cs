@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using Backpack;
+using Controller;
 using PMLua;
 using UI.Backpack;
 using UI.General;
@@ -236,6 +237,7 @@ namespace UI.ChatBox
             script.InitScriptEnv();
             LuaManager.Env.Global.Set("ChatBox", new LuaChatCreator("template"));
             var objects = script.RawRunScript();
+            PlayerController.Instance.playerRigidbody.isKinematic = true;
             if (objects.Length > 0 && objects[0] is LuaChatCreator chatCreator)
             {
                 ChatBox.Instance.textPanel.gameObject.SetActive(true);
@@ -243,6 +245,7 @@ namespace UI.ChatBox
                 yield return chatCreator.ExecuteLine();
                 ChatBox.Instance.textPanel.gameObject.SetActive(false);
             }
+            PlayerController.Instance.playerRigidbody.isKinematic = false;
         }
         public void CloseChat()
         {

@@ -5,7 +5,7 @@ local Data = BaseAI:New{
     Faction = CreatureFaction.Hostile,
     Level = CreatureLevel.Normal,
     Health = 20,
-    AnimationFolder = 'Creature/std/Patrol',
+    AnimationFolder = 'Creature/std/Player_Yellow',
     Animations = {
         { anim = CreatureAnimStage.Death, duration = 1, num = 2 },
         { anim = CreatureAnimStage.Idle, duration = 1, num = 1 },

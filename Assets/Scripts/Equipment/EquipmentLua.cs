@@ -18,6 +18,7 @@ namespace Equipment
             equipmentName = module.Get<string>("Name") ?? "";
             equipmentDesc = module.Get<string>("Desc") ?? "";
             equipmentIcon = module.Get<string>("Icon") ?? "";
+            equipmentCapacity = module.TryGet<int>("Capacity", 0);
             slot = (EquipmentSlot)module.TryGet<int>("Slot", 0);
             castType = (EquipmentCastType)module.TryGet<int>("CastType", 0);
             maxMana = module.TryGet<float>("MaxMana", 0);

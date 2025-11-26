@@ -5,6 +5,7 @@ local Data = {
     Name = '默认鞋子',
     Desc = '这是默认鞋子',
     Icon = 'Equip/std/default_shoe.png',
+    Capacity = 1,
     Slot = EquipmentSlot.Foot,
     CastType = EquipmentCastType.PressKey,
     MaxMana = 100,

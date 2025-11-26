@@ -3,7 +3,9 @@ local Data = QuestData:New{
     ID = 'std.default',
     Name = '模板任务',
     Desc = '击杀敌人',
-    Notify = {},
+    Notify = {
+        QuestNotifyEvent.EnemyKill
+    },
     Type = QuestCategory.MainQuest,
     SubQuests = {
         'std.default.kill10', -- 击杀10个敌人

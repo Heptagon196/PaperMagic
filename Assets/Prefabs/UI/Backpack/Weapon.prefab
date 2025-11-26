@@ -223,9 +223,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fe4dd4e00eb43a882a9408c3a5c85e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  autoSet: 0
   enableDrag: 1
   enableDrop: 1
   enableTip: 1
+  enableRightClick: 1
   stat: 0
   itemType: 0
   itemID: 
@@ -385,9 +387,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fe4dd4e00eb43a882a9408c3a5c85e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  autoSet: 0
   enableDrag: 1
   enableDrop: 1
   enableTip: 1
+  enableRightClick: 1
   stat: 0
   itemType: 0
   itemID: 
@@ -634,6 +638,8 @@ MonoBehaviour:
     button: {fileID: 8271817516197979865}
   currentSelected: 2
   enableDrop: 0
+  enableRightClick: 0
+  enableTipOnEmpty: 0
   showCurrentSelected: {fileID: 1959419845241340079}
 --- !u!1 &4777552305870817606
 GameObject:
@@ -784,9 +790,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fe4dd4e00eb43a882a9408c3a5c85e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  autoSet: 0
   enableDrag: 1
   enableDrop: 1
   enableTip: 1
+  enableRightClick: 1
   stat: 0
   itemType: 0
   itemID: 
@@ -1025,9 +1033,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fe4dd4e00eb43a882a9408c3a5c85e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  autoSet: 0
   enableDrag: 1
   enableDrop: 1
   enableTip: 1
+  enableRightClick: 1
   stat: 0
   itemType: 0
   itemID: 
@@ -1277,9 +1287,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fe4dd4e00eb43a882a9408c3a5c85e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  autoSet: 0
   enableDrag: 1
   enableDrop: 1
   enableTip: 1
+  enableRightClick: 1
   stat: 0
   itemType: 0
   itemID: 

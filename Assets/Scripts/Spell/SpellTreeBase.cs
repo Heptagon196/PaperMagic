@@ -45,7 +45,7 @@ namespace Spell
         public abstract void Execute(out int cost, out List<SpellEffectBase> effectList);
         public virtual int GetSize()
         {
-            int num = 1;
+            int num = id != SpellManager.EmptySpell ? 1 : 0;
             foreach (var node in Nodes)
             {
                 num += node.GetSize();
@@ -90,6 +90,15 @@ namespace Spell
     
     public class SpellTreeBaseVirtualRoot : SpellTreeBase
     {
+        public override int GetSize()
+        {
+            int num = 0;
+            foreach (var node in Nodes)
+            {
+                num += node.GetSize();
+            }
+            return num;
+        }
         public override void Execute(out int cost, out List<SpellEffectBase> effectList)
         {
             cost = 0;

@@ -5,7 +5,7 @@ local Data = BaseAI:New{
     Faction = CreatureFaction.Friendly,
     Level = CreatureLevel.Normal,
     Health = 100,
-    AnimationFolder = 'Creature/std/Merchant',
+    AnimationFolder = 'Creature/std/Player_Green',
     Animations = {
         { anim = CreatureAnimStage.Idle, duration = 1, num = 1 },
     },
@@ -19,6 +19,8 @@ function Data:OnStart()
     self:SetAnim(CreatureAnimStage.Idle)
     self.Owner:GetComponent(typeof(CS.UnityEngine.Rigidbody)).isKinematic = true
     self.Owner:GetComponent(typeof(CS.UnityEngine.CapsuleCollider)).isTrigger = true
+    local spriteObj = self.Owner:GetComponentInChildren(typeof(CS.UnityEngine.SpriteRenderer))
+    spriteObj.transform.localPosition = CS.UnityEngine.Vector3(0, 0.3, 0)
 end
 
 function Data:OnDeath()

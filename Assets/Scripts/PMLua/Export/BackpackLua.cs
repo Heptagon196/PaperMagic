@@ -1,4 +1,5 @@
 ﻿using Backpack;
+using Controller;
 using Equipment;
 using XLua;
 
@@ -15,9 +16,9 @@ namespace PMLua.Export
         {
             BackpackManager.Instance.AddNum((BackpackSlot)slot, id, num);
         }
-        public void GetNum(int slot, string id)
+        public int GetNum(int slot, string id)
         {
-            BackpackManager.Instance.GetNum((BackpackSlot)slot, id);
+            return BackpackManager.Instance.GetNum((BackpackSlot)slot, id);
         }
         public string GetEquipped(int slot)
         {
@@ -26,6 +27,10 @@ namespace PMLua.Export
         public void Equip(int slot, string equipID)
         {
             BackpackManager.Instance.Equip((EquipmentSlot)slot, equipID);
+        }
+        public int SpellEquippedCount(int slot, string spellID)
+        {
+            return PlayerMagicController.Instance.SpellEquippedCount(slot, spellID);
         }
     }
 }

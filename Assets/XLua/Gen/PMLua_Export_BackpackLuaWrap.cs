@@ -21,13 +21,14 @@ namespace XLua.CSObjectWrap
         {
 			ObjectTranslator translator = ObjectTranslatorPool.Instance.Find(L);
 			System.Type type = typeof(PMLua.Export.BackpackLua);
-			Utils.BeginObjectRegister(type, L, translator, 0, 5, 0, 0);
+			Utils.BeginObjectRegister(type, L, translator, 0, 6, 0, 0);
 			
 			Utils.RegisterFunc(L, Utils.METHOD_IDX, "SetNum", _m_SetNum);
 			Utils.RegisterFunc(L, Utils.METHOD_IDX, "AddNum", _m_AddNum);
 			Utils.RegisterFunc(L, Utils.METHOD_IDX, "GetNum", _m_GetNum);
 			Utils.RegisterFunc(L, Utils.METHOD_IDX, "GetEquipped", _m_GetEquipped);
 			Utils.RegisterFunc(L, Utils.METHOD_IDX, "Equip", _m_Equip);
+			Utils.RegisterFunc(L, Utils.METHOD_IDX, "SpellEquippedCount", _m_SpellEquippedCount);
 			
 			
 			
@@ -152,11 +153,12 @@ namespace XLua.CSObjectWrap
                     int _slot = LuaAPI.xlua_tointeger(L, 2);
                     string _id = LuaAPI.lua_tostring(L, 3);
                     
-                    gen_to_be_invoked.GetNum( _slot, _id );
+                        var gen_ret = gen_to_be_invoked.GetNum( _slot, _id );
+                        LuaAPI.xlua_pushinteger(L, gen_ret);
                     
                     
                     
-                    return 0;
+                    return 1;
                 }
                 
             } catch(System.Exception gen_e) {
@@ -215,6 +217,36 @@ namespace XLua.CSObjectWrap
                     
                     
                     return 0;
+                }
+                
+            } catch(System.Exception gen_e) {
+                return LuaAPI.luaL_error(L, "c# exception:" + gen_e);
+            }
+            
+        }
+        
+        [MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+        static int _m_SpellEquippedCount(RealStatePtr L)
+        {
+		    try {
+            
+                ObjectTranslator translator = ObjectTranslatorPool.Instance.Find(L);
+            
+            
+                PMLua.Export.BackpackLua gen_to_be_invoked = (PMLua.Export.BackpackLua)translator.FastGetCSObj(L, 1);
+            
+            
+                
+                {
+                    int _slot = LuaAPI.xlua_tointeger(L, 2);
+                    string _spellID = LuaAPI.lua_tostring(L, 3);
+                    
+                        var gen_ret = gen_to_be_invoked.SpellEquippedCount( _slot, _spellID );
+                        LuaAPI.xlua_pushinteger(L, gen_ret);
+                    
+                    
+                    
+                    return 1;
                 }
                 
             } catch(System.Exception gen_e) {

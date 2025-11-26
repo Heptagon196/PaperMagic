@@ -28,6 +28,11 @@ namespace NPC
         // 返回是否应用此伤害
         public bool CanDoDamageTo(CreatureBase source)
         {
+            // 无来源伤害总是生效
+            if (source == null)
+            {
+                return true;
+            }
             // 中立阵营互相可伤害，不同阵营可互相伤害
             return faction != source.faction || faction == CreatureFaction.Neutral;
         }

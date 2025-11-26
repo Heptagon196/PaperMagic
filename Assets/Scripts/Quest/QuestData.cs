@@ -13,6 +13,7 @@ namespace Quest
         EnemyKill,
         QuestChatFinish,
         BackpackChanged,
+        SelectedQuestChanged,
     }
     [CSharpCallLua]
     public delegate int GetQuestStatusDelegate(LuaTable self, bool childCompleted, int notifyEvent, GameObject obj, string objID);
@@ -119,6 +120,7 @@ namespace Quest
         private readonly GetQuestStatusDelegate _getQuestStatus;
         private readonly OnActivateQuestDelegate _onActivateQuest;
         private readonly GetQuestDesc _onGetQuestDesc;
+        private bool _isActivating = false;
         public QuestInfoLua(LuaTable module)
         {
             if (module == null)
@@ -155,6 +157,10 @@ namespace Quest
         }
         public override QuestStatus GetQuestStatus(bool childCompleted, QuestNotifyEvent notifyEvent, GameObject obj, string objID)
         {
+            if (_isActivating)
+            {
+                return QuestStatus.None;
+            }
             if (_getQuestStatus == null)
             {
                 return childCompleted ? QuestStatus.Completed : QuestStatus.NotCompleted;
@@ -163,7 +169,9 @@ namespace Quest
         }
         public override void OnActivateQuest()
         {
+            _isActivating = true;
             _onActivateQuest?.Invoke(_module);
+            _isActivating = false;
         }
 
         public override string GetOverrideDesc()

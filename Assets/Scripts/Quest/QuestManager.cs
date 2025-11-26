@@ -14,6 +14,16 @@ namespace Quest
     {
         public static QuestManager Instance;
         public static bool DataLoaded = false;
+        private static string _selectedQuest;
+        public static string SelectedQuest
+        {
+            get => _selectedQuest;
+            set
+            {
+                _selectedQuest = value;
+                EventManager.Broadcast(QuestNotifyEvent.SelectedQuestChanged);
+            }
+        }
         // 任务信息
         private static readonly Dictionary<string, QuestInfo> QuestInfos = new();
         // 任务存档数据
@@ -63,6 +73,10 @@ namespace Quest
                 {
                     GetQuestStatus(questID, recvEventType, param.Subject, param.ObjectID);
                 }
+            }
+            if (!string.IsNullOrEmpty(SelectedQuest))
+            {
+                EventManager.Broadcast(QuestNotifyEvent.SelectedQuestChanged);
             }
         }
         public static List<string> GetActivatedQuestsOf(QuestCategory category)
@@ -140,7 +154,12 @@ namespace Quest
             if (ret == QuestStatus.Completed || ret == QuestStatus.Failed)
             {
                 QuestSaveStatus[id] = ret;
+                if (info.category != QuestCategory.QuestGoal)
+                {
+                    SelectedQuest = id;
+                }
             }
+            string newAddQuest = null;
             if (ret == QuestStatus.Completed)
             {
                 if (ToCheckAfterComplete.TryGetValue(id, out var checkQuest))
@@ -158,9 +177,14 @@ namespace Quest
                         if (bAllCompleted)
                         {
                             AddQuest(check);
+                            newAddQuest = check;
                         }
                     }
                 }
+            }
+            if (!string.IsNullOrEmpty(newAddQuest))
+            {
+                SelectedQuest = newAddQuest;
             }
             return ret;
         }
@@ -210,6 +234,7 @@ namespace Quest
                     gameData.activatedQuests.Add(quest);
                 }
             }
+            gameData.selectedQuest = SelectedQuest;
         }
         public void LoadDataFrom(ref GameData gameData)
         {
@@ -230,6 +255,7 @@ namespace Quest
             {
                 CachedActivatedQuests.Add(quest);
             }
+            SelectedQuest = gameData.selectedQuest;
             TryLoadCachedActivatedQuests();
         }
         private static void TryLoadCachedActivatedQuests()

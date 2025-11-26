@@ -158,7 +158,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -364,6 +364,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54705d10020718b47842093bbf8aebdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealthPoint: 0
+  healthPoint: 0
+  faction: 0
   playerRigidbody: {fileID: 5792236743869078206}
   moveSpeed: 3
   jumpForce: 6
@@ -373,11 +376,12 @@ MonoBehaviour:
   footPoint: {fileID: 6975006616878262559}
   rightDirection: {x: 1, y: 0, z: 0}
   frontDirection: {x: 0, y: 0, z: 1}
-  canMoveForward: 0
   animator: {fileID: 7882195874541155378}
   flipAnimator: {fileID: 7580175596632384676}
   spriteRenderer: {fileID: 3403541603135357992}
+  movementMode: 0
   maxJumpCount: 0
+  movingX: 0
 --- !u!114 &4335196263096444566
 MonoBehaviour:
   m_ObjectHideFlags: 0

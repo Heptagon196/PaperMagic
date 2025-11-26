@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Backpack;
 using NPC;
 using Spell;
 using UnityEngine;
@@ -34,6 +35,10 @@ namespace PMLua.Export
         public GameObject Spawn(string id, Vector3 spawnPosition)
         {
             return CreatureManager.SpawnCreature(id, spawnPosition);
+        }
+        public void SetPersistent(GameObject creature)
+        {
+            CreatureManager.SetCreaturePersistent(creature);
         }
         public List<SpellEffectBase> CastSpell(GameObject source, string spellID, Vector3 spawnPosition, Vector3 spawnTowards)
         {
@@ -75,6 +80,31 @@ namespace PMLua.Export
         {
             var anim = owner.GetComponent<CreatureAnimation>();
             anim.SetAnimStat(stage);
+        }
+        public List<SpellEffectBase> CastSpellTree(GameObject source, List<List<string>> spellID, Vector3 spawnPosition, Vector3 spawnTowards)
+        {
+            var scheme = new SpellTreeSchemeData();
+            foreach (var spellList in spellID)
+            {
+                scheme.schemeData.Add(new SpellTreeSchemeColumnData()
+                {
+                    columnData = spellList
+                });
+            }
+            var spell = scheme.CreateSpellTree();
+            spell.OnInit();
+            spell.Execute(out var cost ,out var effectList);
+            foreach (var effect in effectList)
+            {
+                effect.UsePlayerSpawnInfo = false;
+                effect.SpawnPosition = spawnPosition;
+                effect.SpawnTowards = spawnTowards.normalized;
+                effect.Source = source.GetComponent<CreatureBase>();
+                    
+                var bullet = ProjectilePool.GetObject();
+                bullet.GetComponent<Projectile>().Spawn(effect.SpawnPosition, effect.SpawnTowards, effect);
+            }
+            return effectList;
         }
     }
 }

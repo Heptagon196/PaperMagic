@@ -24,7 +24,8 @@ namespace UI.Quest
         public QuestItem questDetailRoot;
         public GameObject questDetailPrefab;
         public QuestCategory currentCategory = QuestCategory.MainQuest;
-        public string showingQuestID;
+        public string showingQuestID = "";
+        private bool _toUpdateTransform = false;
         private void Start()
         {
             foreach (var questType in questInfos)
@@ -40,10 +41,23 @@ namespace UI.Quest
         }
         private void OnEnable()
         {
+            if (showingQuestID == "")
+            {
+                showingQuestID = QuestManager.SelectedQuest;
+                _toUpdateTransform = true;
+            }
             if (!string.IsNullOrEmpty(showingQuestID))
             {
                 ShowQuestList();
                 ShowQuestDetail(showingQuestID);
+            }
+        }
+        private void Update()
+        {
+            if (_toUpdateTransform)
+            {
+                _toUpdateTransform = false;
+                LayoutRebuilder.ForceRebuildLayoutImmediate(questDetailRoot.GetComponent<RectTransform>());
             }
         }
         public void ShowQuestList()
@@ -76,7 +90,34 @@ namespace UI.Quest
                 button.onClick.AddListener(() => ShowQuestDetail(questInfo.id));
             }
         }
-        public void ShowQuestDetail(QuestItem root, string questID, int depth)
+        public static string GetQuestFullDetail(string questID, int depth = 0, bool showTitle = true)
+        {
+            var questInfo = QuestManager.GetQuestInfo(questID);
+            if (questInfo == null)
+            {
+                return "";
+            }
+
+            var title = "";
+            if (depth == 0 && showTitle)
+            {
+                title = questInfo.questName;
+            }
+
+            var retText = QuestItem.GenerateText(title, questInfo.GetOverrideDesc(), depth,
+                QuestManager.GetQuestStatus(questID), questInfo.optional);
+
+            foreach (var subQuest in questInfo.subQuests)
+            {
+                var status = QuestManager.GetQuestStatus(subQuest);
+                if (status != QuestStatus.Hide && status != QuestStatus.None)
+                {
+                    retText += "\n" + GetQuestFullDetail(subQuest, depth + 1);
+                }
+            }
+            return retText;
+        }
+        public void ShowQuestDetail(QuestItem root, string questID, int depth, bool showTitle = true)
         {
             var questInfo = QuestManager.GetQuestInfo(questID);
             if (questInfo == null)
@@ -85,7 +126,7 @@ namespace UI.Quest
             }
 
             var title = "";
-            if (depth == 0)
+            if (depth == 0 && showTitle)
             {
                 title = questInfo.questName;
             }
@@ -111,6 +152,7 @@ namespace UI.Quest
         public void ShowQuestDetail(string questID)
         {
             showingQuestID = questID;
+            QuestManager.SelectedQuest = questID;
             if (string.IsNullOrEmpty(questID))
             {
                 questDetailRoot.gameObject.SetActive(false);

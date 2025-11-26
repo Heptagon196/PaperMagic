@@ -5,14 +5,18 @@ local Enemy = BaseAI:New{
     Faction = CreatureFaction.Hostile,
     Level = CreatureLevel.Elite,
     Health = 50,
-    AnimationFolder = 'Creature/std/Patrol',
+    AnimationFolder = 'Creature/std/Player_Red',
     Animations = {
         { anim = CreatureAnimStage.Death, duration = 1, num = 2 },
         { anim = CreatureAnimStage.Idle, duration = 1, num = 1 },
         { anim = CreatureAnimStage.Walk, duration = 0.1, num = 2 },
     },
 
-    SpellID = 'std.default',
+    SpellID = {
+        { 'std.double_cast' },
+        { 'std.set_color_red', 'std.default' },
+        { 'std.default' },
+    },
     Speed = 4,
     AttackInterval = 2,
     ChangeDirectionInterval = 5,
@@ -61,7 +65,7 @@ function Enemy:OnStart()
             self:TryAttack(function()
                 self.rigidbody.velocity = CS.UnityEngine.Vector3.zero
                 local pos = self.Owner.transform.position
-                PM.Creature:CastSpell(self.Owner, self.SpellID, pos, (PM.Player:GetPosition() - pos))
+                PM.Creature:CastSpellTree(self.Owner, self.SpellID, pos, (PM.Player:GetPosition() - pos))
             end)
             self:SetAnim(CreatureAnimStage.Idle)
             return BTState.Success

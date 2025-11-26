@@ -23,6 +23,7 @@ EquipmentCastType = {
 ---@field Name string 名称
 ---@field Desc string 描述
 ---@field Icon string 图标
+---@field Capacity integer 容量
 ---@field Slot EquipmentSlot 槽位
 ---@field CastType EquipmentCastType 施法方式
 ---@field MaxMana number 最大法力值

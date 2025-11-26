@@ -52,6 +52,7 @@ namespace NPC
                     {
                         _savedVelocity = true;
                         _velocity = _rigidbody.velocity;
+                        creatureAnimation.SetAnimStat("idle");
                     }
                     _rigidbody.velocity = Vector3.zero;
                     return;

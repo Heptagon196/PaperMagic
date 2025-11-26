@@ -97,9 +97,31 @@ namespace Controller
                     continue;
                 }
                 equip.InitWeapon(GetComponent<PlayerController>());
-                equip.InitSpellTree(equippedInfo.CreateSpellTree());
+                var spellTree = equippedInfo.CreateSpellTree();
+                if (spellTree.GetSize() > equip.equipmentCapacity && equip.equipmentCapacity > 0)
+                {
+                    UIFunctions.Instance.ShowFloatTip(
+                        $"{EquipmentManager.GetSlotName(equipSlot)}处法术数量超过上限：{spellTree.GetSize()} > {equip.equipmentCapacity}");
+                    spellTree = new SpellTreeBaseEmpty();
+                }
+                equip.InitSpellTree(spellTree);
                 _currentEquip.Add(equipSlot, equip);
             }
+        }
+        public int SpellEquippedCount(int slot, string checkSpellID)
+        {
+            int count = 0;
+            var equippedInfo = BackpackManager.Instance.GetEquipped((EquipmentSlot)slot);
+            equippedInfo.CurrentScheme.schemeData.ForEach(colData =>
+                colData.columnData.ForEach(spellID =>
+                {
+                    if (spellID == checkSpellID)
+                    {
+                        count++;
+                    }
+                })
+            );
+            return count;
         }
         private EquipmentBase GetEquipment(EquipmentSlot slot)
         {

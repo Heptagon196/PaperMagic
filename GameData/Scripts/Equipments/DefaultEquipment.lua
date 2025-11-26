@@ -5,6 +5,7 @@ local Data = {
     Name = '默认装备',
     Desc = '这是一件默认装备',
     Icon = 'Equip/std/default_wand.png',
+    Capacity = 10,
     Slot = EquipmentSlot.Weapon,
     CastType = EquipmentCastType.PressKey,
     MaxMana = 100,

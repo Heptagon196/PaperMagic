@@ -56,6 +56,7 @@ namespace Backpack
         public string id;
         public string equipmentName;
         public string equipmentDesc;
+        public int equipmentCapacity;
         public Equipment.EquipmentSlot slot;
         public Equipment.EquipmentCastType castType;
         public float maxMana;
@@ -69,6 +70,7 @@ namespace Backpack
             id = equipmentBase.equipmentID;
             equipmentName = equipmentBase.equipmentName;
             equipmentDesc = equipmentBase.equipmentDesc;
+            equipmentCapacity = equipmentBase.equipmentCapacity;
             slot = equipmentBase.slot;
             castType = equipmentBase.castType;
             maxMana = equipmentBase.maxMana;
@@ -101,6 +103,7 @@ namespace Backpack
 <color=Grey>{equipmentDesc}</color>
 
 <color=Black>施法方式：<color=Green>  {GetCastTypeDisplay()}</color>
+法术上限：<color=Green>  {equipmentCapacity}</color>
 最大法力：<color=Green>  {maxMana}</color>
 恢复速度：<color=Green>  {manaResumePerSecond}</color>
 施法间隔：<color=Green>  {minCastInterval}</color></color>";

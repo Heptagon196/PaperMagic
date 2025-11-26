@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Controller;
 using NPC;
 using Spell;
+using UI.General;
 using UnityEngine;
 
 namespace Equipment
@@ -43,6 +44,8 @@ namespace Equipment
         public string equipmentDesc;
         // 图标
         public string equipmentIcon;
+        // 容纳法术数量
+        public int equipmentCapacity;
         // 施法类型
         public EquipmentCastType castType;
         // 装备槽位
@@ -75,6 +78,7 @@ namespace Equipment
                 equipmentName = equipmentName,
                 equipmentDesc = equipmentDesc,
                 equipmentIcon = equipmentIcon,
+                equipmentCapacity = equipmentCapacity,
                 slot = slot,
                 castType = castType,
                 maxMana = maxMana,

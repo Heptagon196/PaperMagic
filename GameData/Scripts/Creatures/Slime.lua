@@ -5,11 +5,11 @@ local Enemy = BaseAI:New{
     Faction = CreatureFaction.Hostile,
     Level = CreatureLevel.Elite,
     Health = 15,
-    AnimationFolder = 'Creature/std/Patrol',
+    AnimationFolder = 'Creature/std/Player_Yellow',
     Animations = {
-        { anim = CreatureAnimStage.Death, duration = 1, num = 2 },
+        { anim = CreatureAnimStage.Death, duration = 1, num = 1 },
         { anim = CreatureAnimStage.Idle, duration = 1, num = 1 },
-        { anim = CreatureAnimStage.Walk, duration = 0.1, num = 2 },
+        { anim = CreatureAnimStage.Walk, duration = 0.1, num = 8 },
     },
 
     SpellID = 'std.default',
@@ -34,6 +34,8 @@ end
 function Enemy:OnStart()
     self.rigidbody = self.Owner:GetComponent(typeof(CS.UnityEngine.Rigidbody))
     self.rigidbody.velocity = CS.UnityEngine.Vector3(self._direction * self.Speed, 0, 0)
+    local spriteObj = self.Owner:GetComponentInChildren(typeof(CS.UnityEngine.SpriteRenderer))
+    spriteObj.transform.localPosition = CS.UnityEngine.Vector3(0, 0.3, 0)
     self:SetAnim(CreatureAnimStage.Idle)
 
     local root = SelectorNode:New('Root')

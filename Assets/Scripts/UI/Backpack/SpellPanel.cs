@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Backpack;
+using Controller;
+using Equipment;
 using Spell;
 using UI.General;
 using UnityEngine;
@@ -59,6 +61,20 @@ namespace UI.Backpack
         {
             return (BackpackManager.Instance.GetItemInfo(BackpackSlot.Spell, spell) as SpellInfo)?.maxChildNodeCount ?? 0;
         }
+        private void OnAddSpell(string spellID)
+        {
+            if (spellID != SpellManager.EmptySpell)
+            {
+                BackpackManager.Instance.AddNum(BackpackSlot.Spell, spellID, -1, false);
+            }
+        }
+        private void OnDelSpell(string spellID)
+        {
+            if (spellID != SpellManager.EmptySpell)
+            {
+                BackpackManager.Instance.AddNum(BackpackSlot.Spell, spellID, 1, false);
+            }
+        }
         private void ReplaceSpellImpl(ItemButton self, string newSpell)
         {
             if (self.stat == ItemStat.SpellPanel)
@@ -66,6 +82,8 @@ namespace UI.Backpack
                 if (self.ExtraData is SpellPanelItemData data)
                 {
                     int childCountDiff = GetSpellChildNodeCount(newSpell) - GetSpellChildNodeCount(data.GetSpell());
+                    OnDelSpell(data.GetSpell());
+                    OnAddSpell(newSpell);
                     data.SetSpell(newSpell);
                     var prevRowBottomConnectPos = -1;
                     if (data.Row > 0)
@@ -118,6 +136,7 @@ namespace UI.Backpack
                             {
                                 var columnData = data.SchemeData[currentColID].columnData;
                                 nextChildCountDiff -= GetSpellChildNodeCount(columnData[delPos]);
+                                OnDelSpell(columnData[delPos]);
                                 columnData.RemoveAt(delPos);
                                 delPos--;
                             }
@@ -127,8 +146,8 @@ namespace UI.Backpack
                         childCountDiff = nextChildCountDiff;
                         currentColID++;
                     }
-                    
                     Refresh();
+                    EventManager.Broadcast(BackpackEvent.BackpackChanged);
                 }
             }
         }

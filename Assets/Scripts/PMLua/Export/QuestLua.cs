@@ -8,7 +8,7 @@ namespace PMLua.Export
     {
         public int GetStatus(string id)
         {
-            return (int)QuestManager.GetQuestStatus(id);
+            return (int)QuestManager.GetCachedQuestStatus(id);
         }
         public void Activate(string id)
         {

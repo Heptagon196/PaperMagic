@@ -73,6 +73,11 @@ namespace NPC
         }
         public void SetAnimStat(string animStage)
         {
+            if (currentStage == animStage)
+            {
+                return;
+            }
+            currentStage = animStage;
             currentAnimationFrame = 0;
             Animations.TryGetValue(animStage, out currentSprites);
             AnimationSwitchDuration.TryGetValue(animStage, out switchDuration);

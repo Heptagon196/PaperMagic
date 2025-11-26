@@ -199,6 +199,12 @@ namespace Controller
         {
             return healthPoint / maxHealthPoint;
         }
-        public override void OnTakeDamage(float damage, CreatureBase source) {}
+        public override void OnTakeDamage(float damage, CreatureBase source)
+        {
+            if (healthPoint <= 0)
+            {
+                UIFunctions.Instance.ShowLoseGame();
+            }
+        }
     }
 }

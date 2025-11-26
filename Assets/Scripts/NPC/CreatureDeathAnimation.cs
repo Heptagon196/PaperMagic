@@ -10,7 +10,7 @@ namespace NPC
         private const string DeathAnimationStateName = "death";
         public void InitAnim(CreatureAnimation inCreatureAnimation)
         {
-            transform.position = inCreatureAnimation.transform.position;
+            transform.position = inCreatureAnimation.GetComponentInChildren<SpriteRenderer>().transform.position;
             var sprite = gameObject.AddComponent<SpriteRenderer>();
             var creatureAnimation = gameObject.AddComponent<CreatureAnimation>();
             creatureAnimation.loop = false;

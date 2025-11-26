@@ -1,15 +1,15 @@
 {
-    "saveTime": "2025-11-26 02:22:51",
+    "saveTime": "2025-11-27 02:27:30",
     "movementMode": 0,
     "playerPosition": {
-        "x": 3.5782463550567629,
-        "y": 1.5,
-        "z": -1.0
+        "x": 17.297927856445314,
+        "y": 1.0,
+        "z": 0.000002294778823852539
     },
     "cameraPosition": {
-        "x": 6.578246116638184,
-        "y": 4.5,
-        "z": -21.0
+        "x": 20.297927856445314,
+        "y": 4.0,
+        "z": -19.999998092651368
     },
     "cameraRotation": {
         "x": 0.0,
@@ -18,7 +18,7 @@
         "w": 1.0
     },
     "maxHealth": 100.0,
-    "currentHealth": 0.0,
+    "currentHealth": 60.0,
     "backpack": [
         {
             "type": 0,
@@ -28,7 +28,7 @@
         {
             "type": 1,
             "id": "std.default",
-            "count": 12
+            "count": 13
         },
         {
             "type": 1,
@@ -48,7 +48,7 @@
         {
             "type": 1,
             "id": "std.triple_cast",
-            "count": 4
+            "count": 6
         },
         {
             "type": 1,
@@ -73,7 +73,7 @@
         {
             "type": 2,
             "id": "std.coin",
-            "count": 8000
+            "count": 14800
         }
     ],
     "equipped": [
@@ -100,7 +100,7 @@
                             },
                             {
                                 "columnData": [
-                                    "std.default"
+                                    "std.empty"
                                 ]
                             }
                         ]
@@ -207,23 +207,62 @@
                 }
             ],
             "s": []
+        },
+        {
+            "id": "std.init_quest.kill_enemy",
+            "b": [
+                {
+                    "key": "summoned",
+                    "val": true
+                }
+            ],
+            "f": [
+                {
+                    "key": "count",
+                    "val": 3.0
+                }
+            ],
+            "s": []
+        },
+        {
+            "id": "std.init_quest_buy",
+            "b": [],
+            "f": [
+                {
+                    "key": "coin",
+                    "val": 14800.0
+                }
+            ],
+            "s": []
         }
     ],
     "questStatus": [
         {
-            "key": "std.default.kill1_special",
+            "key": "std.init_quest.equip_wand",
             "val": 3
         },
         {
-            "key": "std.default.kill10",
+            "key": "std.init_quest.equip_spell",
             "val": 3
         },
         {
-            "key": "std.default",
+            "key": "std.init_quest.kill_enemy",
+            "val": 3
+        },
+        {
+            "key": "std.init_quest",
+            "val": 3
+        },
+        {
+            "key": "std.init_quest_buy",
             "val": 3
         }
     ],
-    "activatedQuests": [],
+    "activatedQuests": [
+        "std.init_quest",
+        "std.init_quest_buy"
+    ],
+    "selectedQuest": "std.init_quest",
     "shopLimit": [
         {
             "shopID": "std.template_merchant",
@@ -231,6 +270,16 @@
                 5,
                 -1
             ]
+        }
+    ],
+    "persistentCreatures": [
+        {
+            "id": "std.elite_patrol",
+            "position": {
+                "x": 30.822805404663087,
+                "y": 1.0,
+                "z": -1.0
+            }
         }
     ]
 }

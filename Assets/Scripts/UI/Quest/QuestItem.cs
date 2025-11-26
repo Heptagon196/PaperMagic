@@ -9,12 +9,13 @@ namespace UI.Quest
     {
         public Text displayText;
         public Transform container;
-        public void SetText(string title, string text, int depth, QuestStatus status, bool optional)
+        public static string GenerateText(string title, string text, int depth, QuestStatus status, bool optional)
         {
+            var space = "";
             var textString = "";
             for (int idx = 0; idx < depth; idx++)
             {
-                textString += '\t';
+                space += '\t';
             }
 
             if (!string.IsNullOrEmpty(title))
@@ -31,7 +32,11 @@ namespace UI.Quest
             {
                 textString += "<color=Grey>[可选]</color> ";
             }
-            displayText.text = textString + text + "</color>";
+            return space + textString + text.Replace("\n", "\n" + space) + "</color>";
+        }
+        public void SetText(string title, string text, int depth, QuestStatus status, bool optional)
+        {
+            displayText.text = GenerateText(title, text, depth, status, optional);
         }
         public float CalcWidgetHeight()
         {

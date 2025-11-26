@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using Controller;
+using SaveData;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
@@ -16,6 +17,7 @@ namespace UI.General
     {
         public static UIFunctions Instance;
         public bool initVisibility;
+        public GameObject loseGamePanel;
         public Button[] tabToggles;
         public GameObject[] tabs;
         public GameObject tipWidget;
@@ -46,6 +48,13 @@ namespace UI.General
                         tabs[tabIdx].SetActive(tabIdx == toggleIdx);
                     }
                 });
+            }
+        }
+        private void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.Tab) || Input.GetKeyDown(KeyCode.Escape))
+            {
+                SwitchUIVisibility();
             }
         }
         public void SwitchUIVisibility()
@@ -137,6 +146,15 @@ namespace UI.General
                 text.color = textColor;
                 yield return new WaitForSeconds(deltaTime);
             }
+        }
+        public void ShowLoseGame()
+        {
+            loseGamePanel.SetActive(true);
+        }
+        public void LoadData()
+        {
+            loseGamePanel.SetActive(false);
+            SaveDataManager.Instance.LoadGame();
         }
     }
 }
