@@ -5,7 +5,7 @@ local Data = SpellData:New{
     Category = SpellType.Modifier,
 	Name = '消逝触发',
 	Desc = '第一个子节点法术消失时\n触发第二个子节点\n触发法术沿当前方向前进',
-    Icon = 'Spell/std/set_color_red.png',
+    Icon = 'Spell/std/trigger_expire.png',
 	Cost = 10,
 	ChildNode = 2,
 }

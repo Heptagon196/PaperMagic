@@ -32,6 +32,7 @@ function Enemy:UpdateStateMachine(deltaTime)
 end
 
 function Enemy:OnStart()
+    print('Enemy start ', self.ID)
     self.rigidbody = self.Owner:GetComponent(typeof(CS.UnityEngine.Rigidbody))
     self.rigidbody.velocity = CS.UnityEngine.Vector3(self._direction * self.Speed, 0, 0)
     local spriteObj = self.Owner:GetComponentInChildren(typeof(CS.UnityEngine.SpriteRenderer))

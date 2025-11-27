@@ -130,6 +130,8 @@ namespace UI.Quest
             {
                 title = questInfo.questName;
             }
+            root.displayText.text = GetQuestFullDetail(questID, depth, showTitle);
+            return;
             root.SetText(title, questInfo.GetOverrideDesc(), depth, QuestManager.GetQuestStatus(questID), questInfo.optional);
 
             List<string> showList = new();

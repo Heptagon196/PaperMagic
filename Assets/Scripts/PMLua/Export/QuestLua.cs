@@ -14,6 +14,10 @@ namespace PMLua.Export
         {
             QuestManager.AddQuest(id);
         }
+        public void FocusQuest(string id)
+        {
+            QuestManager.SelectedQuest = id;
+        }
         public bool GetBool(string module, string key)
         {
             return QuestManager.GetBool(module, key);

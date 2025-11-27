@@ -14,6 +14,7 @@ namespace Quest
         QuestChatFinish,
         BackpackChanged,
         SelectedQuestChanged,
+        CloseBackpack,
     }
     [CSharpCallLua]
     public delegate int GetQuestStatusDelegate(LuaTable self, bool childCompleted, int notifyEvent, GameObject obj, string objID);

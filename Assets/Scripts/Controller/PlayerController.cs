@@ -190,7 +190,7 @@ namespace Controller
         }
         public void SetDefaultData(ref GameData gameData)
         {
-            gameData.playerPosition = transform.position;
+            gameData.playerPosition = new Vector3(0, 2, 0);
             gameData.maxHealth = 100;
             gameData.currentHealth = 100;
             gameData.movementMode = PlayerMovementMode.Platform;

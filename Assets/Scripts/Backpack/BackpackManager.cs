@@ -103,6 +103,7 @@ namespace Backpack
             var slotData = GetData(slot);
             if (slotData != null)
             {
+                slotData.TryAdd(key, 0);
                 return slotData[key];
             }
             return 0;
@@ -113,11 +114,19 @@ namespace Backpack
         }
         public EquippedItemInfo GetEquipped(EquipmentSlot slot)
         {
+            if (!_equipped.ContainsKey(slot))
+            {
+                _equipped.Add(slot, EquippedItemInfo.Empty());
+            }
             _equipped.TryGetValue(slot, out var result);
             return result;
         }
         public EquippedItemInfo GetOrAddEquipped(EquipmentSlot slot)
         {
+            if (!_equipped.ContainsKey(slot))
+            {
+                _equipped.Add(slot, EquippedItemInfo.Empty());
+            }
             _equipped.TryGetValue(slot, out var result);
             if (result == null)
             {
@@ -141,6 +150,10 @@ namespace Backpack
             {
                 UIFunctions.Instance.ShowFloatTip("该装备无法装备到此位置");
                 return;
+            }
+            if (!_equipped.ContainsKey(slot))
+            {
+                _equipped.Add(slot, EquippedItemInfo.Empty());
             }
             var toDel = _equipped[slot].equipmentID;
             if (toDel != EquipmentManager.EmptyEquipment)
@@ -226,7 +239,7 @@ namespace Backpack
         {
             gameData.backpack.Clear();
             gameData.equipped.Clear();
-            
+            /*
             gameData.backpack.Add(new GameDataItem
             {
                 type = BackpackSlot.Equipment,
@@ -266,6 +279,7 @@ namespace Backpack
                 slot = EquipmentSlot.WeaponLeft,
                 info = defaultEquip
             });
+            */
         }
     }
 }

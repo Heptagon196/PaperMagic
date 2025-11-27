@@ -185,6 +185,31 @@ namespace Backpack
         {
             return activeScheme < availableSchemes.Count ? availableSchemes[activeScheme].CreateSpellTree() : null;
         }
+        public static EquippedItemInfo Empty()
+        {
+            return new EquippedItemInfo()
+            {
+                equipmentID = EquipmentManager.EmptyEquipment,
+                activeScheme = 0,
+                availableSchemes = new List<SpellTreeSchemeData>()
+                {
+                    new SpellTreeSchemeData()
+                    {
+                        schemeName = "",
+                        schemeData = new List<SpellTreeSchemeColumnData>()
+                        {
+                            new SpellTreeSchemeColumnData()
+                            {
+                                columnData = new List<string>()
+                                {
+                                    SpellManager.EmptySpell
+                                }
+                            }
+                        }
+                    }
+                }
+            };
+        }
     }
     [Serializable]
     public class SpellTreeSchemeColumnData

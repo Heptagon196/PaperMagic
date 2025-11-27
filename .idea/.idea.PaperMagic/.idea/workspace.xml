@@ -5,129 +5,51 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="42ba9b4e-4b93-444d-b127-378c80b30214" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Quest/SelectedQuestDisplay.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Quest/SelectedQuestDisplay.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Utils.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Utils/SpriteSheetSplitter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Utils/SpriteSheetSplitter.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SceneItems/QuestChecker.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SceneItems/QuestChecker.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SceneItems/TaskTrigger.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SceneItems/TaskTrigger.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PaperMagic/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PaperMagic/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Icons.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Icons/Turbo Disk.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Icons/Turbo Disk/Dark Fantasy RPG Icons - Free Basic Pack (25).meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Icons/Turbo Disk/Dark Fantasy RPG Icons - Free Basic Pack (25)/Demo.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Icons/Turbo Disk/Dark Fantasy RPG Icons - Free Basic Pack (25)/Demo.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Icons/Turbo Disk/Dark Fantasy RPG Icons - Free Basic Pack (25)/Icons.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Icons/Turbo Disk/Dark Fantasy RPG Icons - Free Basic Pack (25)/Icons/512.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Icons/Turbo Disk/Dark Fantasy RPG Icons - Free Basic Pack (25)/Icons/512/icon_axe.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Icons/Turbo Disk/Dark Fantasy RPG Icons - Free Basic Pack (25)/Icons/512/icon_axe.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Icons/Turbo Disk/Dark Fantasy RPG Icons - Free Basic Pack (25)/Icons/512/icon_bow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Icons/Turbo Disk/Dark Fantasy RPG Icons - Free Basic Pack (25)/Icons/512/icon_bow.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Icons/Turbo Disk/Dark Fantasy RPG Icons - Free Basic Pack (25)/Icons/512/icon_broken_sword.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Icons/Turbo Disk/Dark Fantasy RPG Icons - Free Basic Pack (25)/Icons/512/icon_broken_sword.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Icons/Turbo Disk/Dark Fantasy RPG Icons - Free Basic Pack (25)/Icons/512/icon_crossbow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Icons/Turbo Disk/Dark Fantasy RPG Icons - Free Basic Pack (25)/Icons/512/icon_crossbow.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Icons/Turbo Disk/Dark Fantasy RPG Icons - Free Basic Pack (25)/Icons/512/icon_demon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Icons/Turbo Disk/Dark Fantasy RPG Icons - Free Basic Pack (25)/Icons/512/icon_demon.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Icons/Turbo Disk/Dark Fantasy RPG Icons - Free Basic Pack (25)/Icons/512/icon_drop.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Icons/Turbo Disk/Dark Fantasy RPG Icons - Free Basic Pack (25)/Icons/512/icon_drop.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Icons/Turbo Disk/Dark Fantasy RPG Icons - Free Basic Pack (25)/Icons/512/icon_dual_sword.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Icons/Turbo Disk/Dark Fantasy RPG Icons - Free Basic Pack (25)/Icons/512/icon_dual_sword.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Icons/Turbo Disk/Dark Fantasy RPG Icons - Free Basic Pack (25)/Icons/512/icon_fire_hand.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Icons/Turbo Disk/Dark Fantasy RPG Icons - Free Basic Pack (25)/Icons/512/icon_fire_hand.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Icons/Turbo Disk/Dark Fantasy RPG Icons - Free Basic Pack (25)/Icons/512/icon_fireball.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Icons/Turbo Disk/Dark Fantasy RPG Icons - Free Basic Pack (25)/Icons/512/icon_fireball.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Icons/Turbo Disk/Dark Fantasy RPG Icons - Free Basic Pack (25)/Icons/512/icon_gold.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Icons/Turbo Disk/Dark Fantasy RPG Icons - Free Basic Pack (25)/Icons/512/icon_gold.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Icons/Turbo Disk/Dark Fantasy RPG Icons - Free Basic Pack (25)/Icons/512/icon_hammer.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Icons/Turbo Disk/Dark Fantasy RPG Icons - Free Basic Pack (25)/Icons/512/icon_hammer.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Icons/Turbo Disk/Dark Fantasy RPG Icons - Free Basic Pack (25)/Icons/512/icon_hand.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Icons/Turbo Disk/Dark Fantasy RPG Icons - Free Basic Pack (25)/Icons/512/icon_hand.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Icons/Turbo Disk/Dark Fantasy RPG Icons - Free Basic Pack (25)/Icons/512/icon_healing_potion.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Icons/Turbo Disk/Dark Fantasy RPG Icons - Free Basic Pack (25)/Icons/512/icon_healing_potion.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Icons/Turbo Disk/Dark Fantasy RPG Icons - Free Basic Pack (25)/Icons/512/icon_heart.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Icons/Turbo Disk/Dark Fantasy RPG Icons - Free Basic Pack (25)/Icons/512/icon_heart.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Icons/Turbo Disk/Dark Fantasy RPG Icons - Free Basic Pack (25)/Icons/512/icon_luck_horseshoe.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Icons/Turbo Disk/Dark Fantasy RPG Icons - Free Basic Pack (25)/Icons/512/icon_luck_horseshoe.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Icons/Turbo Disk/Dark Fantasy RPG Icons - Free Basic Pack (25)/Icons/512/icon_might.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Icons/Turbo Disk/Dark Fantasy RPG Icons - Free Basic Pack (25)/Icons/512/icon_might.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Icons/Turbo Disk/Dark Fantasy RPG Icons - Free Basic Pack (25)/Icons/512/icon_rain_of_arrows.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Icons/Turbo Disk/Dark Fantasy RPG Icons - Free Basic Pack (25)/Icons/512/icon_rain_of_arrows.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Icons/Turbo Disk/Dark Fantasy RPG Icons - Free Basic Pack (25)/Icons/512/icon_shield.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Icons/Turbo Disk/Dark Fantasy RPG Icons - Free Basic Pack (25)/Icons/512/icon_shield.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Icons/Turbo Disk/Dark Fantasy RPG Icons - Free Basic Pack (25)/Icons/512/icon_skull.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Icons/Turbo Disk/Dark Fantasy RPG Icons - Free Basic Pack (25)/Icons/512/icon_skull.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Icons/Turbo Disk/Dark Fantasy RPG Icons - Free Basic Pack (25)/Icons/512/icon_sword.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Icons/Turbo Disk/Dark Fantasy RPG Icons - Free Basic Pack (25)/Icons/512/icon_sword.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Icons/Turbo Disk/Dark Fantasy RPG Icons - Free Basic Pack (25)/Icons/512/icon_trader.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Icons/Turbo Disk/Dark Fantasy RPG Icons - Free Basic Pack (25)/Icons/512/icon_trader.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Icons/Turbo Disk/Dark Fantasy RPG Icons - Free Basic Pack (25)/Icons/512/icon_trap.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Icons/Turbo Disk/Dark Fantasy RPG Icons - Free Basic Pack (25)/Icons/512/icon_trap.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Icons/Turbo Disk/Dark Fantasy RPG Icons - Free Basic Pack (25)/Icons/512/icon_trap_spears.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Icons/Turbo Disk/Dark Fantasy RPG Icons - Free Basic Pack (25)/Icons/512/icon_trap_spears.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Icons/Turbo Disk/Dark Fantasy RPG Icons - Free Basic Pack (25)/Icons/512/icon_trap_spikes.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Icons/Turbo Disk/Dark Fantasy RPG Icons - Free Basic Pack (25)/Icons/512/icon_trap_spikes.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Icons/Turbo Disk/Dark Fantasy RPG Icons - Free Basic Pack (25)/Icons/512/icon_tripple_arrows_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Icons/Turbo Disk/Dark Fantasy RPG Icons - Free Basic Pack (25)/Icons/512/icon_tripple_arrows_2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/SpriteSheets/Kenney_Male_Adventurer_Papered.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/SpriteSheets/Kenney_Male_Adventurer_Papered.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bullet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Bullet.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Decorates/BaseDecorate.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Decorates/BaseDecorate.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/NPC.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/NPC.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Backpack/SpellUIItem.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Backpack/SpellUIItem.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Backpack/Weapon.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Backpack/Weapon.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Chat/ChatBox.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Chat/ChatBox.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Chat/ChatOptions.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Chat/ChatOptions.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Chat/ShopItem.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Chat/ShopItem.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/General/SaveDataInfo.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/General/SaveDataInfo.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Backpack/BackpackData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Backpack/BackpackData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Backpack/BackpackManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Backpack/BackpackManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Backpack/SpriteLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Backpack/SpriteLoader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controller/CameraController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/CameraController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controller/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/PlayerController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controller/PlayerMagicController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/PlayerMagicController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Equipment/EquipmentBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Equipment/EquipmentBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Equipment/EquipmentLua.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Equipment/EquipmentLua.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NPC/CreatureAnimation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NPC/CreatureAnimation.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NPC/CreatureBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NPC/CreatureBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NPC/CreatureDeathAnimation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NPC/CreatureDeathAnimation.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/NPC/CreatureManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NPC/CreatureManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/NPC/CreatureManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NPC/CreatureManager.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NPC/CreatureMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NPC/CreatureMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NPC/EnemyController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NPC/EnemyController.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NPC/NPCController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NPC/NPCController.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PMLua/Export/BackpackLua.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PMLua/Export/BackpackLua.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PMLua/Export/CreatureLua.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PMLua/Export/CreatureLua.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PMLua/Export/QuestLua.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PMLua/Export/QuestLua.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Quest/QuestData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Quest/QuestData.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Quest/QuestManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Quest/QuestManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Quest/QuestManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Quest/QuestManager.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/SaveData/SaveDataManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SaveData/SaveDataManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Spell/SpellTreeBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Spell/SpellTreeBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Backpack/SpellPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Backpack/SpellPanel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/ChatBox/LuaChatBoxProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/ChatBox/LuaChatBoxProvider.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Backpack/BackpackPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Backpack/BackpackPanel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/ChatBox/ShopManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/ChatBox/ShopManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/General/UIFunctions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/General/UIFunctions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Player/PlayerItemCountIndicator.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Player/PlayerItemCountIndicator.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Quest/QuestItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Quest/QuestItem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Quest/QuestPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Quest/QuestPanel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/XLua/Gen/PMLua_Export_BackpackLuaWrap.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/XLua/Gen/PMLua_Export_BackpackLuaWrap.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/XLua/Gen/PMLua_Export_CreatureLuaWrap.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/XLua/Gen/PMLua_Export_CreatureLuaWrap.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Quest/SelectedQuestDisplay.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Quest/SelectedQuestDisplay.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/SaveData/SaveDataItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/SaveData/SaveDataItem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Gen/PMLua_Export_QuestLuaWrap.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/XLua/Gen/PMLua_Export_QuestLuaWrap.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameData/SaveData/0.json" beforeDir="false" afterPath="$PROJECT_DIR$/GameData/SaveData/0.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameData/SaveData/1.json" beforeDir="false" afterPath="$PROJECT_DIR$/GameData/SaveData/1.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameData/Scripts/Creatures/MerchantBase.lua" beforeDir="false" afterPath="$PROJECT_DIR$/GameData/Scripts/Creatures/MerchantBase.lua" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameData/Scripts/Creatures/PatrolEnemy.lua" beforeDir="false" afterPath="$PROJECT_DIR$/GameData/Scripts/Creatures/PatrolEnemy.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameData/SaveData/global.json" beforeDir="false" afterPath="$PROJECT_DIR$/GameData/SaveData/global.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameData/Scripts/Creatures/Slime.lua" beforeDir="false" afterPath="$PROJECT_DIR$/GameData/Scripts/Creatures/Slime.lua" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameData/Scripts/Creatures/TemplateElite.lua" beforeDir="false" afterPath="$PROJECT_DIR$/GameData/Scripts/Creatures/TemplateElite.lua" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameData/Scripts/Equipments/DefaultEquipment.lua" beforeDir="false" afterPath="$PROJECT_DIR$/GameData/Scripts/Equipments/DefaultEquipment.lua" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameData/Scripts/Equipments/DefaultShoe.lua" beforeDir="false" afterPath="$PROJECT_DIR$/GameData/Scripts/Equipments/DefaultShoe.lua" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameData/Scripts/Lib/Equipment.lua" beforeDir="false" afterPath="$PROJECT_DIR$/GameData/Scripts/Lib/Equipment.lua" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameData/Scripts/Quests/TemplateQuest/TemplateQuest.lua" beforeDir="false" afterPath="$PROJECT_DIR$/GameData/Scripts/Quests/TemplateQuest/TemplateQuest.lua" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameData/Scripts/Lib/Quest.lua" beforeDir="false" afterPath="$PROJECT_DIR$/GameData/Scripts/Lib/Quest.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameData/Scripts/Quests/BuyQuest/0_Main.lua" beforeDir="false" afterPath="$PROJECT_DIR$/GameData/Scripts/Quests/BuyQuest/0_Main.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameData/Scripts/Quests/InitQuest/0_Main.lua" beforeDir="false" afterPath="$PROJECT_DIR$/GameData/Scripts/Quests/InitQuest/0_Main.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameData/Scripts/Quests/InitQuest/1_EquipWand.lua" beforeDir="false" afterPath="$PROJECT_DIR$/GameData/Scripts/Quests/InitQuest/1_EquipWand.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameData/Scripts/Quests/InitQuest/2_EquipSpell.lua" beforeDir="false" afterPath="$PROJECT_DIR$/GameData/Scripts/Quests/InitQuest/2_EquipSpell.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameData/Scripts/Quests/InitQuest/3_KillEnemy.lua" beforeDir="false" afterPath="$PROJECT_DIR$/GameData/Scripts/Quests/InitQuest/3_KillEnemy.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameData/Scripts/SpellEffects/DefaultProjectile.lua" beforeDir="false" afterPath="$PROJECT_DIR$/GameData/Scripts/SpellEffects/DefaultProjectile.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameData/Scripts/Spells/TriggerOnCollision.lua" beforeDir="false" afterPath="$PROJECT_DIR$/GameData/Scripts/Spells/TriggerOnCollision.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameData/Scripts/Spells/TriggerOnExpired.lua" beforeDir="false" afterPath="$PROJECT_DIR$/GameData/Scripts/Spells/TriggerOnExpired.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -195,6 +117,8 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Quest/QuestManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SaveData/SaveDataManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SceneItems/MovementSwitcher.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SceneItems/QuestChecker.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SceneItems/TaskTrigger.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Spell/Projectile.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Spell/ProjectilePool.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Spell/SpellEffectBase.cs" root0="FORCE_HIGHLIGHTING" />
@@ -293,13 +217,15 @@
       <option name="MIXED_MODE_DEBUG" value="0" />
       <method v="2" />
     </configuration>
-    <configuration name="附加到 Unity 编辑器" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="附加到 Unity 编辑器" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="29672">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="29672" />
       <option name="projectPathOnTarget" />
       <option name="runtimes">
-        <list />
+        <list>
+          <MonoRuntime />
+        </list>
       </option>
       <option name="selectedOptions">
         <list />
@@ -363,7 +289,9 @@
       <workItem from="1763989137547" duration="15819000" />
       <workItem from="1764078976399" duration="13196000" />
       <workItem from="1764161990601" duration="1932000" />
-      <workItem from="1764166412196" duration="13989000" />
+      <workItem from="1764166412196" duration="14209000" />
+      <workItem from="1764249999576" duration="4863000" />
+      <workItem from="1764263107530" duration="2957000" />
     </task>
     <servers />
   </component>

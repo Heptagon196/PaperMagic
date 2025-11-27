@@ -25,14 +25,17 @@ function Data:GetStatus(subCompleted, event, gameObject, objID)
     end
     if (not self:GetBool('summoned')) then
         self:SetBool('summoned', true)
-        local spawn = PM.Creature:Spawn('std.slime', PM.Player:GetPosition() + CS.UnityEngine.Vector3(2, 0, 0))
+        local spawn = PM.Creature:Spawn('std.slime', CS.UnityEngine.Vector3(4, 0, 0))
         PM.Creature:SetPersistent(spawn)
-        PM.Creature:SetPersistent(PM.Creature:Spawn('std.slime', PM.Player:GetPosition() + CS.UnityEngine.Vector3(4, 0, 0)))
-        PM.Creature:SetPersistent(PM.Creature:Spawn('std.elite_patrol', PM.Player:GetPosition() + CS.UnityEngine.Vector3(6, 0, 0)))
+        PM.Creature:SetPersistent(PM.Creature:Spawn('std.slime', CS.UnityEngine.Vector3(6, 0, 0)))
+        PM.Creature:SetPersistent(PM.Creature:Spawn('std.elite_patrol', CS.UnityEngine.Vector3(8, 0, 0)))
+        PM:FloatMsg('击败前方出现的三个敌人')
     end
     if (event == QuestNotifyEvent.EnemyKill) then
         self:AddFloat('count', 1)
         if (self:GetFloat('count') >= self.TargetCount) then
+            PM.Backpack:AddNum(BackpackSlot.Spell, 'std.jump', 1)
+            PM:FloatMsg('获得了跳跃法术！装备在鞋子上越过障碍')
             return QuestStatus.Completed
         end
     end

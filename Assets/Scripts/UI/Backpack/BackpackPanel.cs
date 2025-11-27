@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Backpack;
 using Controller;
 using UI.General;
@@ -11,6 +12,7 @@ namespace UI.Backpack
         public List<BackpackSlot> slotTypes;
         public GameObject content;
         public GameObject itemPrefab;
+        private bool _needRefresh = false;
         private void Awake()
         {
             EventManager.AddListener(this, BackpackEvent.BackpackChanged, _ => Refresh());
@@ -24,6 +26,18 @@ namespace UI.Backpack
         private void Start()
         {
             Refresh();
+        }
+        private void OnEnable()
+        {
+            _needRefresh = true;
+        }
+        private void Update()
+        {
+            if (_needRefresh)
+            {
+                _needRefresh = false;
+                Refresh();
+            }
         }
         private void ResizeTo(int count)
         {

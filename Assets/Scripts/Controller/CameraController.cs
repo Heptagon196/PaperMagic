@@ -24,7 +24,10 @@ namespace Controller
         private float _direction = 1;
         private void Awake()
         {
-            Instance = this;
+            if (Instance == null)
+            {
+                Instance = this;
+            }
             _offset = target.position - transform.position;
             _offset.x = 0;
         }
@@ -65,6 +68,7 @@ namespace Controller
         }
         public void SetDefaultData(ref GameData gameData)
         {
+            gameData.movementMode = PlayerMovementMode.Platform;
             gameData.cameraPosition = initialPosition;
             gameData.cameraRotation = transform.rotation;
         }

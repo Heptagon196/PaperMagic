@@ -23,6 +23,7 @@ namespace UI.Quest
                 textString += $"<size=24>{title}</size>\n\n";
             }
             textString += status switch {
+                QuestStatus.None => "<color=Black>☐ ",
                 QuestStatus.NotCompleted => "<color=Black>☐ ",
                 QuestStatus.Completed => "<color=Green>☑ ",
                 QuestStatus.Failed => "<color=Red>☒ ",

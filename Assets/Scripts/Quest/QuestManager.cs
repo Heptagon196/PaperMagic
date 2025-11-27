@@ -6,6 +6,7 @@ using Backpack;
 using Controller;
 using PMLua;
 using SaveData;
+using UI.General;
 using UnityEngine;
 
 namespace Quest
@@ -44,6 +45,8 @@ namespace Quest
                     _ => OnRecvEvent(new EventParamBase(QuestNotifyEvent.BackpackChanged)));
                 EventManager.AddListener(this, BackpackEvent.EquipChanged,
                     _ => OnRecvEvent(new EventParamBase(QuestNotifyEvent.BackpackChanged)));
+                EventManager.AddListener(this, UIPanelEvent.CloseUI,
+                    _ => OnRecvEvent(new EventParamBase(QuestNotifyEvent.CloseBackpack)));
                 EventManager.AddListener(this, QuestNotifyEvent.EnemyKill, OnRecvEvent);
                 EventManager.AddListener(this, QuestNotifyEvent.QuestChatFinish, OnRecvEvent);
                 DontDestroyOnLoad(gameObject);
@@ -57,6 +60,7 @@ namespace Quest
         {
             EventManager.RemoveListeners(this, BackpackEvent.BackpackChanged);
             EventManager.RemoveListeners(this, BackpackEvent.EquipChanged);
+            EventManager.RemoveListeners(this, UIPanelEvent.CloseUI);
             EventManager.RemoveListeners(this, QuestNotifyEvent.EnemyKill);
             EventManager.RemoveListeners(this, QuestNotifyEvent.QuestChatFinish);
         }
@@ -88,8 +92,10 @@ namespace Quest
             var info = GetQuestInfo(id);
             if (info != null)
             {
-                if (!ActivatedQuests[info.category].Contains(id))
+                if (!ActivatedQuests.ContainsKey(info.category) ||
+                    !ActivatedQuests[info.category].Contains(id))
                 {
+                    ActivatedQuests.TryAdd(info.category, new());
                     ActivatedQuests[info.category].Add(id);
                     info.OnActivateQuest();
                 }
@@ -279,6 +285,8 @@ namespace Quest
         {
             gameData.questSave.Clear();
             gameData.questStatus.Clear();
+            gameData.activatedQuests.Clear();
+            gameData.selectedQuest = "";
         }
         public static bool GetBool(string module, string key)
         {

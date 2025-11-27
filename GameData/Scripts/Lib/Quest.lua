@@ -11,6 +11,8 @@ QuestNotifyEvent = {
     EnemyKill = 1,
     QuestChatFinish = 2,
     BackpackChanged = 3,
+    SelectedQuestChanged = 4,
+    CloseBackpack = 5,
 }
 
 ---@enum QuestStatus

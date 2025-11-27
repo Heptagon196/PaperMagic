@@ -68,7 +68,7 @@ namespace UI.ChatBox
         }
         public void SetDefaultData(ref GameData gameData)
         {
-            ShopLimitBuy.Clear();
+            gameData.shopLimit.Clear();
         }
     }
 }

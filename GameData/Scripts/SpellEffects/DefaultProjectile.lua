@@ -3,7 +3,7 @@ local Data = {
     ID = 'std.default_projectile',
     UpdateInterval = 0.1,
     ExpireTime = 3,
-    Damage = 10,
+    Damage = 5,
 
     ShootSpeed = 15,
     CircleRadius = 3,

@@ -16,13 +16,13 @@ local Data = QuestData:New{
 function Data:OnActivate()
     PM.Backpack:AddNum(BackpackSlot.Item, 'std.coin', 1000)
     self:SetFloat('coin', PM.Backpack:GetNum(BackpackSlot.Item, 'std.coin'))
+    PM.Quest:FocusQuest(self.ID)
 end
 
 function Data:GetStatus(subCompleted, event, gameObject, objID)
     if (event == QuestNotifyEvent.BackpackChanged) then
         local prevCoin = self:GetFloat('coin')
         local curCoin = PM.Backpack:GetNum(BackpackSlot.Item, 'std.coin')
-        print(prevCoin, curCoin)
         self:SetFloat('coin', curCoin)
         if (curCoin < prevCoin) then
             return QuestStatus.Completed

@@ -21,10 +21,11 @@ namespace XLua.CSObjectWrap
         {
 			ObjectTranslator translator = ObjectTranslatorPool.Instance.Find(L);
 			System.Type type = typeof(PMLua.Export.QuestLua);
-			Utils.BeginObjectRegister(type, L, translator, 0, 8, 0, 0);
+			Utils.BeginObjectRegister(type, L, translator, 0, 9, 0, 0);
 			
 			Utils.RegisterFunc(L, Utils.METHOD_IDX, "GetStatus", _m_GetStatus);
 			Utils.RegisterFunc(L, Utils.METHOD_IDX, "Activate", _m_Activate);
+			Utils.RegisterFunc(L, Utils.METHOD_IDX, "FocusQuest", _m_FocusQuest);
 			Utils.RegisterFunc(L, Utils.METHOD_IDX, "GetBool", _m_GetBool);
 			Utils.RegisterFunc(L, Utils.METHOD_IDX, "SetBool", _m_SetBool);
 			Utils.RegisterFunc(L, Utils.METHOD_IDX, "GetFloat", _m_GetFloat);
@@ -124,6 +125,34 @@ namespace XLua.CSObjectWrap
                     string _id = LuaAPI.lua_tostring(L, 2);
                     
                     gen_to_be_invoked.Activate( _id );
+                    
+                    
+                    
+                    return 0;
+                }
+                
+            } catch(System.Exception gen_e) {
+                return LuaAPI.luaL_error(L, "c# exception:" + gen_e);
+            }
+            
+        }
+        
+        [MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+        static int _m_FocusQuest(RealStatePtr L)
+        {
+		    try {
+            
+                ObjectTranslator translator = ObjectTranslatorPool.Instance.Find(L);
+            
+            
+                PMLua.Export.QuestLua gen_to_be_invoked = (PMLua.Export.QuestLua)translator.FastGetCSObj(L, 1);
+            
+            
+                
+                {
+                    string _id = LuaAPI.lua_tostring(L, 2);
+                    
+                    gen_to_be_invoked.FocusQuest( _id );
                     
                     
                     

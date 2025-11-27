@@ -98,6 +98,10 @@ namespace Controller
                 }
                 equip.InitWeapon(GetComponent<PlayerController>());
                 var spellTree = equippedInfo.CreateSpellTree();
+                if (spellTree == null)
+                {
+                    continue;
+                }
                 if (spellTree.GetSize() > equip.equipmentCapacity && equip.equipmentCapacity > 0)
                 {
                     UIFunctions.Instance.ShowFloatTip(

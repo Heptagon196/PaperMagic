@@ -36,6 +36,11 @@ namespace UI.SaveData
             SaveDataManager.Instance.SaveGame(saveSlot);
             LoadInfo();
         }
+        public void NewEmptySaveData()
+        {
+            SaveDataManager.Instance.NewEmptySaveGame(saveSlot);
+            LoadInfo();
+        }
         public void LoadData()
         {
             SaveDataManager.Instance.RestartSceneAndLoad(saveSlot);

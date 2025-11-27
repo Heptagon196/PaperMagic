@@ -2,7 +2,7 @@ require('Lib/Quest.lua')
 require('Lib/Equipment.lua')
 local Data = QuestData:New{
     ID = 'std.init_quest.equip_wand',
-    Desc = '在左手装备法杖',
+    Desc = '打开菜单->背包，在左手装备法杖',
     Type = QuestCategory.QuestGoal,
 
     CompleteDesc = '已装备法杖',
@@ -21,6 +21,7 @@ function Data:GetStatus(subCompleted, event, gameObject, objID)
     if (event == QuestNotifyEvent.BackpackChanged) then
         local wand = PM.Backpack:GetEquipped(EquipmentSlot.WeaponLeft)
         if (wand == 'std.default') then
+            PM:FloatMsg('完成任务')
             return QuestStatus.Completed
         else
             return QuestStatus.NotCompleted

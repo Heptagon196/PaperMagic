@@ -27,7 +27,10 @@ namespace UI.General
         public Vector2 floatEndPos;
         public float floatFadeTime;
         public float floatStayTime;
-        public bool UIOpen => _rootTransform.gameObject.activeInHierarchy || ChatBox.ChatBox.ChatBoxOpen;
+        public bool UIOpen =>
+            _rootTransform.gameObject.activeInHierarchy ||
+            ChatBox.ChatBox.ChatBoxOpen ||
+            loseGamePanel.activeInHierarchy;
         private Canvas _canvas;
         private Transform _rootTransform;
         private void Awake()
@@ -154,7 +157,7 @@ namespace UI.General
         public void LoadData()
         {
             loseGamePanel.SetActive(false);
-            SaveDataManager.Instance.LoadGame();
+            SaveDataManager.Instance.RestartSceneAndLoad();
         }
     }
 }

@@ -104,6 +104,7 @@ namespace NPC
         }
         public void SetDefaultData(ref GameData gameData)
         {
+            gameData.persistentCreatures.Clear();
         }
     }
 }

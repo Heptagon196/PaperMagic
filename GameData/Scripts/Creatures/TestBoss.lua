@@ -1,7 +1,7 @@
 require('Lib/AI.lua')
 local Enemy = BaseAI:New{
-    ID = 'std.elite_patrol',
-    Name = '巡逻精英',
+    ID = 'std.test_boss',
+    Name = 'TEST_BOSS',
     Faction = CreatureFaction.Hostile,
     Level = CreatureLevel.Elite,
     Health = 50,
@@ -12,20 +12,32 @@ local Enemy = BaseAI:New{
         { anim = CreatureAnimStage.Walk, duration = 0.1, num = 2 },
     },
 
-    SpellID = {
+    AttackSpellTree = {
+        { 'std.double_cast' },
+        { 'std.default', 'std.default' },
+    },
+    SkillSpellTree = {
+        { 'std.set_color_red' },
         { 'std.default' },
     },
     Speed = 4,
-    AttackInterval = 2,
     ChangeDirectionInterval = 5,
     ViewRange = 15,
     WalkAwayRange = 5,
     HateTime = 15,
     PatrolStayTime = 1,
 
+    AttackInfo = {
+        lastTime = 0,
+        interval = 2,
+    },
+    SkillInfo = {
+        lastTime = -10,
+        interval = 10,
+    },
+
     _lastFindPlayerPos = nil,
     _lastFindPlayerTime = nil,
-    _lastAttackTime = 0,
     _lastChangeDirection = 0;
     _patrolStayStart = nil,
     _direction = 1,
@@ -36,7 +48,6 @@ function Enemy:UpdateStateMachine(deltaTime)
 end
 
 function Enemy:OnStart()
-    print('Enemy start ', self.ID)
     self.rigidbody = self.Owner:GetComponent(typeof(CS.UnityEngine.Rigidbody))
     self.rigidbody.velocity = CS.UnityEngine.Vector3(self._direction * self.Speed, 0, 0)
     local spriteObj = self.Owner:GetComponentInChildren(typeof(CS.UnityEngine.SpriteRenderer))
@@ -56,19 +67,43 @@ function Enemy:OnStart()
             self:SetAnim(CreatureAnimStage.Walk)
             return BTState.Success
         end))
+    SequenceNode:New('Skill'):AddTo(root)
+        :Add(ConditionNode:New('Skill', function()
+            return PM.Creature:CanSeeTarget(self.Owner, PM.Player:GetObject(), self.ViewRange)
+        end))
+        :Add(AsyncNode:New('Skill', function()
+            self:SetAnim(CreatureAnimStage.Idle)
+            self._lastFindPlayerPos = PM.Player:GetPosition()
+            self._lastFindPlayerTime = self:GetTime()
+            local success = self:TryAttack(self.SkillInfo, function()
+                local direction = PM.Player:GetPosition().x > self.Owner.transform.position.x and 1 or -1
+                self.rigidbody.velocity = CS.UnityEngine.Vector3(direction * 5, 15, 0)
+                for angle = 0, 2 * math.pi, math.pi * 30 / 180 do
+                    local towards = CS.UnityEngine.Vector3(math.cos(angle), math.sin(angle), 0)
+                    local pos = self.Owner.transform.position
+                    PM.Creature:CastSpellTree(self.Owner, self.SkillSpellTree, pos, towards)
+                    AsyncWaitSeconds(0.2)
+                end
+                AsyncWaitSeconds(1)
+            end)
+            if (not success) then
+                coroutine.yield(BTState.Failure)
+            end
+            coroutine.yield(BTState.Success)
+        end))
     SequenceNode:New('Attack'):AddTo(root)
         :Add(ConditionNode:New('CanAttack', function()
             return PM.Creature:CanSeeTarget(self.Owner, PM.Player:GetObject(), self.ViewRange)
         end))
         :Add(ActionNode:New('Attack', function()
+            self:SetAnim(CreatureAnimStage.Idle)
             self._lastFindPlayerPos = PM.Player:GetPosition()
             self._lastFindPlayerTime = self:GetTime()
-            self:TryAttack(function()
+            local success = self:TryAttack(self.AttackInfo, function()
                 self.rigidbody.velocity = CS.UnityEngine.Vector3.zero
                 local pos = self.Owner.transform.position
-                PM.Creature:CastSpellTree(self.Owner, self.SpellID, pos, (PM.Player:GetPosition() - pos))
+                PM.Creature:CastSpellTree(self.Owner, self.AttackSpellTree, pos, (PM.Player:GetPosition() - pos))
             end)
-            self:SetAnim(CreatureAnimStage.Idle)
             return BTState.Success
         end))
     SequenceNode:New('Search'):AddTo(root)
@@ -98,9 +133,9 @@ function Enemy:OnStart()
     end):AddTo(root)
 end
 
-function Enemy:TryAttack(func)
-    if (self:GetTime() - self._lastAttackTime > self.AttackInterval) then
-        self._lastAttackTime = self:GetTime()
+function Enemy:TryAttack(attackInfo, func)
+    if (self:GetTime() - attackInfo.lastTime > attackInfo.interval) then
+        attackInfo.lastTime = self:GetTime()
         func()
         return true
     end

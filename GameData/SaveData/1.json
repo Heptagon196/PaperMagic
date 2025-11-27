@@ -1,15 +1,15 @@
 {
-    "saveTime": "2025-11-27 02:27:30",
+    "saveTime": "2025-11-28 00:50:24",
     "movementMode": 0,
     "playerPosition": {
-        "x": 17.297927856445314,
+        "x": 4.152626037597656,
         "y": 1.0,
-        "z": 0.000002294778823852539
+        "z": 0.0
     },
     "cameraPosition": {
-        "x": 20.297927856445314,
+        "x": 7.152626037597656,
         "y": 4.0,
-        "z": -19.999998092651368
+        "z": -20.0
     },
     "cameraRotation": {
         "x": 0.0,
@@ -18,7 +18,7 @@
         "w": 1.0
     },
     "maxHealth": 100.0,
-    "currentHealth": 60.0,
+    "currentHealth": 10.0,
     "backpack": [
         {
             "type": 0,
@@ -48,6 +48,11 @@
         {
             "type": 1,
             "id": "std.triple_cast",
+            "count": 6
+        },
+        {
+            "type": 1,
+            "id": "std.add_damage",
             "count": 6
         },
         {
@@ -239,28 +244,27 @@
     "questStatus": [
         {
             "key": "std.init_quest.equip_wand",
-            "val": 3
+            "val": 2
         },
         {
             "key": "std.init_quest.equip_spell",
-            "val": 3
+            "val": 2
         },
         {
             "key": "std.init_quest.kill_enemy",
-            "val": 3
+            "val": 2
         },
         {
             "key": "std.init_quest",
-            "val": 3
+            "val": 2
         },
         {
             "key": "std.init_quest_buy",
-            "val": 3
+            "val": 2
         }
     ],
     "activatedQuests": [
-        "std.init_quest",
-        "std.init_quest_buy"
+        "std.init_quest"
     ],
     "selectedQuest": "std.init_quest",
     "shopLimit": [
@@ -272,14 +276,5 @@
             ]
         }
     ],
-    "persistentCreatures": [
-        {
-            "id": "std.elite_patrol",
-            "position": {
-                "x": 30.822805404663087,
-                "y": 1.0,
-                "z": -1.0
-            }
-        }
-    ]
+    "persistentCreatures": []
 }

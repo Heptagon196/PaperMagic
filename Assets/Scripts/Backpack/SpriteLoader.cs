@@ -25,10 +25,18 @@ namespace Backpack
         }
         public void AsyncLoadSingeSprite(string filePath, object targetObject)
         {
+            if (Sprites.TryGetValue(filePath, out var sprite))
+            {
+                OnSpriteLoaded(targetObject, sprite);
+            }
             StartCoroutine(_AsyncLoadSingleSprite(filePath, targetObject));
         }
         public void AsyncLoadSingeSprite(string filePath, OnSpriteLoaded callBack)
         {
+            if (Sprites.TryGetValue(filePath, out var sprite))
+            {
+                callBack?.Invoke(sprite);
+            }
             StartCoroutine(_AsyncLoadSingleSprite(filePath, callBack));
         }
         private static void OnSpriteLoaded(object targetObject, Sprite sprite)

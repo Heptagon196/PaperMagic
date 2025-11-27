@@ -5,7 +5,7 @@ local Data = SpellData:New{
     Category = SpellType.Modifier,
 	Name = '碰撞触发',
 	Desc = '第一个子节点法术击中物体时\n触发第二个子节点\n触发法术随机方向发射',
-    Icon = 'Spell/std/set_color_red.png',
+    Icon = 'Spell/std/trigger_collision.png',
 	Cost = 10,
 	ChildNode = 2,
 }

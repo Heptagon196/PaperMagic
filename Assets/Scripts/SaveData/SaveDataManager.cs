@@ -173,6 +173,29 @@ namespace SaveData
                     GetSavePath(DefaultSaveFileSlot), true);
             }
         }
+        public void NewEmptySaveGame(int saveSlot)
+        {
+            var newSave = new GameData();
+            data.saveTime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+            foreach (var processer in Processers)
+            {
+                processer.SetDefaultData(ref data);
+            }
+            try
+            {
+                string path = GetSavePath(saveSlot);
+                Directory.CreateDirectory(Path.GetDirectoryName(path) ?? "");
+                string content = JsonUtility.ToJson(data, true);
+                using FileStream fs = File.Create(path);
+                using StreamWriter sw = new StreamWriter(fs);
+                sw.Write(content);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+        }
         public GameData GetSaveFileData(int loadSlot)
         {
             GameData ret = null;
