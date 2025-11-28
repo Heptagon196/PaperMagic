@@ -5,51 +5,45 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="42ba9b4e-4b93-444d-b127-378c80b30214" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SceneItems/QuestChecker.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SceneItems/QuestChecker.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SceneItems/TaskTrigger.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SceneItems/TaskTrigger.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PaperMagic/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PaperMagic/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bullet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Bullet.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/General/SaveDataInfo.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/General/SaveDataInfo.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Backpack/BackpackData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Backpack/BackpackData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Backpack/BackpackManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Backpack/BackpackManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Backpack/SpriteLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Backpack/SpriteLoader.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controller/CameraController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/CameraController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controller/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controller/PlayerMagicController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/PlayerMagicController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NPC/CreatureManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NPC/CreatureManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NPC/CreatureManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NPC/CreatureManager.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PMLua/Export/QuestLua.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PMLua/Export/QuestLua.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Quest/QuestData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Quest/QuestData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Quest/QuestManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Quest/QuestManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Quest/QuestManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Quest/QuestManager.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PMLua/Export/CreatureLua.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PMLua/Export/CreatureLua.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/SaveData/SaveDataManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SaveData/SaveDataManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Backpack/BackpackPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Backpack/BackpackPanel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/ChatBox/ShopManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/ChatBox/ShopManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Backpack/ItemButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Backpack/ItemButton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Backpack/SpellPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Backpack/SpellPanel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/ChatBox/LuaChatBoxProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/ChatBox/LuaChatBoxProvider.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/General/UIFunctions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/General/UIFunctions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Player/PlayerItemCountIndicator.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Player/PlayerItemCountIndicator.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Quest/QuestItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Quest/QuestItem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Quest/QuestPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Quest/QuestPanel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Quest/SelectedQuestDisplay.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Quest/SelectedQuestDisplay.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/SaveData/SaveDataItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/SaveData/SaveDataItem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/XLua/Gen/PMLua_Export_QuestLuaWrap.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/XLua/Gen/PMLua_Export_QuestLuaWrap.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utils.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utils/SpriteSheetSplitter.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utils/SpriteSheetSplitter.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/High_PipelineAsset.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/High_PipelineAsset.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Low_PipelineAsset.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Low_PipelineAsset.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Medium_PipelineAsset.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Medium_PipelineAsset.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Ultra_PipelineAsset.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Ultra_PipelineAsset.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Very High_PipelineAsset.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Very High_PipelineAsset.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Very Low_PipelineAsset.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Very Low_PipelineAsset.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Gen/PMLua_Export_CreatureLuaWrap.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/XLua/Gen/PMLua_Export_CreatureLuaWrap.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameData/SaveData/0.json" beforeDir="false" afterPath="$PROJECT_DIR$/GameData/SaveData/0.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameData/SaveData/1.json" beforeDir="false" afterPath="$PROJECT_DIR$/GameData/SaveData/1.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameData/SaveData/1 - 副本.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameData/SaveData/1.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameData/SaveData/2.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/GameData/SaveData/global.json" beforeDir="false" afterPath="$PROJECT_DIR$/GameData/SaveData/global.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameData/Scripts/Creatures/MerchantBase.lua" beforeDir="false" afterPath="$PROJECT_DIR$/GameData/Scripts/Creatures/MerchantBase.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameData/Scripts/Creatures/PatrolEnemy.lua" beforeDir="false" afterPath="$PROJECT_DIR$/GameData/Scripts/Creatures/PatrolEnemy.lua" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameData/Scripts/Creatures/Slime.lua" beforeDir="false" afterPath="$PROJECT_DIR$/GameData/Scripts/Creatures/Slime.lua" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameData/Scripts/Creatures/TemplateElite.lua" beforeDir="false" afterPath="$PROJECT_DIR$/GameData/Scripts/Creatures/TemplateElite.lua" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameData/Scripts/Lib/Quest.lua" beforeDir="false" afterPath="$PROJECT_DIR$/GameData/Scripts/Lib/Quest.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameData/Scripts/Creatures/TestBoss.lua" beforeDir="false" afterPath="$PROJECT_DIR$/GameData/Scripts/Creatures/TestBoss.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameData/Scripts/Equipments/DefaultEquipment.lua" beforeDir="false" afterPath="$PROJECT_DIR$/GameData/Scripts/Equipments/DefaultEquipment.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameData/Scripts/Items/TemplateItem.lua" beforeDir="false" afterPath="$PROJECT_DIR$/GameData/Scripts/Items/TemplateItem.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameData/Scripts/Lib/Backpack.lua" beforeDir="false" afterPath="$PROJECT_DIR$/GameData/Scripts/Lib/Backpack.lua" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameData/Scripts/Quests/BuyQuest/0_Main.lua" beforeDir="false" afterPath="$PROJECT_DIR$/GameData/Scripts/Quests/BuyQuest/0_Main.lua" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameData/Scripts/Quests/InitQuest/0_Main.lua" beforeDir="false" afterPath="$PROJECT_DIR$/GameData/Scripts/Quests/InitQuest/0_Main.lua" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameData/Scripts/Quests/InitQuest/1_EquipWand.lua" beforeDir="false" afterPath="$PROJECT_DIR$/GameData/Scripts/Quests/InitQuest/1_EquipWand.lua" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameData/Scripts/Quests/InitQuest/2_EquipSpell.lua" beforeDir="false" afterPath="$PROJECT_DIR$/GameData/Scripts/Quests/InitQuest/2_EquipSpell.lua" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameData/Scripts/Quests/InitQuest/3_KillEnemy.lua" beforeDir="false" afterPath="$PROJECT_DIR$/GameData/Scripts/Quests/InitQuest/3_KillEnemy.lua" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameData/Scripts/SpellEffects/DefaultProjectile.lua" beforeDir="false" afterPath="$PROJECT_DIR$/GameData/Scripts/SpellEffects/DefaultProjectile.lua" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameData/Scripts/Spells/TriggerOnCollision.lua" beforeDir="false" afterPath="$PROJECT_DIR$/GameData/Scripts/Spells/TriggerOnCollision.lua" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameData/Scripts/Spells/TriggerOnExpired.lua" beforeDir="false" afterPath="$PROJECT_DIR$/GameData/Scripts/Spells/TriggerOnExpired.lua" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameData/Scripts/Text/TemplateChat.lua" beforeDir="false" afterPath="$PROJECT_DIR$/GameData/Scripts/Text/TemplateChat.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -217,15 +211,13 @@
       <option name="MIXED_MODE_DEBUG" value="0" />
       <method v="2" />
     </configuration>
-    <configuration name="附加到 Unity 编辑器" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="29672">
+    <configuration name="附加到 Unity 编辑器" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="29672" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="runtimes">
-        <list>
-          <MonoRuntime />
-        </list>
+        <list />
       </option>
       <option name="selectedOptions">
         <list />
@@ -291,7 +283,8 @@
       <workItem from="1764161990601" duration="1932000" />
       <workItem from="1764166412196" duration="14209000" />
       <workItem from="1764249999576" duration="4863000" />
-      <workItem from="1764263107530" duration="2957000" />
+      <workItem from="1764263107530" duration="3698000" />
+      <workItem from="1764303385176" duration="5387000" />
     </task>
     <servers />
   </component>

@@ -61,6 +61,8 @@ end
 function Data:OnStart()
     self.rigidbody = self.Owner:GetComponent(typeof(CS.UnityEngine.Rigidbody))
     self.rigidbody.velocity = CS.UnityEngine.Vector3(self._direction * self.Speed, 0, 0)
+    local spriteObj = self.Owner:GetComponentInChildren(typeof(CS.UnityEngine.SpriteRenderer))
+    spriteObj.transform.localPosition = CS.UnityEngine.Vector3(0, -1, 0)
     self:ChangeState(AIState.Wandering)
 end
 

@@ -80,11 +80,11 @@ namespace UI.General
             rectTransform.GetWorldCorners(corners);
             if (corners[3].y < 5)
             {
-                rectTransform.transform.position += new Vector3(0, 5 - corners[3].y);
+                rectTransform.transform.position += new Vector3(0, 5 - corners[3].y) * _canvas.scaleFactor;
             }
             if (corners[3].x > canvasRect.width)
             {
-                rectTransform.transform.position -= new Vector3(rectTransform.rect.width + itemWidth + 10, 0);
+                rectTransform.transform.position -= new Vector3(rectTransform.rect.width + itemWidth / _canvas.scaleFactor + 10, 0) * _canvas.scaleFactor;
             }
         }
         public void ShowItemTip(string text, Vector3 pos, float itemWidth)

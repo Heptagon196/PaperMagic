@@ -17,10 +17,9 @@ local Data = BaseAI:New{
 
 function Data:OnStart()
     self:SetAnim(CreatureAnimStage.Idle)
-    self.Owner:GetComponent(typeof(CS.UnityEngine.Rigidbody)).isKinematic = true
-    self.Owner:GetComponent(typeof(CS.UnityEngine.CapsuleCollider)).isTrigger = true
+    self.rigidbody = self.Owner:GetComponent(typeof(CS.UnityEngine.Rigidbody))
     local spriteObj = self.Owner:GetComponentInChildren(typeof(CS.UnityEngine.SpriteRenderer))
-    spriteObj.transform.localPosition = CS.UnityEngine.Vector3(0, 0.3, 0)
+    spriteObj.transform.localPosition = CS.UnityEngine.Vector3(0, -1, 0)
 end
 
 function Data:OnDeath()
@@ -32,7 +31,8 @@ function Data:OnInteract()
 end
 
 function Data:UpdateStateMachine()
-    if (PM.Creature:CanSeeTarget(self.Owner, PM.Player:GetObject(), self.InteractRange)) then
+    self.rigidbody.velocity = CS.UnityEngine.Vector3(0, 0, 0)
+    if (PM.Creature:CanSeeTargetTopDown(self.Owner, PM.Player:GetObject(), self.InteractRange)) then
         if (self.canInteract == false) then
             self.canInteract = true
             PM.Chat:SetInteractable(self.XID, true, function()

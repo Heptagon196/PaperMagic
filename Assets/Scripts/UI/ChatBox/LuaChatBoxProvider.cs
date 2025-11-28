@@ -204,6 +204,7 @@ namespace UI.ChatBox
                     {
                         BackpackManager.Instance.AddNum((BackpackSlot)data.BuySlot, data.BuyID, -data.BuyCount);
                         BackpackManager.Instance.AddNum((BackpackSlot)data.SellSlot, data.SellID, data.SellCount);
+                        UIFunctions.Instance.ShowFloatTip("购买成功");
                         if (limit > 0)
                         {
                             limit--;

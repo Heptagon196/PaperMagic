@@ -35,12 +35,17 @@ function Enemy:UpdateStateMachine(deltaTime)
     self.tree:Update()
 end
 
+function Enemy:OnDeath()
+    PM.Backpack:AddNum(BackpackSlot.Item, 'std.coin', 5000)
+    -- PM:FloatMsg('击败敌人获得了5000金币')
+end
+
 function Enemy:OnStart()
     print('Enemy start ', self.ID)
     self.rigidbody = self.Owner:GetComponent(typeof(CS.UnityEngine.Rigidbody))
     self.rigidbody.velocity = CS.UnityEngine.Vector3(self._direction * self.Speed, 0, 0)
     local spriteObj = self.Owner:GetComponentInChildren(typeof(CS.UnityEngine.SpriteRenderer))
-    spriteObj.transform.localPosition = CS.UnityEngine.Vector3(0, 0.3, 0)
+    spriteObj.transform.localPosition = CS.UnityEngine.Vector3(0, -1, 0)
     self:SetAnim(CreatureAnimStage.Idle)
 
     local root = SelectorNode:New('Root')

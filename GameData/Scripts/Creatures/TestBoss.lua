@@ -3,7 +3,7 @@ local Enemy = BaseAI:New{
     ID = 'std.test_boss',
     Name = 'TEST_BOSS',
     Faction = CreatureFaction.Hostile,
-    Level = CreatureLevel.Elite,
+    Level = CreatureLevel.Boss,
     Health = 50,
     AnimationFolder = 'Creature/std/Player_Red',
     Animations = {
@@ -21,7 +21,7 @@ local Enemy = BaseAI:New{
         { 'std.default' },
     },
     Speed = 4,
-    ChangeDirectionInterval = 5,
+    ChangeDirectionInterval = 3,
     ViewRange = 15,
     WalkAwayRange = 5,
     HateTime = 15,
@@ -47,11 +47,16 @@ function Enemy:UpdateStateMachine(deltaTime)
     self.tree:Update()
 end
 
+function Enemy:OnDeath()
+    PM.Backpack:AddNum(BackpackSlot.Item, 'std.coin', 50000)
+    PM:FloatMsg('击败敌人获得了50000金币')
+end
+
 function Enemy:OnStart()
     self.rigidbody = self.Owner:GetComponent(typeof(CS.UnityEngine.Rigidbody))
     self.rigidbody.velocity = CS.UnityEngine.Vector3(self._direction * self.Speed, 0, 0)
     local spriteObj = self.Owner:GetComponentInChildren(typeof(CS.UnityEngine.SpriteRenderer))
-    spriteObj.transform.localPosition = CS.UnityEngine.Vector3(0, 0.3, 0)
+    spriteObj.transform.localPosition = CS.UnityEngine.Vector3(0, -1, 0)
     self:SetAnim(CreatureAnimStage.Idle)
 
     local root = SelectorNode:New('Root')
@@ -117,9 +122,12 @@ function Enemy:OnStart()
             return self._lastFindPlayerPos ~= nil
         end))
         :Add(ActionNode:New('WalkClose', function()
-            local playerPos = PM.Player:GetPosition()
             local pos = self.Owner.transform.position
-            self.rigidbody.velocity = CS.UnityEngine.Vector3(self.Speed * (playerPos.x > pos.x and 1 or -1), 0, 0)
+            if (math.abs(self._lastFindPlayerPos.x - pos.x) < 0.1) then
+                self._lastFindPlayerPos = nil
+                return BTState.Failure
+            end
+            self.rigidbody.velocity = CS.UnityEngine.Vector3(self.Speed * (self._lastFindPlayerPos.x > pos.x and 1 or -1), 0, 0)
             self:SetAnim(CreatureAnimStage.Walk)
             return BTState.Success
             -- return BTWaitForSeconds(self, 'WalkClose', 1)
@@ -148,9 +156,11 @@ function Enemy:TryChangeDirection(func)
             self._lastChangeDirection = self:GetTime()
             self._direction = -self._direction
             self._patrolStayStart = nil
+            self:SetAnim(CreatureAnimStage.Walk)
             func(self._direction)
             return true
         end
+        self:SetAnim(CreatureAnimStage.Idle)
         return false
     end
     if (self:GetTime() - self._lastChangeDirection > self.ChangeDirectionInterval) then

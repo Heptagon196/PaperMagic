@@ -1,15 +1,15 @@
 {
-    "saveTime": "2025-11-28 01:58:13",
+    "saveTime": "2025-11-28 14:45:51",
     "movementMode": 1,
     "playerPosition": {
-        "x": 37.894840240478519,
+        "x": 36.20370101928711,
         "y": 1.0,
-        "z": -0.6269454956054688
+        "z": -0.3851987421512604
     },
     "cameraPosition": {
-        "x": 40.894840240478519,
+        "x": 39.20370101928711,
         "y": 13.819999694824219,
-        "z": -10.626945495605469
+        "z": -10.385198593139649
     },
     "cameraRotation": {
         "x": 0.5,
@@ -43,29 +43,10 @@
         {
             "type": 2,
             "id": "std.coin",
-            "count": 1000
+            "count": 14800
         }
     ],
     "equipped": [
-        {
-            "slot": 8,
-            "info": {
-                "equipmentID": "std.default",
-                "activeScheme": 0,
-                "availableSchemes": [
-                    {
-                        "schemeName": "",
-                        "schemeData": [
-                            {
-                                "columnData": [
-                                    "std.default"
-                                ]
-                            }
-                        ]
-                    }
-                ]
-            }
-        },
         {
             "slot": 2,
             "info": {
@@ -97,6 +78,25 @@
                             {
                                 "columnData": [
                                     "std.empty"
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "slot": 8,
+            "info": {
+                "equipmentID": "std.default",
+                "activeScheme": 0,
+                "availableSchemes": [
+                    {
+                        "schemeName": "",
+                        "schemeData": [
+                            {
+                                "columnData": [
+                                    "std.default"
                                 ]
                             }
                         ]
@@ -177,9 +177,15 @@
             "f": [
                 {
                     "key": "coin",
-                    "val": 1000.0
+                    "val": 14900.0
                 }
             ],
+            "s": []
+        },
+        {
+            "id": "std.side_kill_boss",
+            "b": [],
+            "f": [],
             "s": []
         }
     ],
@@ -199,19 +205,32 @@
         {
             "key": "std.init_quest",
             "val": 3
+        },
+        {
+            "key": "std.init_quest_buy",
+            "val": 3
         }
     ],
     "activatedQuests": [
         "std.init_quest",
-        "std.init_quest_buy"
+        "std.init_quest_buy",
+        "std.side_kill_boss"
     ],
-    "selectedQuest": "std.init_quest_buy",
+    "selectedQuest": "std.side_kill_boss",
     "shopLimit": [
         {
             "shopID": "std.template_merchant",
             "limitBuy": [
+                -1,
+                -1,
                 10,
-                -1
+                10,
+                10,
+                10,
+                10,
+                10,
+                10,
+                10
             ]
         }
     ],

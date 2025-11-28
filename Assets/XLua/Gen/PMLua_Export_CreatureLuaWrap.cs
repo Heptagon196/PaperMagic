@@ -21,7 +21,7 @@ namespace XLua.CSObjectWrap
         {
 			ObjectTranslator translator = ObjectTranslatorPool.Instance.Find(L);
 			System.Type type = typeof(PMLua.Export.CreatureLua);
-			Utils.BeginObjectRegister(type, L, translator, 0, 11, 0, 0);
+			Utils.BeginObjectRegister(type, L, translator, 0, 12, 0, 0);
 			
 			Utils.RegisterFunc(L, Utils.METHOD_IDX, "GetCreatureLevel", _m_GetCreatureLevel);
 			Utils.RegisterFunc(L, Utils.METHOD_IDX, "GetCreatureFaction", _m_GetCreatureFaction);
@@ -31,6 +31,7 @@ namespace XLua.CSObjectWrap
 			Utils.RegisterFunc(L, Utils.METHOD_IDX, "SetPersistent", _m_SetPersistent);
 			Utils.RegisterFunc(L, Utils.METHOD_IDX, "CastSpell", _m_CastSpell);
 			Utils.RegisterFunc(L, Utils.METHOD_IDX, "MoveTowards", _m_MoveTowards);
+			Utils.RegisterFunc(L, Utils.METHOD_IDX, "CanSeeTargetTopDown", _m_CanSeeTargetTopDown);
 			Utils.RegisterFunc(L, Utils.METHOD_IDX, "CanSeeTarget", _m_CanSeeTarget);
 			Utils.RegisterFunc(L, Utils.METHOD_IDX, "SetAnimation", _m_SetAnimation);
 			Utils.RegisterFunc(L, Utils.METHOD_IDX, "CastSpellTree", _m_CastSpellTree);
@@ -317,6 +318,53 @@ namespace XLua.CSObjectWrap
             } catch(System.Exception gen_e) {
                 return LuaAPI.luaL_error(L, "c# exception:" + gen_e);
             }
+            
+        }
+        
+        [MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+        static int _m_CanSeeTargetTopDown(RealStatePtr L)
+        {
+		    try {
+            
+                ObjectTranslator translator = ObjectTranslatorPool.Instance.Find(L);
+            
+            
+                PMLua.Export.CreatureLua gen_to_be_invoked = (PMLua.Export.CreatureLua)translator.FastGetCSObj(L, 1);
+            
+            
+			    int gen_param_count = LuaAPI.lua_gettop(L);
+            
+                if(gen_param_count == 4&& translator.Assignable<UnityEngine.GameObject>(L, 2)&& translator.Assignable<UnityEngine.GameObject>(L, 3)&& LuaTypes.LUA_TNUMBER == LuaAPI.lua_type(L, 4)) 
+                {
+                    UnityEngine.GameObject _owner = (UnityEngine.GameObject)translator.GetObject(L, 2, typeof(UnityEngine.GameObject));
+                    UnityEngine.GameObject _target = (UnityEngine.GameObject)translator.GetObject(L, 3, typeof(UnityEngine.GameObject));
+                    float _maxDistance = (float)LuaAPI.lua_tonumber(L, 4);
+                    
+                        var gen_ret = gen_to_be_invoked.CanSeeTargetTopDown( _owner, _target, _maxDistance );
+                        LuaAPI.lua_pushboolean(L, gen_ret);
+                    
+                    
+                    
+                    return 1;
+                }
+                if(gen_param_count == 3&& translator.Assignable<UnityEngine.GameObject>(L, 2)&& translator.Assignable<UnityEngine.GameObject>(L, 3)) 
+                {
+                    UnityEngine.GameObject _owner = (UnityEngine.GameObject)translator.GetObject(L, 2, typeof(UnityEngine.GameObject));
+                    UnityEngine.GameObject _target = (UnityEngine.GameObject)translator.GetObject(L, 3, typeof(UnityEngine.GameObject));
+                    
+                        var gen_ret = gen_to_be_invoked.CanSeeTargetTopDown( _owner, _target );
+                        LuaAPI.lua_pushboolean(L, gen_ret);
+                    
+                    
+                    
+                    return 1;
+                }
+                
+            } catch(System.Exception gen_e) {
+                return LuaAPI.luaL_error(L, "c# exception:" + gen_e);
+            }
+            
+            return LuaAPI.luaL_error(L, "invalid arguments to PMLua.Export.CreatureLua.CanSeeTargetTopDown!");
             
         }
         

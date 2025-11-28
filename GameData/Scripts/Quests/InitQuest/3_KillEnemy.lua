@@ -5,7 +5,7 @@ local Data = QuestData:New{
     Desc = '使用法术击败敌人。[%d/%d]\n法杖的触发方式为：\n头部：按Q\n衣服：按E\n左手：鼠标左键\n右手：鼠标右键\n鞋子：空格',
     Type = QuestCategory.QuestGoal,
 
-    CompleteDesc = '已击败敌人。\n法杖的法力会随时间自动恢复。\n向前走吧。',
+    CompleteDesc = '已击败敌人并获得金币。\n法杖的法力会随时间自动恢复。\n向前走吧。',
     PrevQuest = 'std.init_quest.equip_spell',
     TargetCount = 3,
 }
@@ -25,8 +25,7 @@ function Data:GetStatus(subCompleted, event, gameObject, objID)
     end
     if (not self:GetBool('summoned')) then
         self:SetBool('summoned', true)
-        local spawn = PM.Creature:Spawn('std.slime', CS.UnityEngine.Vector3(4, 0, 0))
-        PM.Creature:SetPersistent(spawn)
+        PM.Creature:SetPersistent(PM.Creature:Spawn('std.slime', CS.UnityEngine.Vector3(4, 0, 0)))
         PM.Creature:SetPersistent(PM.Creature:Spawn('std.slime', CS.UnityEngine.Vector3(6, 0, 0)))
         PM.Creature:SetPersistent(PM.Creature:Spawn('std.elite_patrol', CS.UnityEngine.Vector3(8, 0, 0)))
         PM:FloatMsg('击败前方出现的三个敌人')

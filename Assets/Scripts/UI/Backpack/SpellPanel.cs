@@ -36,8 +36,10 @@ namespace UI.Backpack
         public float lineThickness = 5f;
         public EquippedEquipmentPanel equippedPanel;
         private static Dictionary<Vector2Int, List<Vector2Int>> _connectionInfo;
+        private Canvas _canvas;
         private void Start()
         {
+            _canvas = GetComponentInParent<Canvas>();
             Refresh();
             equippedPanel.OnSwitchSlot = _ =>
             {
@@ -246,7 +248,7 @@ namespace UI.Backpack
                     var angle = Vector2.SignedAngle(start.position - end.position, Vector2.left);
                     line.GetComponent<RectTransform>().anchoredPosition = (start.anchoredPosition + end.anchoredPosition) / 2;
                     line.transform.position = (start.position + end.position) / 2;
-                    line.GetComponent<RectTransform>().sizeDelta = new Vector2(distance, lineThickness);
+                    line.GetComponent<RectTransform>().sizeDelta = new Vector2(distance / _canvas.scaleFactor, lineThickness);
                     line.transform.rotation = Quaternion.AngleAxis(-angle, Vector3.forward);
                     lineID++;
                 }

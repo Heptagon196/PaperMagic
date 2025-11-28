@@ -1,7 +1,7 @@
 require('Lib/BaseItem.lua')
 ---@type NormalItemInfo
 local Data = {
-    ID = 'std.default',
+    ID = 'std.heal_item',
     Name = '治疗物品',
     Type = NormalItemType.Normal,
     Desc = '<size=20>治疗道具</size>\n\n<i>恢复<color=Green>30</color>点生命</i>',

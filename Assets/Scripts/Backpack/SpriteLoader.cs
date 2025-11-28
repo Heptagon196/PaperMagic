@@ -95,7 +95,7 @@ namespace Backpack
             if (request.result == UnityWebRequest.Result.Success)
             {
                 var texture = DownloadHandlerTexture.GetContent(request);
-                Sprite sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0.5f, 0.5f));
+                Sprite sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0.5f, 0f));
                 Sprites.Add(Path.GetRelativePath(SpriteDir, filePath).Replace('\\', '/'), sprite);
             }
         }

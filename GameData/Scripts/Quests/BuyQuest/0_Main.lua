@@ -3,7 +3,7 @@ require('Lib/Backpack.lua')
 local Data = QuestData:New{
     ID = 'std.init_quest_buy',
     Name = '进入营地',
-    Desc = '进入营地，向商人购买道具',
+    Desc = '进入营地，用击败敌人获得的金币向商人购买道具',
     Notify = {
         QuestNotifyEvent.BackpackChanged,
     },
@@ -14,7 +14,7 @@ local Data = QuestData:New{
 }
 
 function Data:OnActivate()
-    PM.Backpack:AddNum(BackpackSlot.Item, 'std.coin', 1000)
+    -- PM.Backpack:AddNum(BackpackSlot.Item, 'std.coin', 100000)
     self:SetFloat('coin', PM.Backpack:GetNum(BackpackSlot.Item, 'std.coin'))
     PM.Quest:FocusQuest(self.ID)
 end

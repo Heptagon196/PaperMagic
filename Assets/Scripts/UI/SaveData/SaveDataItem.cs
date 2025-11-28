@@ -1,4 +1,5 @@
 ﻿using System.IO;
+using Controller;
 using SaveData;
 using UnityEngine;
 using UnityEngine.UI;
@@ -40,9 +41,11 @@ namespace UI.SaveData
         {
             SaveDataManager.Instance.NewEmptySaveGame(saveSlot);
             LoadInfo();
+            SaveDataPanel.Instance.Refresh();
         }
         public void LoadData()
         {
+            CameraController.Instance.Reset();
             SaveDataManager.Instance.RestartSceneAndLoad(saveSlot);
         }
         public void DeleteData()

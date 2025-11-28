@@ -70,7 +70,7 @@ namespace Controller
         {
             gameData.movementMode = PlayerMovementMode.Platform;
             gameData.cameraPosition = initialPosition;
-            gameData.cameraRotation = transform.rotation;
+            gameData.cameraRotation = Quaternion.identity;
         }
         public void SetCameraMode(PlayerMovementMode mode)
         {
@@ -89,6 +89,10 @@ namespace Controller
                 cameraTargetRotation = Quaternion.identity;
                 _offset += modeSwitchOffset;
             }
+        }
+        public void Reset()
+        {
+            SetCameraMode(PlayerMovementMode.Platform);
         }
     }
 }

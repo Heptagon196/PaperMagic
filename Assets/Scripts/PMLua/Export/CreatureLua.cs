@@ -62,8 +62,26 @@ namespace PMLua.Export
             gameObject.transform.position =
                 Vector3.MoveTowards(gameObject.transform.position, target, speed * Time.deltaTime);
         }
+        public bool CanSeeTargetTopDown(GameObject owner, GameObject target, float maxDistance = 10f)
+        {
+            Vector3 direction = target.transform.position - owner.transform.position;
+            if (direction.magnitude > maxDistance)
+            {
+                return false;
+            }
+            if (Physics.Raycast(owner.transform.position, direction.normalized, out var hit, maxDistance,
+                    LayerMask.GetMask("Player", "Ground")))
+            {
+                return hit.collider.gameObject == target;
+            }
+            return false;
+        }
         public bool CanSeeTarget(GameObject owner, GameObject target, float maxDistance = 10f)
         {
+            if (!Mathf.Approximately(owner.transform.position.z, target.transform.position.z))
+            {
+                return false;
+            }
             Vector3 direction = target.transform.position - owner.transform.position;
             if (direction.magnitude > maxDistance)
             {

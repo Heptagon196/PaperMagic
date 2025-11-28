@@ -240,10 +240,6 @@ namespace SaveData
                 currentSaveFileSlot = loadSlot;
             }
             data = GetSaveFileData(currentSaveFileSlot);
-            if (data.currentHealth <= 0)
-            {
-                data.currentHealth = data.maxHealth;
-            }
             if (data == null)
             {
                 data = new()
@@ -254,6 +250,10 @@ namespace SaveData
                 {
                     processer.SetDefaultData(ref data);
                 }
+            }
+            if (data.currentHealth <= 0)
+            {
+                data.currentHealth = data.maxHealth;
             }
             foreach (var processer in Processers)
             {

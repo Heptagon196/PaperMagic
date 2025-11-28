@@ -26,5 +26,5 @@ function AddShopEquip(id, cost, limit)
 end
 
 function AddShopItem(id, count, cost, limit)
-    return AddShopBuyInfo(BackpackSlot.Item, count, 1, BackpackSlot.Item, 'std.coin', cost, limit)
+    return AddShopBuyInfo(BackpackSlot.Item, id, count, BackpackSlot.Item, 'std.coin', cost, limit)
 end

@@ -1,16 +1,16 @@
 require('Lib/Equipment.lua')
 ---@type EquipmentInfo
 local Data = {
-    ID = 'std.default',
-    Name = '默认装备',
-    Desc = '这是一件默认装备',
+    ID = 'std.advanced_wand',
+    Name = '高级装备',
+    Desc = '能装备在任何槽位上',
     Icon = 'Equip/std/default_wand.png',
     Capacity = 10,
-    Slot = EquipmentSlot.Weapon,
+    Slot = EquipmentSlot.All,
     CastType = EquipmentCastType.PressKey,
     MaxMana = 100,
-    ManaResume = 10,
-    CastInterval = 0.5,
+    ManaResume = 100,
+    CastInterval = 0.2,
 }
 
 function Data:OnAdd()

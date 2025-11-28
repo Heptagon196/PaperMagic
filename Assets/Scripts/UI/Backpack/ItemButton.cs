@@ -99,6 +99,11 @@ namespace UI.Backpack
             {
                 OnEndDrag(null);
             }
+            if (_isShowingTip)
+            {
+                _isShowingTip = false;
+                UIFunctions.Instance.tipWidget.GetComponent<KeepActiveWhenHovering>().SetToDisappear();
+            }
         }
         public void LoadInfo(BackpackSlot type, string id, int count, string replaceDesc = null)
         {
